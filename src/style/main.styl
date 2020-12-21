@@ -4,6 +4,8 @@
     font-weight: 300
     font-style: normal
 
+* 
+    box-sizing border-box
 
 
 @import "helpers/vars.styl"
@@ -16,13 +18,32 @@ body
     display flex
     flex-direction column
     min-height 100vh
+    font-family "Spectral"
+    font-size 18px
+    line-height 26px
+    font-weight 300
 
     &.js-burger-menu-is-open
         overflow hidden
 
 .main
     flex-grow 1
+    padding-top 165px
     overflow-x hidden
+    @media tablet-landscape-medium
+        padding-top 155px
+    @media tablet-portrait-large
+        padding-top 106px
+
+.container 
+    max-width 1518px
+    width 100%
+    margin 0 auto
+    padding 0 39px
+    @media tablet-landscape-medium
+        padding 0 32px
+    @media tablet-portrait-small
+        padding 0 20px
 
 
 
@@ -37,3 +58,4 @@ body
 @import "partials/reviews.styl"
 @import "partials/branches.styl"
 @import "partials/footer.styl"
+@import "partials/popup.styl"

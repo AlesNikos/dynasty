@@ -3,11 +3,11 @@
 
 
 // Валидация форм
-// partials/validation.js
+//= partials/validation.js
 
 
 // Показывает и скрывает попапы
-// partials/popup.js
+//= partials/popup.js
 
 
 // Показывает и скрывает главное меню
@@ -20,3 +20,7 @@
 
 // Переключение табов
 //= partials/tabs.js
+
+
+// Header
+//= partials/header.js

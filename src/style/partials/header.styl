@@ -1,24 +1,35 @@
-.head
-    display flex
-    flex-wrap nowrap
-    align-items center
-    width calc(100% - 78px)
-    max-width 1440px
-    margin 0 auto
+.header
+    position fixed
+    top 0
+    left 0
+    right 0
     padding 35px 0 39px 0
+    background-color #fff
+    z-index: 1000
+    transition all 0.2s ease
+
     @media tablet-landscape-medium
-        width calc(100% - 64px)
         padding 30px 0 34px 0
-    @media tablet-portrait-large
-        flex-direction column-reverse
-    @media tablet-portrait-small
-        flex-direction row
-        width calc(100% - 40px)
+
+    &.header__fixed 
+        padding 18px 0 25px
+        box-shadow: 3px 4px 30px rgba(0, 0, 0, 0.15);
+        .header__row--top
+            display none
+            @media tablet-portrait-large
+                display flex
+        .header__burger 
+            top 29px
+
+    &__inner 
+        display flex
+        flex-wrap nowrap
+        align-items center
 
     &__burger
         position absolute
         top 39px
-        left 32px
+        right 32px
         z-index 2
         display none
         @media tablet-portrait-large
@@ -29,7 +40,7 @@
 
     &__aside
         margin 0 0 0 auto
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             position fixed
             top 0
             left 0
@@ -44,7 +55,7 @@
         display flex
         flex-direction column
         align-items flex-end
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             align-items center
             box-sizing border-box
             width 100%
@@ -56,18 +67,18 @@
             transition opacity .5s 0s ease, visibility 0s .5s linear
 
     &__row--top
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             display flex
             flex-direction column
             align-items center
             margin 0 0 50px 0
 
-    &__row + &__row
-        margin 30px 0 0 0
+    &__row:first-of-type
+        margin-bottom 30px
 
     &__menu
         @media tablet-portrait-large
-            position fixed
+            position static
             top 0
             left 0
             z-index 2
@@ -88,7 +99,7 @@
         outline none
         transition background-color .3s 0s ease
         cursor pointer
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             font-size 22px
             line-height 26px
             border-radius 21.5px
@@ -107,7 +118,7 @@
                 stroke black
                 stroke-width 1.2px
                 transition stroke .3s 0s ease
-                @media tablet-portrait-small
+                @media tablet-portrait-large
                     display none
 
             &:hover
@@ -120,7 +131,7 @@
             margin 0 30px 0 0
             @media tablet-landscape-medium
                 margin 0 25px 0 0
-            @media tablet-portrait-small
+            @media tablet-portrait-large
                 margin 0 0 30px 0
 
     &__phone
@@ -130,7 +141,7 @@
         font-weight 300
         color black
         text-decoration none
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             font-size 22px
             line-height 26px
 
@@ -138,10 +149,11 @@
             margin 0 30px 0 0
             @media tablet-landscape-medium
                 margin 0 25px 0 0
-            @media tablet-portrait-small
+            @media tablet-portrait-large
                 margin 0 0 30px 0
 
-.head__button:not(.head__button--no-backing):hover
+
+.header__button:not(.header__button--no-backing):hover
     background-color bright-pink
 
 .menu
@@ -151,7 +163,7 @@
         background-color white
         overflow hidden
         transition width .75s .5s ease
-    @media tablet-portrait-small
+    @media tablet-portrait-large
         width auto
         height auto
         background-color transparent
@@ -174,7 +186,7 @@
             opacity 0
             visibility hidden
             transition opacity .5s 0s ease, visibility 0s .5s linear
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             padding 0
             opacity 1
             visibility visible
@@ -191,7 +203,7 @@
         @media tablet-portrait-large
             font-size 36px
             line-height 40px
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             font-size 22px
             line-height 26px
 
@@ -202,7 +214,7 @@
             color bright-pink
 
     &__item + &__item
-        margin 0 0 0 30px
+        margin 0 0 0 29px
         @media tablet-landscape-medium
             margin 0 0 0 25px
         @media tablet-portrait-large
@@ -243,7 +255,7 @@
                     display block
                     font-size 36px
                     line-height 40px
-                @media tablet-portrait-small
+                @media tablet-portrait-large
                     font-size 22px
                     line-height 26px
 
@@ -349,14 +361,14 @@ body.js-burger-menu-is-open
             @media tablet-portrait-small
                 transition none
 
-    & .head
+    & .header
         &__aside
-            @media tablet-portrait-small
+            @media tablet-portrait-large
                 width 100%
                 transition width .75s 0s ease
 
         &__rows
-            @media tablet-portrait-small
+            @media tablet-portrait-large
                 opacity 1
                 visibility visible
                 transition opacity .5s .75s ease, visibility 0s .75s linear

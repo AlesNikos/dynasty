@@ -63,11 +63,208 @@
 
 
 // Валидация форм
-// partials/validation.js
+(function () {
+
+    //Валидация форм
+    function validationCheck(){
+
+        // Проверка на обязательность заполнения
+        function reqCheck(elem){
+            if(elem.hasAttribute("data-req")){
+                validErrors.push(elem);
+            };
+        };
+
+        // Убрать указание об ошибке
+        function noErrors(elem){
+            let elemParent = elem.parentElement;
+            while(!elemParent.classList.contains("form__group")){
+                elemParent = elemParent.parentElement;
+            };
+            if(elemParent.classList.contains("js-valid-error")){
+                elemParent.classList.remove("js-valid-error");
+            };
+        };
+
+        // Проверка прилагаемого файла
+        function fileCheck(elem, file){
+            if(file.size > 5000000){
+                validErrors.push(elem);
+            }else{
+                noErrors(elem);
+            };
+        };
+
+        // Проверка вводимых данных через регулярное выражение
+        function valueCheck(elem, val, patrn){
+            if(!patrn.test(val)){
+                validErrors.push(elem); 
+            }else{
+                noErrors(elem);
+            };
+        };
+
+        // Ищем форму, к которой относится кнопка
+        let form = this.parentElement;
+        while(form.tagName != "FORM"){
+            form = form.parentElement
+        };
+
+        // Ищем все элементы данной формы
+        let formElems = form.querySelectorAll("input, select, textarea");
+        
+        // Создаем массив для полей с ошибками
+        let validErrors = [];
+
+        // Основной цикл проверки на правильность заполнения формы
+        for(let i = 0; i < formElems.length; i++){
+
+            let elemType;
+            if(formElems[i].hasAttribute("type")){
+                elemType = formElems[i].getAttribute("type");
+            }else{
+                elemType = formElems[i].getAttribute("data-type");
+            }
+
+            switch(elemType){
+
+                // Для инпутов
+                case "text":
+                    if(formElems[i].value == ""){ 
+                        reqCheck(formElems[i]);
+                    }else{
+                        switch(formElems[i].getAttribute("name")){
+                            case "surname":
+                            case "name":
+                                let namePattern = new RegExp("^[a-zа-яё -]{1,}$","i");
+                                valueCheck(formElems[i], formElems[i].value, namePattern);
+                                break;
+                            case "phone":   
+                                let phonePattern = new RegExp("^[0-9 ]{7,}$");
+                                valueCheck(formElems[i], formElems[i].value, phonePattern);
+                                break;
+                            case "date":   
+                                let datePattern = new RegExp("^[0-9]{1,4}[.]{1}[0-9]{1,4}[.]{1}[0-9]{1,4}$");
+                                valueCheck(formElems[i], formElems[i].value, datePattern);
+                                break;
+                            case "mail":
+                                let mailPattern = new RegExp("^[a-z0-9_-]{1,}@{1}[a-z]{1,}[.]{1}[a-z]{2}$","i");
+                                valueCheck(formElems[i], formElems[i].value, mailPattern);
+                                break;
+                        };
+                    };
+                    break;
+
+                // Для текстовых полей
+                case "textarea":
+                    if(formElems[i].value == ""){ 
+                        reqCheck(formElems[i]);
+                    }else{
+                        noErrors(formElems[i]);
+                    };
+                    break;
+
+                // Для селектов
+                case "select":
+                    if(formElems[i].value == "choice-1"){
+                        reqCheck(formElems[i]);
+                    }else{
+                        noErrors(formElems[i]);
+                    };
+                    break;
+
+                // Для чекбоксов
+                case "checkbox":
+                    if(!formElems[i].checked){
+                        reqCheck(formElems[i]);
+                    }else{
+                        noErrors(formElems[i]);
+                    };
+                    break;
+
+                // Для файлов
+                case "file":
+                    if(!formElems[i].files[0]){
+                        reqCheck(formElems[i]);
+                    }else if(formElems[i].files[0]){
+                        fileCheck(formElems[i], formElems[i].files[0]);
+                    };
+                    break;
+            };
+        };
+
+        // Проверка, есть ли поля с ошибками заполнения, отмена отправки, и назначение подсказок об ошибках
+        if(validErrors.length){
+            event.preventDefault();
+            for(let i = 0; i < validErrors.length; i++){
+
+                let elemParent = validErrors[i].parentElement;
+                while(!elemParent.classList.contains("form__group")){
+                    elemParent = elemParent.parentElement;
+                };
+                if(!elemParent.classList.contains("js-valid-error")){
+                    elemParent.classList.add("js-valid-error");
+                };
+            };
+        };
+    };
+
+    // Кнопки отправки форм
+    const submitButtons = document.querySelectorAll(".js-submit");
+
+    // Если кнопки найдены, по клику на них проверяем относящуюся к ним форму на валидность
+    if(submitButtons){
+        for(let i = 0; i < submitButtons.length; i++){
+            submitButtons[i].addEventListener("click", validationCheck);
+        };  
+    };
+
+})();
 
 
 // Показывает и скрывает попапы
-// partials/popup.js
+(function(){
+
+    const popupButtons = document.querySelectorAll(".js-popup-button");
+
+    if(popupButtons){
+
+        for(let i = 0; i < popupButtons.length; i++){
+            popupButtons[i].addEventListener("click", showPopup);
+        };
+
+    };
+
+    function showPopup(){
+
+        let targetPopupName = this.getAttribute("data-popup-for");
+        let targetPopup = document.querySelector("[data-popup=" + targetPopupName + "]");
+
+        if(targetPopup){
+            document.body.classList.add("js-popup-is-open");
+            targetPopup.classList.add("js-popup-is-active");
+        };
+
+    };
+
+    const closePopupButton = document.querySelector(".js-close-popup-button");
+
+    if(closePopupButton){
+        closePopupButton.addEventListener("click", closePopup);
+    };
+
+    function closePopup(){
+
+        let openedPopup = document.querySelector(".js-popup-is-active");
+
+        if(openedPopup){
+            openedPopup.classList.remove("js-popup-is-active");
+        };
+        
+        document.body.classList.remove("js-popup-is-open");
+    };
+
+})();
 
 
 // Показывает и скрывает главное меню
@@ -93,16 +290,39 @@
 
 // Инициализация Яндекс-карты
 // Инициализация карты Яндекс
-if(document.getElementById("map")){
+if(document.getElementById("map-1")){
     ymaps.ready(init);
     function init(){ 
-        let locationMap = new ymaps.Map("map", {
+        let locationMap = new ymaps.Map("map-1", {
             center: [56.831886, 60.620480],
             zoom: 15,
             controls: [],
         }),
         
         mainPin = new ymaps.Placemark([56.831886, 60.620480], {
+            hintContent:"",
+            balloonContent:""
+        }, {
+            iconLayout: "default#image",
+            iconImageHref: "../images/pin.png",
+            iconImageSize: [32, 37],
+            iconImageOffset: [-16, -37]
+        });
+ 
+        locationMap.geoObjects
+            .add(mainPin)
+    };    
+};
+if(document.getElementById("map-2")){
+    ymaps.ready(init);
+    function init(){ 
+        let locationMap = new ymaps.Map("map-2", {
+            center: [56.795475, 60.624631],
+            zoom: 15,
+            controls: [],
+        }),
+        
+        mainPin = new ymaps.Placemark([56.795475, 60.624631], {
             hintContent:"",
             balloonContent:""
         }, {
@@ -197,4 +417,20 @@ if(document.getElementById("map")){
         };
     };
 
+})();
+
+
+// Header
+(function(){
+
+    let header = document.querySelector('.header');
+
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 1) {
+        header.classList.add('header__fixed');
+      } else {
+        header.classList.remove('header__fixed');
+      }
+    });
+    
 })();

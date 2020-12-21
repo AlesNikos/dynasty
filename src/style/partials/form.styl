@@ -4,8 +4,20 @@
         flex-wrap nowrap
         align-items flex-start
 
+    &__row
+        &:not(:last-child)
+            margin 0 0 30px 0
     &__group
         width 100%
+
+    &__label 
+        color #afafaf
+        font-size 16px
+        font-weight 400
+        line-height 26px
+        span {
+            color #a4023e
+        }
 
     &__input
         box-sizing border-box

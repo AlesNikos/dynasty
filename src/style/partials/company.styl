@@ -17,6 +17,7 @@
         grid-gap 36px
         @media laptop
             grid-gap 32px
+            grid-template-rows minmax(484px, auto) repeat(2, minmax(300px, auto))
         @media tablet-portrait-large
             grid-template-columns 1fr 1fr
             grid-template-rows auto
@@ -30,11 +31,13 @@
         text-align center
         @media phone
             text-align left
+    &__link {
+        line-height 24px}
 
 .advantage
     position relative
     box-sizing border-box
-    padding 44px 48px
+    padding 43px 48px
     @media tablet-landscape-medium
         padding 40px
     @media tablet-portrait-large
@@ -68,6 +71,9 @@
         bottom 0
         right 170px
         display block
+        @media laptop 
+            width 32%
+            right 165px
         @media tablet-landscape-large
             right 100px
         @media tablet-landscape-medium
@@ -118,6 +124,9 @@
     &__button,
     &__link
         margin 27px 0 0 0
+    &__link 
+        margin 30px 0 0 0
+        line-height 24px
 
 .advantage:nth-child(1)
     grid-column 1 / -1
@@ -146,6 +155,11 @@
     @media tablet-portrait-small
         grid-column auto
         grid-row auto
+
+    & .advantage__info
+        width 280px  
+        @media tablet-portrait-large
+            width 100% 
 
 .advantage:nth-child(3),
 .advantage:nth-child(4)

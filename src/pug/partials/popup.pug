@@ -1,6 +1,22 @@
 section.hidden-block
     div.hidden-block__background
-    button.hidden-block__close-button.js-close-popup-button
+    //- button.hidden-block__close-button.js-close-popup-button
     div.hidden-block__container
-        section.project-popup.hidden-block__popup(data-popup="project")
-            
+        section.appointment-popup.popup.hidden-block__popup(data-popup="appointment")
+            button.hidden-block__close-button.popup__close-button.js-close-popup-button
+            p.popup__title
+                |Записаться на прием
+            p.popup__subtitle
+                | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+            form.popup__form.form(action="")
+                .form__row
+                    .form__group
+                        label.form__label(for="")
+                            | ФИО <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req")
+                .form__row
+                    .form__group
+                        label.form__label(for="")
+                            | Телефон <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req", name="phone")
+
