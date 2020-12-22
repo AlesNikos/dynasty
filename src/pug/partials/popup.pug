@@ -2,21 +2,275 @@ section.hidden-block
     div.hidden-block__background
     //- button.hidden-block__close-button.js-close-popup-button
     div.hidden-block__container
-        section.appointment-popup.popup.hidden-block__popup(data-popup="appointment")
-            button.hidden-block__close-button.popup__close-button.js-close-popup-button
-            p.popup__title
-                |Записаться на прием
-            p.popup__subtitle
-                | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
-            form.popup__form.form(action="")
-                .form__row
-                    .form__group
-                        label.form__label(for="")
-                            | ФИО <span class="common-req-sign">*</span>
-                        input.form__input(type="text", data-req="req")
-                .form__row
-                    .form__group
-                        label.form__label(for="")
-                            | Телефон <span class="common-req-sign">*</span>
-                        input.form__input(type="text", data-req="req", name="phone")
+        .hidden-block__wrapper
 
+            //- ЗАПИСАТЬСЯ НА ПРИЕМ
+            section.appointment-popup.popup.hidden-block__popup(data-popup="appointment")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                p.popup__title
+                    |Записаться на прием
+                p.popup__subtitle
+                    | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                form.popup__form.form(action="")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Клиника
+                            select.js-choice(name="", type="select", id="popup-clinic")
+                                option Клиника на Мамина-Сибиряка, 128
+                                option Клиника на Академика Шварца, 14
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Услуга
+                            select.js-choice(name="", type="select", id="popup-services")
+                                option Клиника на Мамина-Сибиряка, 128
+                                option Клиника на Академика Шварца, 14
+                    .form__row
+                        .form__group
+                            label.form__label(for="name-1")
+                                | ФИО <span class="common-req-sign">*</span>
+                            input.form__input(type="text", data-req="req", id="name-1")
+                    .form__row
+                        .form__group
+                            label.form__label(for="phone-1")
+                                | Телефон <span class="common-req-sign">*</span>
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-1")
+                    .form__row
+                        .form__group.form__group--checkbox
+                            input.form__checkbox-input(type="checkbox", id="checkbox-1")
+                            label.form__checkbox-label(for="checkbox-1")
+                                span.form__checkbox-description
+                                    |Согласен на обработку 
+                                    a(href="#") персональных данных
+                    .form__row
+                        .form__group
+                            button.common__button.common__button--medium.form__button
+                                |Отправить заявку
+
+            //- ОСТАВИТЬ ОТЗЫВ
+            section.review-popup.popup.hidden-block__popup(data-popup="review-popup")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                p.popup__title
+                    |Оставить отзыв
+                p.popup__subtitle
+                    | Оцените параметры по 5-бальной шкале, где 5 – очень хорошо, 1 – очень плохо. Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                form.popup__form.form(action="")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | ФИО <span class="common-req-sign">*</span>
+                            input.form__input(type="text", data-req="req")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Телефон <span class="common-req-sign">*</span>
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Цель обращения в клинику
+                            input.form__input(type="text", data-req="req")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Текст отзыва <span class="common-req-sign">*</span>
+                            textarea.form__textarea(type="text-area", data-req="req", name="text", autocomplete="off")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Достоинства
+                            textarea.form__textarea(type="text-area", data-req="req", name="text", autocomplete="off")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Недостатки
+                            textarea.form__textarea(type="text-area", data-req="req", name="text", autocomplete="off")
+                    .form__row
+                        .form__group.opinion
+                            .opinion__title
+                                |Регистратура
+                            .opinion__row
+                                span.opinion__name
+                                    |Скорость обслуживания
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-1", id="radio-popup-1")
+                                        label.opinion__label(for="radio-popup-1")
+                                            |1
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-1", id="radio-popup-2")
+                                        label.opinion__label(for="radio-popup-2")
+                                            |2
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-1", id="radio-popup-3")
+                                        label.opinion__label(for="radio-popup-3")
+                                            |3
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-1", id="radio-popup-4")
+                                        label.opinion__label(for="radio-popup-4")
+                                            |4
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-1", id="radio-popup-5")
+                                        label.opinion__label(for="radio-popup-5")
+                                            |5
+                            .opinion__row
+                                span.opinion__name
+                                    |Внешний вид сотрудника
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-2", id="radio-popup-11")
+                                        label.opinion__label(for="radio-popup-11")
+                                            |1
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-2", id="radio-popup-12")
+                                        label.opinion__label(for="radio-popup-12")
+                                            |2
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-2", id="radio-popup-13")
+                                        label.opinion__label(for="radio-popup-13")
+                                            |3
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-2", id="radio-popup-14")
+                                        label.opinion__label(for="radio-popup-14")
+                                            |4
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-2", id="radio-popup-15")
+                                        label.opinion__label(for="radio-popup-15")
+                                            |5
+                            .opinion__row
+                                span.opinion__name
+                                    |Вежливость
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-3", id="radio-popup-21")
+                                        label.opinion__label(for="radio-popup-21")
+                                            |1
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-3", id="radio-popup-22")
+                                        label.opinion__label(for="radio-popup-22")
+                                            |2
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-3", id="radio-popup-23")
+                                        label.opinion__label(for="radio-popup-23")
+                                            |3
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-3", id="radio-popup-24")
+                                        label.opinion__label(for="radio-popup-24")
+                                            |4
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-3", id="radio-popup-25")
+                                        label.opinion__label(for="radio-popup-25")
+                                            |5
+                    .form__row
+                        .form__group.opinion
+                            .opinion__title
+                                |Доктор
+                            .opinion__row
+                                span.opinion__name
+                                    |Внешний вид
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-4", id="radio-popup-31")
+                                        label.opinion__label(for="radio-popup-31")
+                                            |1
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-4", id="radio-popup-32")
+                                        label.opinion__label(for="radio-popup-32")
+                                            |2
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-4", id="radio-popup-33")
+                                        label.opinion__label(for="radio-popup-33")
+                                            |3
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-4", id="radio-popup-34")
+                                        label.opinion__label(for="radio-popup-34")
+                                            |4
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-4", id="radio-popup-35")
+                                        label.opinion__label(for="radio-popup-35")
+                                            |5
+                            .opinion__row
+                                span.opinion__name
+                                    |Вежливость
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-5", id="radio-popup-41")
+                                        label.opinion__label(for="radio-popup-41")
+                                            |1
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-5", id="radio-popup-42")
+                                        label.opinion__label(for="radio-popup-42")
+                                            |2
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-5", id="radio-popup-43")
+                                        label.opinion__label(for="radio-popup-43")
+                                            |3
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-5", id="radio-popup-44")
+                                        label.opinion__label(for="radio-popup-44")
+                                            |4
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-5", id="radio-popup-45")
+                                        label.opinion__label(for="radio-popup-45")
+                                            |5
+                            .opinion__row
+                                span.opinion__name
+                                    |Ответил ли на все вопросы
+                                .opinion__inputs
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-6", id="radio-popup-51")
+                                        label.opinion__label.opinion__label--not-number(for="radio-popup-51")
+                                            |Да
+                                    .opinion__inputs-group
+                                        input.opinion__input(type="radio", name="opinion-6", id="radio-popup-52")
+                                        label.opinion__label.opinion__label--not-number(for="radio-popup-52")
+                                            |Нет
+                                        
+                                    
+                    .form__row
+                        .form__group.form__group--checkbox
+                            input.form__checkbox-input(type="checkbox", id="checkbox-2")
+                            label.form__checkbox-label(for="checkbox-2")
+                                span.form__checkbox-description
+                                    |Согласен на обработку 
+                                    a(href="#") персональных данных
+                    .form__row
+                        .form__group
+                            button.common__button.common__button--medium.form__button
+                                |Отправить отзыв
+
+            //- ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ
+            section.appointment-popup.popup.hidden-block__popup(data-popup="question-doctor-popup")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                p.popup__title
+                    |Задать вопрос главврачу
+                p.popup__subtitle
+                    | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                form.popup__form.form(action="")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | ФИО <span class="common-req-sign">*</span>
+                            input.form__input(type="text", data-req="req")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Телефон <span class="common-req-sign">*</span>
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone")
+                    .form__row
+                        .form__group
+                            label.form__label(for="")
+                                | Текст вопроса <span class="common-req-sign">*</span>
+                            textarea.form__textarea(type="text-area", data-req="req", name="text", autocomplete="off")
+                    .form__row
+                        .form__group.form__group--checkbox
+                            input.form__checkbox-input(type="checkbox", id="checkbox-3")
+                            label.form__checkbox-label(for="checkbox-3")
+                                span.form__checkbox-description
+                                    |Согласен на обработку 
+                                    a(href="#") персональных данных
+                    .form__row
+                        .form__group
+                            button.common__button.common__button--medium.form__button
+                                |Задать вопрос 

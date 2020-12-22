@@ -95,19 +95,38 @@ body.js-popup-is-open
             visibility visible
             transition opacity 1s 1s ease, visibility 0s 1s linear  
 
+        &__wrapper
+            opacity 1
+            visibility visible
+            transition opacity 1s 1s ease, visibility 0s 1s linear
+
 .hidden-block__popup.js-popup-is-active
     display block
 
 /* <-------------------> */
+.hidden-block__wrapper
+    position fixed
+    top 0
+    left 0
+    display flex
+    width 100%
+    height 100%
+    overflow hidden auto
+    opacity: 0;
+    visibility: hidden;
 
 .hidden-block__popup 
     position relative
     max-width 628px
     width 100%
-    padding 70px 50px
+    margin auto
+    padding 61px 50px
     box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
     border-radius 10px
     background-color #ffffff
+
+    @media phone
+        padding 61px 32px
 
 .popup 
     &__close-button
@@ -120,14 +139,14 @@ body.js-popup-is-open
         &:after
             top 10px
     &__title 
-        margin 0 0 36px
+        margin 0 0 30px
         color #030404
         font-size 48px
         font-weight 400
         line-height 52px
 
     &__subtitle
-        margin 0 0 50px
+        margin 0 0 35px
         letter-spacing -0.36px
         span 
             color #a4023e

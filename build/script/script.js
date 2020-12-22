@@ -219,6 +219,16 @@
         };  
     };
 
+
+    // Маска для телефона imask.js
+    let phoneInputs = document.querySelectorAll(".js-imask-phone");
+    let phoneMaskOptions = {
+        mask: "+{7}(000)000-00-00"
+    };
+    for(let i = 0; i < phoneInputs.length; i++){
+        let phoneMask = IMask(phoneInputs[i], phoneMaskOptions);
+    };
+
 })();
 
 
@@ -247,10 +257,12 @@
 
     };
 
-    const closePopupButton = document.querySelector(".js-close-popup-button");
+    const closePopupButton = document.querySelectorAll(".js-close-popup-button");
 
     if(closePopupButton){
-        closePopupButton.addEventListener("click", closePopup);
+        for (let i = 0; i < closePopupButton.length; i++) {
+            closePopupButton[i].addEventListener("click", closePopup);
+        }
     };
 
     function closePopup(){
@@ -433,4 +445,87 @@ if(document.getElementById("map-2")){
       }
     });
     
+})();
+
+// Кастомизация селекта
+(function(){
+
+  let choicesDependent = document.getElementById('popup-clinic');
+  if(choicesDependent){
+      sShort = new Choices(choicesDependent, {
+        silent: false,
+        searchEnabled: false,
+        resetScrollPosition: true,
+        placeholder: false,
+        classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            item: 'choices__item',
+          },
+      });
+    };
+
+  choicesDependent = document.getElementById('popup-services');
+  if(choicesDependent){
+      sShort = new Choices(choicesDependent, {
+        silent: false,
+        searchEnabled: false,
+        resetScrollPosition: true,
+        placeholder: false,
+        classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            item: 'choices__item',
+          },
+      });
+    };
+    
+})();
+
+// Ховер в виде пузыря
+(function(){
+
+    let bubbleCards = document.querySelectorAll(".js-bubble-hover");
+    if(bubbleCards){
+        bubbleCards.forEach(item => {
+            item.addEventListener("mouseenter", createBubble);
+            item.addEventListener("mouseleave", function(){
+                generateBubbles = true;
+            });
+        });
+    }
+
+    let generateBubbles = true;
+
+    function createBubble(event){
+
+        if(!generateBubbles){
+            return;
+        }
+
+        generateBubbles = false;
+
+        let bubbleSize = this.offsetWidth;
+        if(this.offsetWidth > this.offsetHeight){
+            bubbleSize = this.offsetHeight;
+        }
+
+        let bubbleContainer = document.createElement("div");
+        bubbleContainer.className = "bubble-container";
+        bubbleContainer.style.width = bubbleSize + "px";
+        bubbleContainer.style.height = bubbleSize + "px";
+        bubbleContainer.style.left = event.clientX - this.getBoundingClientRect().left - bubbleSize / 2 + "px";
+        bubbleContainer.style.top = event.clientY - this.getBoundingClientRect().top - bubbleSize / 2 + "px";
+
+        let bubble = document.createElement("div");
+        bubble.className = "bubble";
+
+        bubbleContainer.append(bubble);
+        this.prepend(bubbleContainer);
+        setTimeout(function(){
+            bubbleContainer.remove();
+        }, 500);
+
+    }
+
 })();

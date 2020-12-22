@@ -21,7 +21,13 @@
         list-style none
 
     .tabs__item 
-        margin-bottom 39px
+        margin 0 15px 39px 15px
+        @media tablet-landscape-medium 
+            margin 0 12.5px 25px 12.5px
+        
+        @media tablet-portrait-small
+            margin 12px 25px 11px 0
+        
 
 .branches__item.js-content-is-hidden
     display none

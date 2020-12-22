@@ -22,10 +22,12 @@
 
     };
 
-    const closePopupButton = document.querySelector(".js-close-popup-button");
+    const closePopupButton = document.querySelectorAll(".js-close-popup-button");
 
     if(closePopupButton){
-        closePopupButton.addEventListener("click", closePopup);
+        for (let i = 0; i < closePopupButton.length; i++) {
+            closePopupButton[i].addEventListener("click", closePopup);
+        }
     };
 
     function closePopup(){

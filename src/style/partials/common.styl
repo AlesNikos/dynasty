@@ -63,7 +63,7 @@ svg circle
             transition background-color .3s 0s ease 
 
             &:hover
-                background-color bright-pink
+                // background-color bright-pink
                 border none
 
         &--large
@@ -149,5 +149,38 @@ svg circle
             & p:not([class])
                 color white
 
-.common__button:not(.common__button--no-backing):hover
-    background-color bright-pink
+// .common__button:not(.common__button--no-backing):hover
+//     background-color bright-pink
+
+
+@keyframes bubble
+    0%
+        width 0
+        height 0
+        opacity 1
+    100%
+        width 400%
+        height 400%
+        opacity 0
+
+.bubble
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    border-radius 50%
+    animation bubble
+    animation-timing-function linear
+    &-container 
+        position absolute
+    &-hover 
+        position relative
+        overflow hidden
+        &__button
+            & .bubble-container
+                opacity .6
+
+            & .bubble
+                background-color white
+                animation-duration .4s
+

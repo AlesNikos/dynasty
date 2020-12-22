@@ -154,4 +154,14 @@
         };  
     };
 
+
+    // Маска для телефона imask.js
+    let phoneInputs = document.querySelectorAll(".js-imask-phone");
+    let phoneMaskOptions = {
+        mask: "+{7}(000)000-00-00"
+    };
+    for(let i = 0; i < phoneInputs.length; i++){
+        let phoneMask = IMask(phoneInputs[i], phoneMaskOptions);
+    };
+
 })();

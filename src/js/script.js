@@ -24,3 +24,9 @@
 
 // Header
 //= partials/header.js
+
+// Кастомизация селекта
+//= partials/custom-select.js
+
+// Ховер в виде пузыря
+//= partials/bubble-hover.js
