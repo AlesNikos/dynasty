@@ -183,6 +183,18 @@ svg circle {
 .common__wysiwyg--white p:not([class]) {
   color: #fff;
 }
+.common__wysiwyg h2 {
+  color: #030404;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+}
+@media (max-width: 700px) {
+  .common__wysiwyg h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
 .bubble {
   position: absolute;
   top: 50%;
@@ -283,6 +295,9 @@ body.js-burger-menu-is-open {
   .main {
     padding-top: 106px;
   }
+}
+.main.inner-page {
+  padding-bottom: 74px;
 }
 .container {
   max-width: 1518px;
@@ -2719,6 +2734,52 @@ body.js-burger-menu-is-open .burger::after {
   .about__item + .about__item .about-item__heading {
     margin-top: 70px;
   }
+}
+.contacts.branches {
+  padding: 0;
+}
+.contacts__text {
+  margin: 84px 0 0 191px;
+}
+@media (max-width: 1024px) {
+  .contacts__text {
+    margin-left: 0;
+  }
+}
+.contacts__info-title {
+  margin: 0 0 31px 0;
+  color: #030404;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px;
+}
+.contacts__item {
+  margin-bottom: 18px;
+}
+.contacts__item-name {
+  margin-right: 11px;
+  color: #030404;
+  letter-spacing: -0.36px;
+}
+.contacts__item-value {
+  color: #030404;
+  letter-spacing: -0.36px;
+}
+.contacts__item-value--link {
+  color: #a4023e;
+  border-bottom: 1px solid #a4023e;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.contacts__item-value--link:hover {
+  border-bottom-color: transparent;
+}
+.contacts__requisites {
+  margin-top: 84px;
+}
+.contacts__requisites-title {
+  margin: 0 0 31px 0;
 }
 .foot {
   width: calc(100% - 78px);

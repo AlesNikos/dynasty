@@ -1,0 +1,148 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main.inner-page
+
+          //- START inner-intro
+          section.inner-intro
+            .container
+              .breadcrumps.inner-intro__breadcrumps
+                ul.breadcrumps__list
+                  li.breadcrumps__item
+                    a.breadcrumps__link(href="#")
+                      span
+                        |Главная
+                  li.breadcrumps__item
+                    span
+                      |Контакты
+              h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+                |Контакты
+          //- END inner-intro
+
+
+
+          //- START contacts
+          section.contacts.branches
+            div.tabs.branches__tabs.js-tabs(data-tabs="branches")
+                ul.tabs__list
+                    li.tabs__item.tabs__item--active
+                        button.tabs__button(data-tab="branch-01")
+                            |ул. Мамина-Сибиряка, 128
+                    li.tabs__item
+                        button.tabs__button(data-tab="branch-02")
+                            |ул. Академика Шварца, 14
+            ul.branches__list(data-tabs-content="branches")
+                li.branches__item(data-tab-content="branch-01")
+                    div.branch
+                        div.branch__top
+                            div.branch__image-wrapper
+                                img.branch__image(src="./images/branches/branch-01.jpg", alt="")
+                            div.branch__map-wrapper
+                                div#map-1.branch__map
+                        div.branch__bottom
+                            div.branch__col
+                                div.common__wysiwyg.branch__work-hours
+                                    p
+                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                span.branch__opening-sign
+                                    |Сейчас открыто
+                            div.branch__col
+                                div.common__wysiwyg.branch__description
+                                    p
+                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                    p
+                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+                li.branches__item(data-tab-content="branch-02")
+                    div.branch
+                        div.branch__top
+                            div.branch__image-wrapper
+                                img.branch__image(src="./images/branches/branch-01.jpg", alt="")
+                            div.branch__map-wrapper
+                                div#map-2.branch__map
+                        div.branch__bottom
+                            div.branch__col
+                                div.common__wysiwyg.branch__work-hours
+                                    p
+                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                span.branch__opening-sign
+                                    |Сейчас открыто
+                            div.branch__col
+                                div.common__wysiwyg.branch__description
+                                    p
+                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                    p
+                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+
+            .contacts__text.common__wysiwyg
+              .contacts__info
+                h2.contacts__info-title
+                  |Контактная информация
+                .contacts__item
+                  span.contacts__item-name
+                    |Юридический и фактический адрес:
+                  span.contacts__item-value
+                    |ул. Академика Шварца, 14, г. Екатеринбург, 620073
+                .contacts__item
+                  span.contacts__item-name
+                    |Электронная почта:
+                  a.contacts__item-value.contacts__item-value--link(href="mailto:")
+                    |2871111@dinastiy.ru
+                .contacts__item
+                  span.contacts__item-name
+                    |Телефон:
+                  span.contacts__item-value
+                    |+7 (343) 287-11-11
+
+              .contacts__requisites
+                h2.contacts__requisites-title
+                  |Реквизиты
+                .contacts__item
+                  span.contacts__item-name
+                    |ООО «ГКБ №41 – Семейная медицина»
+                .contacts__item
+                  span.contacts__item-name
+                    |ИНН:
+                  span.contacts__item-value
+                    |6674194106
+                .contacts__item
+                  span.contacts__item-name
+                    |ОГРН:
+                  span.contacts__item-value
+                    |1069674077835
+                .contacts__item
+                  span.contacts__item-name
+                    |р/счет:
+                  span.contacts__item-value
+                    |40702810162160007611
+                .contacts__item
+                  span.contacts__item-name
+                    |в ПАО «УБРиР» БИК:
+                  span.contacts__item-value
+                    |046577795
+                .contacts__item
+                  span.contacts__item-name
+                    |к/счет:
+                  span.contacts__item-value
+                    |030101810900000000795
+          //- END contacts
+
+
+
+
+        //= partials/footer.pug
+        //= partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="https://unpkg.com/imask")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
