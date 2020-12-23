@@ -13,7 +13,7 @@ if(document.getElementById("map-1")){
             balloonContent:""
         }, {
             iconLayout: "default#image",
-            iconImageHref: "../images/pin.png",
+            iconImageHref: "./images/pin.png",
             iconImageSize: [32, 37],
             iconImageOffset: [-16, -37]
         });
@@ -36,7 +36,7 @@ if(document.getElementById("map-2")){
             balloonContent:""
         }, {
             iconLayout: "default#image",
-            iconImageHref: "../images/pin.png",
+            iconImageHref: "./images/pin.png",
             iconImageSize: [32, 37],
             iconImageOffset: [-16, -37]
         });
