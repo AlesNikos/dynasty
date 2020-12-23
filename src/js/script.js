@@ -33,3 +33,6 @@
 
 // Замена data-al на href для Seo
 //= partials/seo.js
+
+// Фильтрация специалистов
+//= partials/doctors-filter.js

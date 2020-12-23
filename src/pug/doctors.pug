@@ -1,0 +1,116 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  span
+                    |Специалисты
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Специалисты
+        //- END inner-intro
+
+        section.doctors
+          .container
+
+            .doctors__branch-filter.js-select-filter(data-for="doctors")
+              select.doctors__select.js-choice(choices-black, autocomplete="off", id="doctors-select")
+                option(value="all-branches")
+                  |Все специалисты
+                option(value="100")
+                  |Главный врач
+                option(value="200")
+                  |Старший администратор
+                option(value="300")
+                  |Педиатр
+                option(value="400")
+                  |Гастроэнтеролог
+                option(value="500")
+                  |Акушер-гинеколог
+                option(value="600")
+                  |УЗИ
+
+            .doctors__list.js-filtered-content(data-content="doctors")
+              .doctors__item-wrap(data-filter-group="all-branches 100")
+                .doctors__item.doctors-item
+                  a.doctors-item__img-wrap(data-al="")
+                    img.doctors-item__img(src="./images/doctors/doctors-img-1.png", alt="")
+                  .doctors-item__info
+                    p.doctors-item__name
+                      |<span>Чаленко</span> Татьяна Владимировна
+                    .doctors-item__ranks
+                      span.doctors-item__rank
+                        |Главный врач
+              .doctors__item-wrap(data-filter-group="all-branches 200")
+                .doctors__item.doctors-item
+                  a.doctors-item__img-wrap(data-al="")
+                    img.doctors-item__img(src="./images/doctors/doctors-img-2.png", alt="")
+                  .doctors-item__info
+                    p.doctors-item__name
+                      |<span>Масаева</span> Анна Геннадьевна
+                    .doctors-item__ranks
+                      span.doctors-item__rank
+                        |Старший администратор
+              .doctors__item-wrap(data-filter-group="all-branches 300 400")
+                .doctors__item.doctors-item
+                  a.doctors-item__img-wrap(data-al="")
+                    img.doctors-item__img(src="./images/doctors/doctors-img-3.png", alt="")
+                  .doctors-item__info
+                    p.doctors-item__name
+                      |<span>Дмитриева</span> Надежда Александровна
+                    .doctors-item__ranks
+                      span.doctors-item__rank
+                        |Педиатр
+                      span.doctors-item__rank
+                        |Гастроэнтеролог
+              .doctors__item-wrap(data-filter-group="all-branches 500")
+                .doctors__item.doctors-item
+                  a.doctors-item__img-wrap(data-al="")
+                    img.doctors-item__img(src="./images/doctors/doctors-img-4.png", alt="")
+                  .doctors-item__info
+                    p.doctors-item__name
+                      |<span>Кузьмина</span> Светлана Евгеньевна
+                    .doctors-item__ranks
+                      span.doctors-item__rank
+                        |Акушер-гинеколог
+              .doctors__item-wrap(data-filter-group="all-branches 500 600")
+                .doctors__item.doctors-item
+                  a.doctors-item__img-wrap(data-al="")
+                    img.doctors-item__img(src="./images/doctors/doctors-img-5.png", alt="")
+                  .doctors-item__info
+                    p.doctors-item__name
+                      |<span>Пыхтеева</span> Татьяна Геннадьевна
+                    .doctors-item__ranks
+                      span.doctors-item__rank
+                        |Акушер-гинеколог
+                      span.doctors-item__rank
+                        |УЗИ
+
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js" type="text/javascript")
+      script(src="script/script.js")
