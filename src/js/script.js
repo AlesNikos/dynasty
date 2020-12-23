@@ -30,3 +30,6 @@
 
 // Ховер в виде пузыря
 //= partials/bubble-hover.js
+
+// Замена data-al на href для Seo
+//= partials/seo.js

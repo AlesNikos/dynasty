@@ -529,3 +529,16 @@ if(document.getElementById("map-2")){
     }
 
 })();
+
+// Замена data-al на href для Seo
+(function(){
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var links = document.querySelectorAll(".hidden-dlink");
+      links.forEach(function(i){
+          let href = i.getAttribute("data-al");
+          i.setAttribute("href", href);
+      });
+  });
+
+})();
