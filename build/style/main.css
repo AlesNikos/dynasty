@@ -2223,6 +2223,25 @@ body.js-burger-menu-is-open .burger::after {
     margin: 0;
   }
 }
+.news-preview__img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 160px;
+  height: 100px;
+  margin: 5px 0 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.news-preview__img {
+  max-width: 100%;
+}
 .news-preview__date {
   display: block;
   margin: 0 0 8px 0;
@@ -2251,6 +2270,69 @@ body.js-burger-menu-is-open .burger::after {
   font-weight: 400;
   color: #030404;
   letter-spacing: -0.36px;
+}
+.i-news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0 -18px;
+}
+@media (max-width: 1200px) {
+  .i-news__list {
+    margin: 0 -16px;
+  }
+}
+@media (max-width: 700px) {
+  .i-news__list {
+    margin: 0 -10px;
+  }
+}
+.i-news__item-wrap {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  width: 100%;
+  padding: 0 18px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1200px) {
+  .i-news__item-wrap {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .i-news__item-wrap {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .i-news__item-wrap {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+.i-news .news-preview {
+  height: 100%;
+  padding: 43px 48px 41px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+@media (max-width: 520px) {
+  .i-news .news-preview {
+    padding: 32px;
+  }
 }
 .reviews {
   position: relative;
@@ -3190,6 +3272,12 @@ body.js-burger-menu-is-open .burger::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   max-width: 508px;
   height: 100%;
   border-radius: 10px;

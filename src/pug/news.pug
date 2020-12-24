@@ -1,0 +1,123 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |О нас
+                li.breadcrumps__item
+                  span
+                    |Новости
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Новости
+        //- END inner-intro
+
+
+
+        section.i-news
+          .container
+            .i-news__list
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  // a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="", alt="")
+                  span.news-preview__date
+                      |03.07.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |Физиотерапия на дому
+                  p.news-preview__description
+                      |Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="./images/news/news-img-1.png", alt="")
+                  span.news-preview__date
+                      |18.06.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |Жидкий азот – криомассаж для красоты
+                  p.news-preview__description
+                      |Для достижения полного понимания и комфорта в сотрудничестве с вами просим вас ознакомиться с разделом сайта «Для пациентов».
+
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  // a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="./images/news/news-img-1.png", alt="")
+                  span.news-preview__date
+                      |01.06.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |У нас безопасно
+                  p.news-preview__description
+                      |Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  // a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="./images/news/news-img-1.png", alt="")
+                  span.news-preview__date
+                      |03.07.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |8 августа - международный день офтальмологии
+                  p.news-preview__description
+                      |С очками я столкнулся во 2 классе. Мои оценки стали значительно хуже и родители недоумевали. Выяснилось, что решение примеров было верным, просто я неверно списывал их с доски. 
+
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="./images/news/news-img-1.png", alt="")
+                  span.news-preview__date
+                      |03.07.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |8 августа - международный день офтальмологии
+                  p.news-preview__description
+                      |С очками я столкнулся во 2 классе. Мои оценки стали значительно хуже и родители недоумевали. Выяснилось, что решение примеров было верным, просто я неверно списывал их с доски. 
+
+              .i-news__item-wrap
+                article.i-news__item.news-preview
+                  a.news-preview__img-wrap.hidden-dlink(data-al="")
+                    img.news-preview__img(src="./images/news/news-img-1.png", alt="")
+                  span.news-preview__date
+                      |03.07.2020
+                  h4.common__h4-heading.news-preview__heading
+                      a.news-preview__link.hidden-dlink(data-al="")
+                        |8 августа - международный день офтальмологии
+                  p.news-preview__description
+                      |С очками я столкнулся во 2 классе. Мои оценки стали значительно хуже и родители недоумевали. Выяснилось, что решение примеров было верным, просто я неверно списывал их с доски. 
+
+
+
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")
