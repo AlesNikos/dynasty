@@ -24,7 +24,9 @@ gulp.task("webserver", function(){
 gulp.task("html:build", function(){
     return gulp.src("src/pug/*.pug")
         .pipe(rigger())
-        .pipe(pug())
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest("build"))
         .pipe(server.stream());
 });

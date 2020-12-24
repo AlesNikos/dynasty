@@ -11,19 +11,19 @@ div.hidden-block
                     |Записаться на прием
                 p.popup__subtitle
                     | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
-                form.popup__form.form(action="")
+                form.popup__form.form
                     .form__row
                         .form__group
                             label.form__label
                                 | Клиника
-                            select.js-choice(type="select", id="popup-clinic")
+                            select.js-choice(id="popup-clinic")
                                 option Клиника на Мамина-Сибиряка, 128
                                 option Клиника на Академика Шварца, 14
                     .form__row
                         .form__group
                             label.form__label
                                 | Услуга
-                            select.js-choice(type="select", id="popup-services")
+                            select.js-choice(id="popup-services")
                                 option Клиника на Мамина-Сибиряка, 128
                                 option Клиника на Академика Шварца, 14
                     .form__row
@@ -56,7 +56,7 @@ div.hidden-block
                     |Оставить отзыв
                 p.popup__subtitle
                     | Оцените параметры по 5-бальной шкале, где 5 – очень хорошо, 1 – очень плохо. Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
-                form.popup__form.form(action="")
+                form.popup__form.form
                     .form__row
                         .form__group
                             label.form__label(for="name-11")
@@ -76,17 +76,17 @@ div.hidden-block
                         .form__group
                             label.form__label
                                 | Текст отзыва <span class="common-req-sign">*</span>
-                            textarea.form__textarea(type="textarea", data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
                     .form__row
                         .form__group
                             label.form__label
                                 | Достоинства
-                            textarea.form__textarea(type="textarea", data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
                     .form__row
                         .form__group
                             label.form__label
                                 | Недостатки
-                            textarea.form__textarea(type="textarea", data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
                     .form__row
                         .form__group.opinion
                             .opinion__title
@@ -249,7 +249,7 @@ div.hidden-block
                     |Задать вопрос главврачу
                 p.popup__subtitle
                     | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
-                form.popup__form.form(action="")
+                form.popup__form.form
                     .form__row
                         .form__group
                             label.form__label(for="name-21")
@@ -264,7 +264,7 @@ div.hidden-block
                         .form__group
                             label.form__label
                                 | Текст вопроса <span class="common-req-sign">*</span>
-                            textarea.form__textarea(type="textarea", data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
                     .form__row
                         .form__group.form__group--checkbox
                             input.form__checkbox-input(type="checkbox", id="checkbox-3")

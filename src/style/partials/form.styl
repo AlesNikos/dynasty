@@ -155,6 +155,9 @@
         background-image: url('../images/icons/icon-arrow-down.svg')
         background-size 100%
         transition transform 0.3s ease
+    &[data-type*='select-one'] 
+        .choices__inner 
+            padding-bottom 8px
 
     &__item 
         &--selectable
@@ -167,6 +170,11 @@
 .choices__list--dropdown::-webkit-scrollbar-thumb
     border-radius 2px
     background-color #a4023e
+
+.is-flipped .choices__list--dropdown
+    box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+    border-radius 10px
+    margin-top 10px
 
 .opinion
     margin-top 50px
