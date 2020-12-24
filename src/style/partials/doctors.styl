@@ -88,4 +88,76 @@
   .choices__list--dropdown 
     max-height 270px
 
-  
+// Детальная специалиста
+.doctor
+  max-width: 1130px
+  width 100%
+  margin 0 auto
+  padding 46px 39px 93px
+  // @media laptop
+  //   max-width: 978px
+  @media tablet-landscape-medium
+    padding 46px 32px 57px
+  @media tablet-portrait-small
+    padding 46px 20px 57px
+  &__top
+    margin-bottom 90px
+    @media phone
+        margin-bottom 50px
+  &-top
+    position relative
+    display flex
+    flex-direction column
+    justify-content center
+    min-height 580px
+    &__img-wrap
+      position absolute
+      top 0
+      right 0
+      display flex
+      max-width 508px
+      height 100%
+      border-radius 10px
+      overflow hidden
+      // @media laptop
+      //   max-width: 434px
+      @media tablet-portrait-large
+        position static
+        margin 0 auto 30px
+    &__img
+      max-width: 100%
+    &__tags 
+      display flex
+      align-items center
+      flex-wrap: wrap
+      max-width 500px
+      margin-bottom 33px
+      @media tablet-landscape-small
+        max-width: 450px
+      @media tablet-portrait-large
+        max-width 100%
+      @media phone
+        margin-bottom 24px
+    &__text
+      max-width 500px
+      @media tablet-landscape-small
+        max-width: 450px
+      @media tablet-portrait-large
+        max-width 100% 
+
+      p
+        margin 0
+      & p:not([class]):not(:last-child)
+        margin 0 0 24px 0
+        letter-spacing -0.36px
+  &__button
+    margin-top 41px
+    padding 12px 29px 11px 29px
+    border-radius 24px
+    background-color deep-pink
+    color #fff
+    font-size 20px
+    font-weight 400
+    line-height 24px
+    border 0
+    cursor pointer

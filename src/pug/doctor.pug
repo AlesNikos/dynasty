@@ -1,0 +1,171 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        section.doctor
+
+          .doctor__top.doctor-top
+
+            //- START inner-intro
+            div.inner-intro.inner-intro__custom
+              .container
+                .breadcrumps.inner-intro__breadcrumps
+                  ul.breadcrumps__list
+                    li.breadcrumps__item
+                      a.breadcrumps__link(href="#")
+                        span
+                          |Главная
+                    li.breadcrumps__item
+                      a.breadcrumps__link(href="#")
+                        span
+                          |Специалисты
+                    li.breadcrumps__item
+                      span
+                        |Ведерникова Алена Игоревна
+                h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+                  |Ведерникова Алена Игоревна
+            //- END inner-intro
+
+            .doctor-top__img-wrap
+              img.doctor-top__img(src="./images/doctors/doctor-img.png", alt="")
+
+            .doctor-top__tags.tags
+              a.tags__tag.hidden-dlink(data-al="")
+                |Акушер-гинеколог
+              a.tags__tag.hidden-dlink(data-al="")
+                |УЗИ
+            .doctor-top__text
+              p
+                |Врач высшей категории. Стаж работы 17 лет.
+              p 
+                span Дни приема: 
+                |пн, вт, чт, пт
+
+          .doctor__information.common__wysiwyg
+            h3
+              |Образование
+            ul
+              li
+                |Диплом УГМА по специальности «Педиатрия» от 2011 года.
+              li
+                |Интернатура по акушерству и гинекологии 2011-2012 годы.
+              li
+                |Профессиональная переподготовка по ультразвуковой диагностике в 2016 году. Сертификат специалиста по ультразвуковой диагностике от 2016 года.
+              li
+                |Курс повышения квалификации по «Актуальным вопросам акушерско - гинекологической помощи в амбулаторно - поликлинической практике» в 2017 году. Сертификат специалиста по акушерству и гинекологии от 2017 года.
+              li
+                |Обучение по технологии «Плазмолифтинг в гинекологии» в 2019 году.
+
+            h3
+              |Сфера профессиональных интересов
+            ul
+              li
+                |Консультации по заболеваниям шейки матки,
+              li
+                |воспалительные заболевания женской половой сферы,
+              li
+                |вопросы контрацепции и планирования беременности,
+              li
+                |диагностика и лечение бесплодия,
+              li
+                |лечение патологии шейки матки,
+              li
+                |кольпоскопия, биопсия,
+              li
+                |диатермокоагуляция, аргонно - плазменная коагуляция, конизация,
+              li
+                |плазмолифтинг в гинекологии (введение аутологичной плазмы в гинекологии),
+              li
+                |УЗИ в гинекологии.
+          
+          button.doctor__button.js-popup-button.js-bubble-hover.bubble-hover.bubble-hover__button
+            span
+              |Задать вопрос врачу
+
+        section.i-reviews
+          h3.i-reviews__title
+            |Отзывы
+          .i-reviews__list
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |УЗИ
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |09.02.2020
+              span.i-review__author
+                |Ирина Анатольевна
+              .common__wysiwyg.i-review__description
+                p
+                  |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                h6 
+                  |Достоинства
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать.
+                h6
+                  |Недостатки
+                p
+                  |Нет.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |02.02.2020
+              span.i-review__author
+                |Екатерина
+              .common__wysiwyg.i-review__description
+                p
+                  |Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                p
+                  |Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                h6 
+                  |Достоинства
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать.
+                h6
+                  |Недостатки
+                p
+                  |Нет.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Прием акушера-гинеколога
+          .i-reviews__link-wrapper
+            a.common__link.common__link--large.i-reviews__link.hidden-dlink(data-al="")
+              |Все отзывы о специалисте
+
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")

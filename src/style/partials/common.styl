@@ -7,6 +7,9 @@ svg circle
     stroke inherit !important
     stroke-width inherit !important
 
+button:focus
+    outline none
+
 .common
     &__h1-heading
         margin 0
@@ -148,6 +151,8 @@ svg circle
             line-height 26px
             font-weight 300
             color black
+            & + h3 
+                margin-top 84px
 
         & p:not([class]) + p:not([class])
             margin 18px 0 0 0
@@ -164,6 +169,42 @@ svg circle
             @media tablet-portrait-small
                 font-size 26px
                 line-height 30px
+        h3 
+            color black
+            font-size 36px
+            font-weight 400
+            line-height 40px
+            @media phone 
+                font-size 30px
+                line-height 34px
+
+        h6
+            color: #000
+            font-size 18px
+            font-weight 700
+            line-height 26px
+
+        & ul:not([class])
+            margin 0
+            padding 0
+            list-style none
+            & li:not([class])
+                position relative
+                padding-left 35px
+                letter-spacing -0.36px
+                &:before
+                    content ""
+                    position absolute
+                    top 14px
+                    left 0
+                    display inline-block
+                    width 25px
+                    height 1px
+                    background-color deep-pink
+            & + h3 
+                margin-top 84px
+                @media phone
+                    margin-top 54px
 
 // .common__button:not(.common__button--no-backing):hover
 //     background-color bright-pink
@@ -202,3 +243,24 @@ svg circle
 
 .js-content-is-hidden
     display none
+
+.tags
+    display flex
+    align-items center
+    flex-wrap: wrap
+    &__tag
+        padding 5px 25px
+        margin-bottom 10px
+        border-radius 20px
+        border 1px solid #e2e2e2
+        color gray
+        font-size 18px
+        font-weight 400
+        line-height 26px
+        text-decoration none
+        background-color #fff
+        transition: 0.3s
+        &:not(:last-child)
+            margin-right 10px
+        &:hover 
+            background-color #f7f7f7
