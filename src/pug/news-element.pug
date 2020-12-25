@@ -1,0 +1,85 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |О нас
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Новости
+                li.breadcrumps__item
+                  span
+                    |Физиотерапия на дому
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Физиотерапия на дому
+        //- END inner-intro
+
+        section.news-element
+          .news-element__description.common-wysiwyg
+            p
+              |Транскраниальная микрополяризация (ТКМП) – сравнительно молодая терапия, применяющаяся для лечения пациентов с неврологическими проблемами. Данный метод активно используется в США и Западной Европе. Многочисленные исследования, свидетельствуют о том, что терапия имеет серьезный потенциал в лечении неврологических и психиатрических заболеваний.
+          .news-element__slider
+            .news-slider.swiper-container.js-news-element-slider
+              .swiper-wrapper
+                .swiper-slide
+                  .news-slider__item
+                    .news-slider__img-wrap
+                      img.news-slider__img(src="images/main-slider/main-slide-01.jpg", alt="")
+                    p.news-slider__info
+                      |Небольшое описание к фотографии.
+                .swiper-slide
+                  .news-slider__item
+                    .news-slider__img-wrap
+                      img.news-slider__img(src="images/main-slider/main-slide-01.jpg", alt="")
+                    p.news-slider__info
+                      |Небольшое описание к фотографии. 
+
+              .news-slider__pagination.js-news-slider-pagination
+              .news-slider__arrows
+                    .news-slider__arrow.js-news-slider-arrow-left
+                        svg(width="12" height="21")
+                            use(xlink:href="#arrow-left")
+                    .news-slider__arrow.js-news-slider-arrow-right
+                        svg(width="12" height="21")
+                            use(xlink:href="#arrow-right")
+
+          .news-element__description.common-wysiwyg
+            p
+              |Транскраниальная микрополяризация – это лечебное воздействие постоянным электрическим током при низком напряжении на клетки головного мозга. Воздействие тока на нервные систему по своим характеристикам сопоставимо с физиологическими процессами в клетках головного мозга.
+            p
+              |Говоря простым языком, микрополяризация "помогает дружить нейронам", то есть способствует образованию новых связей в головном мозге, а это значит и развитию нервной системы!
+            p
+              |Процедуру назначают неврологи, педиатры, терапевты, отоларингологи, офтальмологи. Сама процедура длится 30-40 минут, она безболезненна. Во время процедуры можно читать, рисовать, играть и т.п. Эффект от микрополяризации имеет продленное воздействие и в полной мере проявится через 1-2 месяца!
+            span.news-element__date
+              |18.06.2020
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")

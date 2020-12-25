@@ -57,5 +57,32 @@
         });
 
     };
+
+    // Cлайдер на детальной странице новостей
+    if(document.querySelector(".js-news-element-slider")){
+
+        let newsElementSwiper = new Swiper(".js-news-element-slider", {
+            init: true,
+            //centeredSlides: true,
+            speed: 1000,
+            slidesPerView: 1,
+            loop: false,
+            parallax: true,
+            autoHeight: true,
+            direction: "horizontal",
+            watchOverflow: true,
+            spaceBetween: 20,
+            pagination: {
+                el: ".js-news-slider-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".js-news-slider-arrow-right",
+                prevEl: ".js-news-slider-arrow-left",
+            },
+        });
+    
+
+    };
     
 })();
