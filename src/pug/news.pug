@@ -111,6 +111,30 @@ html(lang="ru")
                   p.news-preview__description
                       |С очками я столкнулся во 2 классе. Мои оценки стали значительно хуже и родители недоумевали. Выяснилось, что решение примеров было верным, просто я неверно списывал их с доски. 
 
+        //- Пагинация
+        .pagination.pagination--position
+          a.pagination__item.pagination__item-arrows.pagination__item--arrow-left.pagination__item--disabled(href="")
+            <svg width="12" height="21">
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+          a.pagination__item.pagination__item--active(href="")
+            |1
+          a.pagination__item(href="")
+            |2
+          a.pagination__item(href="")
+            |3
+          a.pagination__item(href="")
+            |4
+          a.pagination__item(href="")
+            |5
+          a.pagination__item(href="")
+            |...
+          a.pagination__item(href="")
+            |99
+          a.pagination__item.pagination__item-arrows.pagination__item--arrow-right.js-reviews-slider-arrow-right(href="")
+            <svg width="12" height="21">
+              <use xlink:href="#arrow-right"></use>
+            </svg>
 
 
 
