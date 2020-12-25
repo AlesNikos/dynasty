@@ -1,0 +1,128 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  span
+                    |Услуги и цены
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Услуги и цены
+        //- END inner-intro
+
+        section.i-services.services--inner
+          .container
+            .tabs.i-services__tabs.js-tabs(data-tabs="services")
+              ul.tabs__list
+                  li.tabs__item.tabs__item--active
+                      button.tabs__button(data-tab="grown")
+                          |Взрослое отделение
+                  li.tabs__item
+                      button.tabs__button(data-tab="child")
+                          |Детское отделение                          
+                  li.tabs__item
+                      button.tabs__button(data-tab="vaccination")
+                          |Центр вакцинации                     
+                  li.tabs__item
+                      button.tabs__button(data-tab="check-up")
+                          |ЧЕК-АП программы
+
+            .i-services__container(data-tabs-content="services")
+              .i-services__list(data-tab-content="grown")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Акушер-гинеколог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-05.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Аллерголог-иммунолог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-08.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Гастроэнтеролог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-19.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Дерматовенеролог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-01.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Диетолог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-06.svg", alt="")
+
+              .i-services__list(data-tab-content="child")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Акушер-гинеколог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-05.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Аллерголог-иммунолог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-08.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Гастроэнтеролог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-19.svg", alt="")
+                .i-services__item-wrap
+                  a.i-services__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                    div.i-services__name-wrap
+                      span.i-services__name
+                        |Дерматовенеролог
+                    .i-services__img-wrap
+                      img.i-services__img(src="./images/services/service-icon-01.svg", alt="")
+
+
+
+
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")
