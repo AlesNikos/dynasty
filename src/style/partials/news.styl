@@ -115,16 +115,24 @@
             flex 0 0 100%
             max-width 100% 
             padding 0 10px
+        @media phone 
+            margin-bottom 20px
+    
     .news-preview
         height 100%
         padding 43px 48px 41px
         border-radius 10px
-        border 1px solid #e2e2e2
+        custom-border(#e2e2e2)
         background-color #fff
         @media phone
             padding 32px
-            
 
+    &__item
+        transition box-shadow 0.3s ease
+        &:hover
+            @media desktop-hover
+                box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+            
 .news-element
     position relative
     max-width: 1130px
