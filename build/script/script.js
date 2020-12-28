@@ -471,6 +471,23 @@ if(document.getElementById("map-2")){
         header.classList.remove('header__fixed');
       }
     });
+
+
+    // let servicesMenu = document.querySelector('.js-service-menu');
+    // // let blockPosition = servicesMenu.getBoundingClientRect().top;
+    // // console.log(blockPosition + pageYOffset);
+
+    // window.addEventListener('scroll', function() {
+    //   let position = window.pageYOffset;
+    //   console.log(position);
+    //   let blockPosition = servicesMenu.getBoundingClientRect();
+    //   console.log(blockPosition.top + pageYOffset);
+    //   if (position > (blockPosition.top + pageYOffset - 96)) {
+    //     servicesMenu.classList.add('services-element__menu--fixed');
+    //   } else {
+    //     servicesMenu.classList.remove('services-element__menu--fixed');
+    //   }
+    // });
     
 })();
 
@@ -506,9 +523,40 @@ if(document.getElementById("map-2")){
           },
       });
     };
+
   choicesDependent1 = document.getElementById('doctors-select');
   if(choicesDependent1){
       sShort = new Choices(choicesDependent1, {
+        silent: false,
+        searchEnabled: false,
+        resetScrollPosition: true,
+        placeholder: false,
+        classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            item: 'choices__item',
+          },
+      });
+    };
+
+  let choicesDependent2 = document.getElementById('clinic');
+  if(choicesDependent){
+      sShort = new Choices(choicesDependent2, {
+        silent: false,
+        searchEnabled: false,
+        resetScrollPosition: true,
+        placeholder: false,
+        classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            item: 'choices__item',
+          },
+      });
+    };
+
+  let choicesDependent3 = document.getElementById('services');
+  if(choicesDependent){
+      sShort = new Choices(choicesDependent3, {
         silent: false,
         searchEnabled: false,
         resetScrollPosition: true,

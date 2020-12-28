@@ -169,3 +169,135 @@
         max-height 100%
         @media phone
             max-width 100%
+
+.service
+    &__info 
+        margin-bottom 85px
+    &__info-hero
+        height 560px
+        padding 40px 49px
+        border-radius 10px
+        // background-color #2a2a2a
+        background-position center
+        background-repeat no-repeat
+        background-size cover
+        overflow hidden
+        
+    &__info-text
+        max-width 500px
+        color #000
+        font-size 22px
+        font-weight 400
+        line-height 32px
+        p 
+            margin 0 0 24px 0
+            line-height 32px
+            letter-spacing -0.44px
+
+    &__menu
+        position static
+        display flex
+        align-items center
+        justify-content center
+        margin-bottom 92px
+        // &--fixed
+        //     position fixed
+        //     top 133px
+        //     left 0
+        //     right 0
+        //     margin 0
+        .menu__list
+            padding 25px 47px
+            background-color #fff
+            box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+            border-radius 10px
+
+        .menu__item--active
+            .menu__link 
+                border-bottom-color transparent
+        .menu__link
+            border-bottom 1px dotted #000
+            transition border-bottom-color 0.3s ease
+            &:hover 
+                border-bottom-color transparent
+    &__description
+        max-width 1057px
+        margin 0 auto
+        h2
+            margin 0 0 31px 0
+        p
+            letter-spacing -0.36px
+    &__doctors
+        margin-bottom 89px
+    &__timeline
+        margin-bottom 93px
+    &__prices
+        margin-bottom 98px
+    &__form 
+        margin-bottom 101px
+
+.service__info-hero + .service__menu
+    margin-top -37px
+// .services-element__hero + .services-element__menu--fixed
+//     top 133px
+
+.timeline
+    width calc(100% - 78px)
+    max-width 1440px
+    margin-left auto
+    margin-right auto
+    padding 62px 0
+    border-radius 10px
+    background-color lightest-gray
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
+
+    &__inner
+        max-width 1057px
+        width calc(100% - 78px)
+        margin 0 auto
+    &__heading
+        margin-bottom 31px
+    &__schedule
+        p
+            margin 0
+            letter-spacing -0.36px
+        & p:not(:last-child) 
+            margin 0 0 24px 0
+
+.prices
+    max-width 1057px
+    width calc(100% - 78px)
+    margin-left auto
+    margin-right auto
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
+    &__items
+        &:not(:last-of-type)
+            margin-bottom 44px
+    &__items-heading
+        margin 0 0 27px 0
+        color black
+        font-size 24px
+        font-weight 400
+        line-height 26px
+    &__item
+        display flex
+        justify-content space-between
+        padding 18px 26px
+        border-radius 10px
+        background-color #fff
+        &:nth-child(2n) 
+            background-color #f5f5f5
+    &__item-name
+        width 80%
+        margin 0
+        letter-spacing -0.36px
+        color #000
+    &__item-price
+        letter-spacing -0.36px
+        color #000

@@ -1,0 +1,314 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Услуги и цены
+                li.breadcrumps__item
+                  span
+                    |Терапевт
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Терапевт
+        //- END inner-intro
+
+        section.service
+
+          section.service__info
+            .container
+              .service__info-hero(style="background-image: url('images/services/services-element-img.png')")
+                .service__info-text
+                  p
+                    |Терапевт – это врач широкого профиля, специализирующийся на ранней диагностике множества заболеваний. Терапевт ведет первичный прием и лечение пациентов, а при необходимости дает направление к более узкоспециализированному специалисту.
+                  p
+                    |Если вы не знаете, к какому врачу обратиться, то начать нужно именно с терапевта.
+                
+              nav.service__menu.menu.js-service-menu
+                ul.menu__list.services-element__menu-list
+                  li.menu__item.menu__item--active
+                    a.menu__link(href="")
+                      |Об услуге
+                  li.menu__item
+                    a.menu__link(href="")
+                      |Цены
+                  li.menu__item
+                    a.menu__link(href="")
+                      |Записаться на прием
+                  li.menu__item
+                    a.menu__link(href="")
+                      |Вопрос-ответ
+                  li.menu__item
+                    a.menu__link(href="")
+                      |Отзывы
+                  li.menu__item
+                    a.menu__link(href="")
+                      |Специалисты
+
+              //- Об услуге
+              .service__description.common__wysiwyg
+                h2
+                  |Об услуге
+                p
+                  |Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие. 
+                p
+                  |Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.
+
+          // START Специалисты направления
+          section.doctors.service__doctors
+            .container
+              h2.common__h2-heading.doctors__heading
+                |Специалисты направления
+              .doctors__list
+                .doctors__item-wrap
+                  .doctors__item.doctors-item
+                    a.doctors-item__img-wrap.hidden-dlink(data-al="")
+                      img.doctors-item__img.lazyload(data-src="./images/doctors/doctors-img-1.png", alt="")
+                    .doctors-item__info
+                      p.doctors-item__name
+                        |<span>Чаленко</span> Татьяна Владимировна
+                      .doctors-item__ranks
+                        span.doctors-item__rank
+                          |Главный врач
+                .doctors__item-wrap
+                  .doctors__item.doctors-item
+                    a.doctors-item__img-wrap.hidden-dlink(data-al="")
+                      img.doctors-item__img.lazyload(data-src="./images/doctors/doctors-img-2.png", alt="")
+                    .doctors-item__info
+                      p.doctors-item__name
+                        |<span>Масаева</span> Анна Геннадьевна
+                      .doctors-item__ranks
+                        span.doctors-item__rank
+                          |Старший администратор
+                .doctors__item-wrap
+                  .doctors__item.doctors-item
+                    a.doctors-item__img-wrap.hidden-dlink(data-al="")
+                      img.doctors-item__img.lazyload(data-src="./images/doctors/doctors-img-3.png", alt="")
+                    .doctors-item__info
+                      p.doctors-item__name
+                        |<span>Дмитриева</span> Надежда Александровна
+                      .doctors-item__ranks
+                        span.doctors-item__rank
+                          |Педиатр
+                        span.doctors-item__rank
+                          |Гастроэнтеролог
+                .doctors__item-wrap
+                  .doctors__item.doctors-item
+                    a.doctors-item__img-wrap.hidden-dlink(data-al="")
+                      img.doctors-item__img.lazyload(data-src="./images/doctors/doctors-img-4.png", alt="")
+                    .doctors-item__info
+                      p.doctors-item__name
+                        |<span>Кузьмина</span> Светлана Евгеньевна
+                      .doctors-item__ranks
+                        span.doctors-item__rank
+                          |Акушер-гинеколог
+              div.doctors__link-wrapper
+                    a.common__link.common__link--large.company__link.hidden-dlink(data-al="")
+                        |Все специалисты направления
+          // END Специалисты направления
+
+          // START Расписание приема
+          section.timeline.service__timeline
+            .timeline__inner
+              h2.common__h2-heading.timeline__heading
+                  |Расписание приема
+              .timeline__schedule
+                p
+                  |Специалист ведет прием с понедельника по пятницу с 08:00 до 13:00.
+          // END Расписание приема
+
+          // START Стоимость услуг
+          section.prices.service__prices
+            h2.common__h2-heading.timeline__heading
+                  |Стоимость услуг
+            .prices__items
+              h5.prices__items-heading
+                |Консультации
+              .prices__item
+                p.prices__item-name
+                  |Консультация врача-терапевта, инфекциониста Малкиной О.И.
+                spam.prices__item-price
+                  |1400 руб
+              .prices__item
+                p.prices__item-name
+                  |Консультация врача-терапевта, гастроэнтеролога Заплатиной Н.И.
+                spam.prices__item-price
+                  |1400 руб
+              .prices__item
+                p.prices__item-name
+                  |Консультация врача-терапевта, кардиолога ВагановойА.В
+                spam.prices__item-price
+                  |1500 руб
+
+            .prices__items
+              h5.prices__items-heading
+                |Вызов на дом
+              .prices__item
+                p.prices__item-name
+                  |Выезд в пределах Екатеринбурга
+                spam.prices__item-price
+                  |3000 руб
+              .prices__item
+                p.prices__item-name
+                  |Выезд за черту города, в пределах 40 км.
+                spam.prices__item-price
+                  |4000 руб
+          // END Стоимость услуг
+            
+          // START Записаться на прием
+          section.appointment-form.main-form-container.service__form
+            h4.main-form-container__title
+                    |Записаться на прием
+            p.main-form-container__subtitle
+                | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+            form.form.form--main
+                .form__row
+                    .form__group
+                        label.form__label
+                            | Клиника
+                        select.js-choice(id="clinic")
+                            option Клиника на Мамина-Сибиряка, 128
+                            option Клиника на Академика Шварца, 14
+                    .form__group
+                        label.form__label
+                            | Услуга
+                        select.js-choice(id="services")
+                            option Клиника на Мамина-Сибиряка, 128
+                            option Клиника на Академика Шварца, 14
+                //- .form__row
+                .form__row
+                    .form__group
+                        label.form__label(for="name-d-1")
+                            | ФИО <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req", id="name-d-1")
+                    .form__group
+                        label.form__label(for="phone-d-1")
+                            | Телефон <span class="common-req-sign">*</span>
+                        input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-d-1")
+                //- .form__row
+                .form__row
+                    .form__group.form__group--checkbox
+                        input.form__checkbox-input(type="checkbox", id="checkbox-d-1")
+                        label.form__checkbox-label(for="checkbox-d-1")
+                            span.form__checkbox-description
+                                |Согласен на обработку 
+                                a(href="#") персональных данных
+                .form__row
+                    .form__group.form__group--button
+                        button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                            span
+                                |Записаться
+          // END Записаться на прием
+
+          // START Отзывы
+          section.reviews.service__reviews
+            h1.common__h1-heading.reviews__heading
+                |Отзывы
+            div.reviews-slider.swiper-container.js-reviews-slider
+                ul.reviews-slider__list.swiper-wrapper
+                    li.reviews-slider__item.swiper-slide
+                        div.review
+                            div.review__info
+                                span.review__date
+                                    |30.01.2020
+                                span.review__author
+                                    |Дмитрий
+                                div.common__wysiwyg.review__description
+                                    p
+                                        |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                    p
+                                        |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                |Читать полностью
+                    li.reviews-slider__item.swiper-slide
+                        div.review
+                            div.review__info
+                                span.review__date
+                                    |17.03.2020
+                                span.review__author
+                                    |Мария
+                                div.common__wysiwyg.review__description
+                                    p
+                                        |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                    p
+                                        |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                |Читать полностью
+                    li.reviews-slider__item.swiper-slide
+                        div.review
+                            div.review__info
+                                span.review__date
+                                    |30.01.2020
+                                span.review__author
+                                    |Дмитрий
+                                div.common__wysiwyg.review__description
+                                    p
+                                        |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                    p
+                                        |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                |Читать полностью
+                    li.reviews-slider__item.swiper-slide
+                        div.review
+                            div.review__info
+                                span.review__date
+                                    |17.03.2020
+                                span.review__author
+                                    |Мария
+                                div.common__wysiwyg.review__description
+                                    p
+                                        |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                    p
+                                        |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                |Читать полностью
+                div.reviews-slider__arrows
+                    div.reviews-slider__arrow.js-reviews-slider-arrow-left
+                        svg(width="20" height="37")
+                            use(xlink:href="#arrow-left")
+                    div.reviews-slider__arrow.js-reviews-slider-arrow-right
+                        svg(width="20" height="37")
+                            use(xlink:href="#arrow-right")
+            div.reviews__link-wrapper
+                a.common__link.common__link--large.reviews__link(href="")
+                    |Все отзывы
+          // End Отзывы
+
+
+
+
+
+
+
+
+
+
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")
