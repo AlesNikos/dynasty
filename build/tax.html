@@ -79,53 +79,152 @@
           <div class="breadcrumps inner-intro__breadcrumps">
             <ul class="breadcrumps__list">
               <li class="breadcrumps__item"><a class="breadcrumps__link" href="#"><span>Главная</span></a></li>
-              <li class="breadcrumps__item"><a class="breadcrumps__link" href="#"><span>О нас</span></a></li>
-              <li class="breadcrumps__item"><a class="breadcrumps__link" href="#"><span>Новости</span></a></li>
-              <li class="breadcrumps__item"><span>Физиотерапия на дому</span></li>
+              <li class="breadcrumps__item"><a class="breadcrumps__link" href="#"><span>Пациентам</span></a></li>
+              <li class="breadcrumps__item"><span>Налоговый вычет</span></li>
             </ul>
           </div>
-          <h1 class="common__h1-heading common__h1-heading--black inner-intro__page-heading">Физиотерапия на дому</h1>
+          <h1 class="common__h1-heading common__h1-heading--black inner-intro__page-heading">Налоговый вычет</h1>
         </div>
       </section>
-      <section class="news-element">
-        <div class="news-element__description common-wysiwyg">
-          <p>Транскраниальная микрополяризация (ТКМП) – сравнительно молодая терапия, применяющаяся для лечения пациентов с неврологическими проблемами. Данный метод активно используется в США и Западной Европе. Многочисленные исследования, свидетельствуют о том, что терапия имеет серьезный потенциал в лечении неврологических и психиатрических заболеваний.</p>
-        </div>
-        <div class="news-element__slider">
-          <div class="news-slider swiper-container js-news-element-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="news-slider__item">
-                  <div class="news-slider__img-wrap"><img class="news-slider__img" src="images/main-slider/main-slide-01.jpg" alt=""></div>
-                  <p class="news-slider__info">Небольшое описание к фотографии.</p>
+      <section class="tax">
+        <div class="container">
+          <div class="tax__description common__wysiwyg common__wysiwyg--custom">
+            <p>Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие. </p>
+            <p>Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.</p>
+          </div>
+          <div class="tax__forms">
+            <div class="tax__form-wrap">
+              <div class="tax-accordion js-accordion">
+                <div class="tax-accordion__head js-accordion-open"><span class="tax-accordion__title">Заказать справку</span>
+                  <svg width="20" height="37">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="news-slider__item">
-                  <div class="news-slider__img-wrap"><img class="news-slider__img" src="images/main-slider/main-slide-01.jpg" alt=""></div>
-                  <p class="news-slider__info">Небольшое описание к фотографии. </p>
+                <div class="tax-accordion__body">
+                  <p class="tax-accordion__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
+                  <form class="form">
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="name-d-21">ФИО плательщика <span class="common-req-sign">*</span></label>
+                        <input class="form__input error" type="text" data-req="req" id="name-d-21">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="name-d-22">ФИО пациента <span class="common-req-sign">*</span></label>
+                        <input class="form__input" type="text" data-req="req" id="name-d-22">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="date-d-21">Дата рождения <span class="common-req-sign">*</span></label>
+                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-21">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group form__group--checkbox form__group--checkbox-dates">
+                        <label class="form__label">За какой период нужна справка <span class="common-req-sign">*</span></label>
+                        <div class="form__dates-inputs">
+                          <input class="form__checkbox-input" type="checkbox" id="checkbox-d-21">
+                          <label class="form__checkbox-label" for="checkbox-d-21"><span class="form__checkbox-description">2017</span></label>
+                          <input class="form__checkbox-input" type="checkbox" id="checkbox-d-22">
+                          <label class="form__checkbox-label" for="checkbox-d-22"><span class="form__checkbox-description">2018</span></label>
+                          <input class="form__checkbox-input" type="checkbox" id="checkbox-d-23">
+                          <label class="form__checkbox-label" for="checkbox-d-23"><span class="form__checkbox-description">2019</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="phone-d-21">Телефон <span class="common-req-sign">*</span></label>
+                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-21">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label">Клиника</label>
+                        <select class="js-choice js-choices-dependent">
+                          <option class="choice-1"> </option>
+                          <option>Клиника на Мамина-Сибиряка, 128</option>
+                          <option>Клиника на Академика Шварца, 14</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group form__group--checkbox">
+                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-24">
+                        <label class="form__checkbox-label" for="checkbox-d-24"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Заказать справку</span></button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="news-slider__pagination js-news-slider-pagination"></div>
-            <div class="news-slider__arrows">
-              <div class="news-slider__arrow js-news-slider-arrow-left">
-                <svg width="12" height="21">
-                  <use xlink:href="#arrow-left"></use>
-                </svg>
-              </div>
-              <div class="news-slider__arrow js-news-slider-arrow-right">
-                <svg width="12" height="21">
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
+            <div class="tax__form-wrap">
+              <div class="tax-accordion js-accordion">
+                <div class="tax-accordion__head js-accordion-open"><span class="tax-accordion__title">Заказать рецепт</span>
+                  <svg width="20" height="37">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+                <div class="tax-accordion__body">
+                  <p class="tax-accordion__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
+                  <form class="form">
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="name-d-31">ФИО <span class="common-req-sign">*</span></label>
+                        <input class="form__input error" type="text" data-req="req" id="name-d-31">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="date-d-31">Дата рождения <span class="common-req-sign">*</span></label>
+                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-31">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="date-d-32">Дата выдачи рецепта <span class="common-req-sign">*</span></label>
+                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-32">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label" for="phone-d-31">Телефон <span class="common-req-sign">*</span></label>
+                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-31">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <label class="form__label">Клиника</label>
+                        <select class="js-choice js-choices-dependent">
+                          <option class="choice-1"> </option>
+                          <option>Клиника на Мамина-Сибиряка, 128</option>
+                          <option>Клиника на Академика Шварца, 14</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group form__group--checkbox">
+                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-31">
+                        <label class="form__checkbox-label" for="checkbox-d-31"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__group">
+                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Заказать рецепт</span></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="news-element__description common-wysiwyg">
-          <p>Транскраниальная микрополяризация – это лечебное воздействие постоянным электрическим током при низком напряжении на клетки головного мозга. Воздействие тока на нервные систему по своим характеристикам сопоставимо с физиологическими процессами в клетках головного мозга.</p>
-          <p>Говоря простым языком, микрополяризация "помогает дружить нейронам", то есть способствует образованию новых связей в головном мозге, а это значит и развитию нервной системы!</p>
-          <p>Процедуру назначают неврологи, педиатры, терапевты, отоларингологи, офтальмологи. Сама процедура длится 30-40 минут, она безболезненна. Во время процедуры можно читать, рисовать, играть и т.п. Эффект от микрополяризации имеет продленное воздействие и в полной мере проявится через 1-2 месяца!</p><span class="news-element__date">18.06.2020</span>
         </div>
       </section>
     </main>

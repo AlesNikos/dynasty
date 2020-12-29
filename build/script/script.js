@@ -250,10 +250,23 @@
     // Маска для телефона imask.js
     let phoneInputs = document.querySelectorAll(".js-imask-phone");
     let phoneMaskOptions = {
-        mask: "+{7}(000)000-00-00"
+        mask: "+{7}(000)000-00-00",
+        lazy: false,
     };
     for(let i = 0; i < phoneInputs.length; i++){
         let phoneMask = IMask(phoneInputs[i], phoneMaskOptions);
+    };
+
+    // Маска для даты imask.js
+    let dateInputs = document.querySelectorAll(".js-imask-date");
+    let dateMaskOptions = {
+        mask: Date,
+        lazy: false,
+        min: new Date(1930, 0, 1),
+        max: new Date(2030, 0, 1),
+    };
+    for(let i = 0; i < dateInputs.length; i++){
+        let dateMask = IMask(dateInputs[i], dateMaskOptions);
     };
 
 })();
@@ -494,35 +507,35 @@ if(document.getElementById("map-2")){
 // Кастомизация селекта
 (function(){
 
-  let choicesDependent = document.getElementById('popup-clinic');
-  if(choicesDependent){
-      sShort = new Choices(choicesDependent, {
-        silent: false,
-        searchEnabled: false,
-        resetScrollPosition: true,
-        placeholder: false,
-        classNames: {
-            containerOuter: 'choices',
-            containerInner: 'choices__inner',
-            item: 'choices__item',
-          },
-      });
-    };
+  // let choicesDependent = document.getElementById('popup-clinic');
+  // if(choicesDependent){
+  //     sShort = new Choices(choicesDependent, {
+  //       silent: false,
+  //       searchEnabled: false,
+  //       resetScrollPosition: true,
+  //       placeholder: false,
+  //       classNames: {
+  //           containerOuter: 'choices',
+  //           containerInner: 'choices__inner',
+  //           item: 'choices__item',
+  //         },
+  //     });
+  //   };
 
-  choicesDependent = document.getElementById('popup-services');
-  if(choicesDependent){
-      sShort = new Choices(choicesDependent, {
-        silent: false,
-        searchEnabled: false,
-        resetScrollPosition: true,
-        placeholder: false,
-        classNames: {
-            containerOuter: 'choices',
-            containerInner: 'choices__inner',
-            item: 'choices__item',
-          },
-      });
-    };
+  // choicesDependent = document.getElementById('popup-services');
+  // if(choicesDependent){
+  //     sShort = new Choices(choicesDependent, {
+  //       silent: false,
+  //       searchEnabled: false,
+  //       resetScrollPosition: true,
+  //       placeholder: false,
+  //       classNames: {
+  //           containerOuter: 'choices',
+  //           containerInner: 'choices__inner',
+  //           item: 'choices__item',
+  //         },
+  //     });
+  //   };
 
   choicesDependent1 = document.getElementById('doctors-select');
   if(choicesDependent1){
@@ -540,7 +553,7 @@ if(document.getElementById("map-2")){
     };
 
   let choicesDependent2 = document.getElementById('clinic');
-  if(choicesDependent){
+  if(choicesDependent2){
       sShort = new Choices(choicesDependent2, {
         silent: false,
         searchEnabled: false,
@@ -555,7 +568,7 @@ if(document.getElementById("map-2")){
     };
 
   let choicesDependent3 = document.getElementById('services');
-  if(choicesDependent){
+  if(choicesDependent3){
       sShort = new Choices(choicesDependent3, {
         silent: false,
         searchEnabled: false,
@@ -568,6 +581,22 @@ if(document.getElementById("map-2")){
           },
       });
     };
+
+  let choicesDependentAll = document.querySelectorAll(".js-choices-dependent");
+  if(choicesDependentAll){
+    for(let i = 0; i < choicesDependentAll.length; ++i){
+      serviceChoices = new Choices(choicesDependentAll[i], {
+        silent: false,
+        searchEnabled: false,
+        resetScrollPosition: true,
+        classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            item: 'choices__item',
+          },
+      });
+    };
+  };
     
 })();
 
@@ -721,7 +750,7 @@ if(document.getElementById("map-2")){
       e.preventDefault();
       let target = e.target;
       if (target.closest('.js-accordion-open')) {
-        target.closest('.accordion').classList.toggle('opened');
+        target.closest('.js-accordion').classList.toggle('opened');
       }
     });
   });

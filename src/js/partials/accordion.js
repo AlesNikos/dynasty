@@ -7,7 +7,7 @@
       e.preventDefault();
       let target = e.target;
       if (target.closest('.js-accordion-open')) {
-        target.closest('.accordion').classList.toggle('opened');
+        target.closest('.js-accordion').classList.toggle('opened');
       }
     });
   });

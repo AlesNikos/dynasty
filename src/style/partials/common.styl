@@ -157,6 +157,7 @@ custom-border(color)
             line-height 26px
             font-weight 300
             color black
+            letter-spacing: -0.36px;
             & + h3 
                 margin-top 84px
 
@@ -211,7 +212,9 @@ custom-border(color)
                 margin-top 84px
                 @media phone
                     margin-top 54px
-
+        &--custom
+            & p:not([class]) + p:not([class])
+                margin 24px 0 0
 // .common__button:not(.common__button--no-backing):hover
 //     background-color bright-pink
 

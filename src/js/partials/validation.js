@@ -158,10 +158,23 @@
     // Маска для телефона imask.js
     let phoneInputs = document.querySelectorAll(".js-imask-phone");
     let phoneMaskOptions = {
-        mask: "+{7}(000)000-00-00"
+        mask: "+{7}(000)000-00-00",
+        lazy: false,
     };
     for(let i = 0; i < phoneInputs.length; i++){
         let phoneMask = IMask(phoneInputs[i], phoneMaskOptions);
+    };
+
+    // Маска для даты imask.js
+    let dateInputs = document.querySelectorAll(".js-imask-date");
+    let dateMaskOptions = {
+        mask: Date,
+        lazy: false,
+        min: new Date(1930, 0, 1),
+        max: new Date(2030, 0, 1),
+    };
+    for(let i = 0; i < dateInputs.length; i++){
+        let dateMask = IMask(dateInputs[i], dateMaskOptions);
     };
 
 })();

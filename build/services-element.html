@@ -312,7 +312,7 @@
         <!-- START Вопрос-ответ-->
         <section class="questions servcie__question" id="service-questions" data-anchor="service-questions">
           <h2 class="common__h2-heading questions__heading">Вопрос-ответ</h2>
-          <div class="accordion opened">
+          <div class="accordion js-accordion opened">
             <div class="accordion__head js-accordion-open"><span class="accordion__title">В ваших клиниках можно вызвать терапевта на дом?</span>
               <svg width="29" height="29">
                 <use xlink:href="#icon-cross"></use>
@@ -325,7 +325,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion">
+          <div class="accordion js-accordion">
             <div class="accordion__head js-accordion-open"><span class="accordion__title">Можно ли связаться с лечащим врачем не посещая поликлинику?</span>
               <svg width="29" height="29">
                 <use xlink:href="#icon-cross"></use>
@@ -338,7 +338,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion">
+          <div class="accordion js-accordion">
             <div class="accordion__head js-accordion-open"><span class="accordion__title">Если я записываюсь на прием к терапевту, сколько вреимени в моем распоряжении, чтобы задать все вопросы?</span>
               <svg width="29" height="29">
                 <use xlink:href="#icon-cross"></use>
@@ -351,7 +351,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion">
+          <div class="accordion js-accordion">
             <div class="accordion__head js-accordion-open"><span class="accordion__title">Еще какой-то небольшой вопрос?</span>
               <svg width="29" height="29">
                 <use xlink:href="#icon-cross"></use>
@@ -364,7 +364,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion">
+          <div class="accordion js-accordion">
             <div class="accordion__head js-accordion-open"><span class="accordion__title">Ну и еще какой-то небольшой вопрос?</span>
               <svg width="29" height="29">
                 <use xlink:href="#icon-cross"></use>
@@ -541,7 +541,8 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Клиника</label>
-                  <select class="js-choice" id="popup-clinic">
+                  <select class="js-choice js-choices-dependent" id="popup-clinic">
+                    <option class="choice-1"> </option>
                     <option>Клиника на Мамина-Сибиряка, 128</option>
                     <option>Клиника на Академика Шварца, 14</option>
                   </select>
@@ -550,7 +551,8 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Услуга</label>
-                  <select class="js-choice" id="popup-services">
+                  <select class="js-choice js-choices-dependent" id="popup-services">
+                    <option class="choice-1"> </option>
                     <option>Клиника на Мамина-Сибиряка, 128</option>
                     <option>Клиника на Академика Шварца, 14</option>
                   </select>

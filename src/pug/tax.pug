@@ -1,0 +1,181 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Пациентам
+                li.breadcrumps__item
+                  span
+                    |Налоговый вычет
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Налоговый вычет
+        //- END inner-intro
+
+        section.tax
+          .container
+            .tax__description.common__wysiwyg.common__wysiwyg--custom
+              p
+                |Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие. 
+              p
+                |Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.
+
+            .tax__forms
+              .tax__form-wrap
+                .tax-accordion.js-accordion
+                  .tax-accordion__head.js-accordion-open
+                    span.tax-accordion__title
+                      |Заказать справку
+                    svg(width="20" height="37")
+                      use(xlink:href="#arrow-right")
+                  .tax-accordion__body
+                      p.tax-accordion__subtitle
+                        | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                      form.form
+                          .form__row
+                              .form__group
+                                  label.form__label(for="name-d-21")
+                                      | ФИО плательщика <span class="common-req-sign">*</span>
+                                  input.form__input.error(type="text", data-req="req", id="name-d-21")
+                          .form__row
+                              .form__group
+                                  label.form__label(for="name-d-22")
+                                      | ФИО пациента <span class="common-req-sign">*</span>
+                                  input.form__input(type="text", data-req="req", id="name-d-22")
+                          .form__row
+                              .form__group
+                                  label.form__label(for="date-d-21")
+                                      | Дата рождения <span class="common-req-sign">*</span>
+                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-21")
+                          
+                          .form__row
+                              .form__group.form__group--checkbox.form__group--checkbox-dates
+                                  label.form__label
+                                      | За какой период нужна справка <span class="common-req-sign">*</span>
+                                  .form__dates-inputs
+                                    input.form__checkbox-input(type="checkbox", id="checkbox-d-21")
+                                    label.form__checkbox-label(for="checkbox-d-21")
+                                        span.form__checkbox-description
+                                            |2017
+                                    input.form__checkbox-input(type="checkbox", id="checkbox-d-22")
+                                    label.form__checkbox-label(for="checkbox-d-22")
+                                        span.form__checkbox-description
+                                            |2018
+                                    input.form__checkbox-input(type="checkbox", id="checkbox-d-23")
+                                    label.form__checkbox-label(for="checkbox-d-23")
+                                        span.form__checkbox-description
+                                            |2019
+                          
+                          .form__row
+                              .form__group
+                                  label.form__label(for="phone-d-21")
+                                      | Телефон <span class="common-req-sign">*</span>
+                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-21")
+
+                          .form__row
+                              .form__group
+                                  label.form__label
+                                      | Клиника
+                                  select.js-choice.js-choices-dependent
+                                    option.choice-1  
+                                    option Клиника на Мамина-Сибиряка, 128
+                                    option Клиника на Академика Шварца, 14
+
+                          .form__row
+                              .form__group.form__group--checkbox
+                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-24")
+                                  label.form__checkbox-label(for="checkbox-d-24")
+                                      span.form__checkbox-description
+                                          |Согласен на обработку 
+                                          a(href="#") персональных данных
+                          .form__row
+                              .form__group
+                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                      span
+                                          |Заказать справку
+
+              .tax__form-wrap
+                .tax-accordion.js-accordion
+                  .tax-accordion__head.js-accordion-open
+                    span.tax-accordion__title
+                      |Заказать рецепт
+                    svg(width="20" height="37")
+                      use(xlink:href="#arrow-right")
+                  .tax-accordion__body
+                      p.tax-accordion__subtitle
+                        | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                      form.form
+                          .form__row
+                              .form__group
+                                  label.form__label(for="name-d-31")
+                                      | ФИО <span class="common-req-sign">*</span>
+                                  input.form__input.error(type="text", data-req="req", id="name-d-31")
+                          
+                          .form__row
+                              .form__group
+                                  label.form__label(for="date-d-31")
+                                      | Дата рождения <span class="common-req-sign">*</span>
+                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-31")
+                          .form__row
+                              .form__group
+                                  label.form__label(for="date-d-32")
+                                      | Дата выдачи рецепта <span class="common-req-sign">*</span>
+                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-32")
+                          
+                          .form__row
+                              .form__group
+                                  label.form__label(for="phone-d-31")
+                                      | Телефон <span class="common-req-sign">*</span>
+                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-31")
+
+                          .form__row
+                              .form__group
+                                  label.form__label
+                                      | Клиника
+                                  select.js-choice.js-choices-dependent
+                                    option.choice-1  
+                                    option Клиника на Мамина-Сибиряка, 128
+                                    option Клиника на Академика Шварца, 14
+
+                          .form__row
+                              .form__group.form__group--checkbox
+                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-31")
+                                  label.form__checkbox-label(for="checkbox-d-31")
+                                      span.form__checkbox-description
+                                          |Согласен на обработку 
+                                          a(href="#") персональных данных
+                          .form__row
+                              .form__group
+                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                      span
+                                          |Заказать рецепт
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")
