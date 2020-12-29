@@ -103,6 +103,37 @@
                 transition 0.3s ease 
                 &:hover 
                     border-color: transparent
+    &--main
+        & .form__row
+            display flex
+            flex-wrap wrap
+            margin 0 -18px
+            // &:not(:last-child)
+            //     margin-bottom 26px
+        & .form__group
+            position relative
+            flex 0 0 50%
+            max-width 50%
+            width 100%
+            padding 0 18px
+            margin-bottom 26px
+            // &:last-child
+            //     margin-bottom 0
+            @media tablet-portrait-large
+                flex 0 0 100%
+                max-width 100%
+        & .form__group--checkbox
+            flex 0 0 100%
+            max-width 100%
+            margin 24px 0 39px
+            text-align center
+            @media phone 
+                text-align left
+        & .form__group--button
+            flex 0 0 100%
+            max-width 100%
+            margin-bottom 0
+            text-align center
 
 
 
@@ -242,6 +273,8 @@
         width calc(100% - 64px)
     @media tablet-portrait-small
         width calc(100% - 40px)
+    @media phone 
+        padding 24px
 
     &__title
         margin 0 0 30px
@@ -250,6 +283,9 @@
         font-weight 400
         line-height 52px
         text-align center
+        @media phone 
+            font-size 32px
+            line-height 36px
     &__subtitle
         margin 0 0 35px
         letter-spacing -0.36px
@@ -260,24 +296,24 @@
     //     display flex
     //     flex-wrap wrap
     //     margin 0 -18px
-    & .form__row
-        display flex
-        flex-wrap wrap
-        margin 0 -18px
-        &:not(:last-child)
-            margin-bottom 26px
-    & .form__group
-        position relative
-        flex 0 0 50%
-        max-width 50%
-        width 100%
-        padding 0 18px
-    & .form__group--checkbox
-        flex 0 0 100%
-        max-width 100%
-        margin 24px 0 15px
-        text-align center
-    & .form__group--button
-        flex 0 0 100%
-        max-width 100%
-        text-align center
+    // & .form__row
+    //     display flex
+    //     flex-wrap wrap
+    //     margin 0 -18px
+    //     &:not(:last-child)
+    //         margin-bottom 26px
+    // & .form__group
+    //     position relative
+    //     flex 0 0 50%
+    //     max-width 50%
+    //     width 100%
+    //     padding 0 18px
+    // & .form__group--checkbox
+    //     flex 0 0 100%
+    //     max-width 100%
+    //     margin 24px 0 15px
+    //     text-align center
+    // & .form__group--button
+    //     flex 0 0 100%
+    //     max-width 100%
+    //     text-align center

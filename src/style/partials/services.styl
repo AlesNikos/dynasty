@@ -173,6 +173,8 @@
 .service
     &__info 
         margin-bottom 85px
+        @media phone 
+            margin-bottom 40px
     &__info-hero
         height 560px
         padding 40px 49px
@@ -182,6 +184,12 @@
         background-repeat no-repeat
         background-size cover
         overflow hidden
+        @media tablet-portrait-medium
+            height 420px
+        @media phone
+            min-height 420px
+            height auto
+            padding 32px
         
     &__info-text
         max-width 500px
@@ -189,10 +197,15 @@
         font-size 22px
         font-weight 400
         line-height 32px
+        @media tablet-portrait-medium
+            font-size 18px
+            line-height 22px
         p 
             margin 0 0 24px 0
             line-height 32px
             letter-spacing -0.44px
+            @media tablet-portrait-medium
+                line-height 22px
 
     &__menu
         position static
@@ -212,6 +225,9 @@
             box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
             border-radius 10px
 
+        .menu__item 
+            @media phone 
+                text-align center
         .menu__item--active
             .menu__link 
                 border-bottom-color transparent
@@ -223,29 +239,49 @@
     &__description
         max-width 1057px
         margin 0 auto
+        @media laptop
+            max-width: 900px
+
         h2
             margin 0 0 31px 0
         p
             letter-spacing -0.36px
     &__doctors
         margin-bottom 89px
-    &__timeline
+        @media phone 
+            margin-bottom 60px
+        .doctors__item-wrap
+            &:last-child
+                @media tablet-landscape-medium 
+                    display none
+                @media tablet-portrait-medium
+                    display block
+    &__timeline.timeline
         margin-bottom 93px
-    &__prices
+        @media phone 
+            margin-bottom 60px
+    &__prices.prices
         margin-bottom 98px
+        @media phone 
+            margin-bottom 60px
     &__form 
         margin-bottom 101px
+        @media phone 
+            margin-bottom 60px
+    &__branches.branches
+        padding-bottom 17px
 
 .service__info-hero + .service__menu
     margin-top -37px
+    @media phone 
+        margin-top 24px
 // .services-element__hero + .services-element__menu--fixed
 //     top 133px
 
 .timeline
     width calc(100% - 78px)
     max-width 1440px
-    margin-left auto
-    margin-right auto
+    margin 0 auto
     padding 62px 0
     border-radius 10px
     background-color lightest-gray
@@ -253,11 +289,18 @@
         width calc(100% - 64px)
     @media tablet-portrait-small
         width calc(100% - 40px)
+    @media phone
+        padding 24px 0
 
     &__inner
         max-width 1057px
         width calc(100% - 78px)
         margin 0 auto
+        @media laptop
+            max-width: 900px
+        @media phone
+            width calc(100% - 48px)
+
     &__heading
         margin-bottom 31px
     &__schedule
@@ -270,8 +313,9 @@
 .prices
     max-width 1057px
     width calc(100% - 78px)
-    margin-left auto
-    margin-right auto
+    margin 0 auto
+    @media laptop
+        max-width: 900px
     @media tablet-landscape-medium
         width calc(100% - 64px)
     @media tablet-portrait-small
@@ -291,6 +335,8 @@
         padding 18px 26px
         border-radius 10px
         background-color #fff
+        @media tablet-portrait-small
+            flex-direction column
         &:nth-child(2n) 
             background-color #f5f5f5
     &__item-name
@@ -298,6 +344,61 @@
         margin 0
         letter-spacing -0.36px
         color #000
+        @media tablet-portrait-small
+            width 100%   
+            margin-bottom 12px
     &__item-price
         letter-spacing -0.36px
         color #000
+
+.services-links
+    &__list
+        display flex
+        flex-wrap wrap
+        margin 0 -18px
+        @media tablet-portrait-large
+            margin 0 -16px
+    &__item-wrap
+        position relative
+        flex 0 0 33.333333%
+        max-width 33.333333%
+        width 100%
+        padding 0 18px
+        @media tablet-portrait-large
+            padding 0 16px
+        @media tablet-portrait-medium
+            flex 0 0 50%
+            max-width 50%
+            margin-bottom 32px
+        @media phone
+            flex 0 0 100%
+            max-width 100%
+            margin-bottom 20px
+    &__item
+        display block
+        width 100%
+        height 542px
+        padding 46px
+        background-color #f6f6f6
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        border-radius 10px
+        text-decoration none
+        text-align center
+        overflow hidden
+        @media tablet-portrait-large
+            height 370px
+        @media phone
+            height 434px
+        &:hover 
+            .services-links__item-name 
+                border-bottom-color transparent
+    &__item-name
+        margin 0
+        border-bottom: 1px solid #000
+        color #000
+        font-size 26px
+        font-weight 400
+        line-height 30px
+        transition 0.3s ease

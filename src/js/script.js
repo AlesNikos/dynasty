@@ -36,3 +36,9 @@
 
 // Фильтрация специалистов
 //= partials/doctors-filter.js
+
+// Аккордеон
+//= partials/accordion.js
+
+// Плавный скролл до элемента
+//= partials/scroll.js

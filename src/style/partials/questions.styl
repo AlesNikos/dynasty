@@ -1,0 +1,95 @@
+.questions
+  width calc(100% - 78px)
+  max-width 1052px
+  margin 0 auto
+  padding 93px 0
+  @media laptop
+    max-width: 900px
+  @media tablet-landscape-medium
+    width calc(100% - 64px)
+  @media tablet-portrait-small
+    width calc(100% - 40px)
+
+  &__heading
+    margin-bottom 37px
+    text-align center
+
+  &__link-wrapper
+    margin 46px 0 0
+    text-align center
+  &__btn
+    padding 12px 30px
+    font-size 20px
+    font-weight 400
+    line-height 24px
+    border-radius 23px
+
+
+
+@keyframes spoiler {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.accordion
+  // padding 46px 44px 41px 49px
+  border-radius 10px
+  custom-border(#e2e2e2)
+  background-color #fff
+  transition box-shadow 0.3s ease
+  cursor pointer
+
+  &:not(:last-of-type)
+    margin-bottom 12px
+  &:hover 
+    box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+  &.opened
+    box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+    .accordion__head
+      // margin-bottom 20px
+      padding-bottom 20px
+      svg 
+        transform rotate(45deg)
+    .accordion__body
+      display block
+      animation: spoiler 1s;
+      
+  &__head
+    position relative
+    display flex
+    justify-content space-between
+    padding 46px 44px 41px 49px
+    @media phone 
+      padding 24px
+    svg
+      flex-shrink 0
+      transition 0.3s ease     
+    // padding 49px
+  &__title
+    max-width: 886px
+    margin-right 20px
+    color #000
+    font-size 26px
+    font-weight 400
+    line-height 30px
+    @media phone 
+      font-size 22px
+      line-height 24px
+  &__body 
+    display none
+    padding 0 44px 41px 49px
+    @media phone 
+      padding 0 24px 24px
+  &__text 
+    max-width 886px
+    color #000
+    & p
+      margin 0
+      letter-spacing -0.36px
+    & p:not(:last-child)
+      margin 0 0 19px 0

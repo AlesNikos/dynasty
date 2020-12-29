@@ -4,8 +4,10 @@
     max-width 1440px
     margin 0 auto
     padding 90px 0 93px 0
-    @media tablet-landscape-medium
+    @media laptop
         width calc(100% - 64px)
+    // @media tablet-landscape-medium
+    //     width calc(100% - 64px)
     @media tablet-portrait-small
         width calc(100% - 40px)
 
@@ -30,6 +32,12 @@
         text-align center
         @media phone
             text-align left
+    &__btn
+        padding 12px 30px
+        font-size 20px
+        font-weight 400
+        line-height 24px
+        border-radius 23px
 
 .reviews-slider
     position relative

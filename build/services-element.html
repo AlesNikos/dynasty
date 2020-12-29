@@ -19,7 +19,7 @@
 		<path d="M7.7,0.6c2.9,0,5.2,2.3,5.2,5.2S10.6,11,7.7,11S2.6,8.6,2.6,5.8S4.9,0.6,7.7,0.6z"/>
 		<path d="M0.7,15.8c1.1-2.9,3.8-4.9,7-4.9s6,2,7,4.9"/>
 	</g>
-</symbol><symbol id="search-icon" viewBox="0 0 15.5 16.4">
+</symbol><symbol id="icon-cross" viewBox="0 0 29 29"><g><g><path fill="#030404" d="M28.872 14.001v.992H14.996V28.87h-.991V14.993H.128v-.992h13.877V.125h.99v13.876z"/></g></g></symbol><symbol id="search-icon" viewBox="0 0 15.5 16.4">
 	<g>
 		<path d="M2.5,2.9c2.5-2.5,6.7-2.5,9.2,0s2.5,6.7,0,9.2s-6.7,2.5-9.2,0l0,0C0,9.6,0,5.5,2.5,2.9z"/>
 		<line x1="11.7" y1="12.1" x2="14.9" y2="15.3"/>
@@ -96,16 +96,16 @@
               </div>
             </div>
             <nav class="service__menu menu js-service-menu">
-              <ul class="menu__list services-element__menu-list">
-                <li class="menu__item menu__item--active"><a class="menu__link" href="">Об услуге</a></li>
-                <li class="menu__item"><a class="menu__link" href="">Цены</a></li>
-                <li class="menu__item"><a class="menu__link" href="">Записаться на прием</a></li>
-                <li class="menu__item"><a class="menu__link" href="">Вопрос-ответ</a></li>
-                <li class="menu__item"><a class="menu__link" href="">Отзывы</a></li>
-                <li class="menu__item"><a class="menu__link" href="">Специалисты</a></li>
+              <ul class="menu__list service__menu-list">
+                <li class="menu__item menu__item--active"><a class="menu__link hidden-dlink js-scroll-button" data-al="#service-about" data-target="service-about">Об услуге</a></li>
+                <li class="menu__item"><a class="menu__link hidden-dlink js-scroll-button" data-al="#service-prices" data-target="service-prices">Цены</a></li>
+                <li class="menu__item"><a class="menu__link hidden-dlink js-scroll-button" data-al="#service-form" data-target="service-form">Записаться на прием</a></li>
+                <li class="menu__item"><a class="menu__link hidden-dlink js-scroll-button" data-al="service-questions" data-target="service-questions">Вопрос-ответ</a></li>
+                <li class="menu__item"><a class="menu__link hidden-dlink js-scroll-button" data-al="#service-reviews" data-target="service-reviews">Отзывы</a></li>
+                <li class="menu__item"><a class="menu__link hidden-dlink js-scroll-button" data-al="#service-doctors" data-target="service-doctors">Специалисты</a></li>
               </ul>
             </nav>
-            <div class="service__description common__wysiwyg">
+            <div class="service__description common__wysiwyg" id="service-about" data-anchor="service-about">
               <h2>Об услуге</h2>
               <p>Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие. </p>
               <p>Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.</p>
@@ -113,7 +113,7 @@
           </div>
         </section>
         <!-- START Специалисты направления-->
-        <section class="doctors service__doctors">
+        <section class="doctors service__doctors" id="service-doctors" data-anchor="service-doctors">
           <div class="container">
             <h2 class="common__h2-heading doctors__heading">Специалисты направления</h2>
             <div class="doctors__list">
@@ -165,7 +165,7 @@
         </section>
         <!-- END Расписание приема-->
         <!-- START Стоимость услуг-->
-        <section class="prices service__prices">
+        <section class="prices service__prices" id="service-prices" data-anchor="service-prices">
           <h2 class="common__h2-heading timeline__heading">Стоимость услуг</h2>
           <div class="prices__items">
             <h5 class="prices__items-heading">Консультации</h5>
@@ -196,7 +196,7 @@
         </section>
         <!-- END Стоимость услуг-->
         <!-- START Записаться на прием-->
-        <section class="appointment-form main-form-container service__form">
+        <section class="appointment-form main-form-container service__form" id="service-form" data-anchor="service-form">
           <h4 class="main-form-container__title">Записаться на прием</h4>
           <p class="main-form-container__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
           <form class="form form--main">
@@ -241,7 +241,7 @@
         </section>
         <!-- END Записаться на прием-->
         <!-- START Отзывы-->
-        <section class="reviews service__reviews">
+        <section class="reviews service__reviews" id="service-reviews" data-anchor="service-reviews">
           <h1 class="common__h1-heading reviews__heading">Отзывы</h1>
           <div class="reviews-slider swiper-container js-reviews-slider">
             <ul class="reviews-slider__list swiper-wrapper">
@@ -304,8 +304,170 @@
             </div>
           </div>
           <div class="reviews__link-wrapper"><a class="common__link common__link--large reviews__link" href="">Все отзывы</a></div>
+          <div class="reviews__link-wrapper">
+            <button class="common__button reviews__btn js-bubble-hover bubble-hover bubble-hover__button">Оставить отзыв</button>
+          </div>
         </section>
         <!-- End Отзывы-->
+        <!-- START Вопрос-ответ-->
+        <section class="questions servcie__question" id="service-questions" data-anchor="service-questions">
+          <h2 class="common__h2-heading questions__heading">Вопрос-ответ</h2>
+          <div class="accordion opened">
+            <div class="accordion__head js-accordion-open"><span class="accordion__title">В ваших клиниках можно вызвать терапевта на дом?</span>
+              <svg width="29" height="29">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__text">
+                <p>Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+                <p>Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__head js-accordion-open"><span class="accordion__title">Можно ли связаться с лечащим врачем не посещая поликлинику?</span>
+              <svg width="29" height="29">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__text">
+                <p>Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+                <p>Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__head js-accordion-open"><span class="accordion__title">Если я записываюсь на прием к терапевту, сколько вреимени в моем распоряжении, чтобы задать все вопросы?</span>
+              <svg width="29" height="29">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__text">
+                <p>Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+                <p>Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__head js-accordion-open"><span class="accordion__title">Еще какой-то небольшой вопрос?</span>
+              <svg width="29" height="29">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__text">
+                <p>Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+                <p>Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__head js-accordion-open"><span class="accordion__title">Ну и еще какой-то небольшой вопрос?</span>
+              <svg width="29" height="29">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__text">
+                <p>Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+                <p>Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.</p>
+              </div>
+            </div>
+          </div>
+          <div class="questions__link-wrapper"><a class="common__link common__link--large questions__link hidden-dlink" data-al="">Все вопросы об услуге</a></div>
+          <div class="questions__link-wrapper">
+            <button class="common__button questions__btn js-bubble-hover bubble-hover bubble-hover__button">Задать вопрос</button>
+          </div>
+        </section>
+        <!-- END Вопрос-ответ-->
+        <!-- START Блок для SEO-текста-->
+        <section class="service__info">
+          <div class="container">
+            <div class="service__description common__wysiwyg">
+              <h2>Блок для СЕО-текста</h2>
+              <p>Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие. </p>
+              <p>Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.</p>
+            </div>
+          </div>
+        </section>
+        <!-- END Блок для SEO-текста-->
+        <!-- START Блок с карточками-->
+        <section class="services-links service__links">
+          <div class="container">
+            <div class="services-links__list">
+              <div class="services-links__item-wrap"><a class="services-links__item hidden-dlink" data-al="" style="background-image: url('./images/services/service-link-img-1.png')"><span class="services-links__item-name">Лечение</span></a></div>
+              <div class="services-links__item-wrap"><a class="services-links__item hidden-dlink" data-al="" style="background-image: url('./images/services/service-link-img-2.png')"><span class="services-links__item-name">Диагностика</span></a></div>
+              <div class="services-links__item-wrap"><a class="services-links__item hidden-dlink" data-al="" style="background-image: url('./images/services/service-link-img-3.png')"><span class="services-links__item-name">Программы</span></a></div>
+            </div>
+          </div>
+        </section>
+        <!-- END Блок с карточками-->
+        <!-- START Наши отделения-->
+        <section class="branches service__branches">
+          <h2 class="common__h2-heading branches__heading">Наши отделения</h2>
+          <div class="tabs branches__tabs js-tabs" data-tabs="branches">
+            <ul class="tabs__list">
+              <li class="tabs__item tabs__item--active">
+                <button class="tabs__button" data-tab="branch-01">ул. Мамина-Сибиряка, 128</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__button" data-tab="branch-02">ул. Академика Шварца, 14</button>
+              </li>
+            </ul>
+          </div>
+          <ul class="branches__list" data-tabs-content="branches">
+            <li class="branches__item" data-tab-content="branch-01">
+              <div class="branch">
+                <div class="branch__top">
+                  <div class="branch__image-wrapper"><img class="branch__image" src="images/branches/branch-01.jpg" alt=""></div>
+                  <div class="branch__map-wrapper">
+                    <div class="branch__map" id="map-1"></div>
+                  </div>
+                </div>
+                <div class="branch__bottom">
+                  <div class="branch__col">
+                    <div class="common__wysiwyg branch__work-hours">
+                      <p>Филиал работает ежедневно с 07:30 до 20:00</p>
+                    </div><span class="branch__opening-sign">Сейчас открыто</span>
+                  </div>
+                  <div class="branch__col">
+                    <div class="common__wysiwyg branch__description">
+                      <p>Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.</p>
+                      <p>Забор анализов ежедневно с 07:30. Вакцинация ежедневно.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="branches__item" data-tab-content="branch-02">
+              <div class="branch">
+                <div class="branch__top">
+                  <div class="branch__image-wrapper"><img class="branch__image" src="images/branches/branch-01.jpg" alt=""></div>
+                  <div class="branch__map-wrapper">
+                    <div class="branch__map" id="map-2"></div>
+                  </div>
+                </div>
+                <div class="branch__bottom">
+                  <div class="branch__col">
+                    <div class="common__wysiwyg branch__work-hours">
+                      <p>Филиал работает ежедневно с 07:30 до 20:00</p>
+                    </div><span class="branch__opening-sign">Сейчас открыто</span>
+                  </div>
+                  <div class="branch__col">
+                    <div class="common__wysiwyg branch__description">
+                      <p>Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.</p>
+                      <p>Забор анализов ежедневно с 07:30. Вакцинация ежедневно.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- END Наши отделения-->
       </section>
     </main>
     <footer class="foot">
