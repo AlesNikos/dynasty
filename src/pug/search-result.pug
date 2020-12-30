@@ -1,0 +1,98 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  span
+                    |Результаты поиска
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Результаты поиска
+        //- END inner-intro
+
+        section.search-result
+          .search
+            form.form.form--search
+              div.form__group
+                input.form__input.form__input--rounded(placeholder="Поиск по сайту")
+              button.common__button.common__button--medium.form__search-button.js-bubble-hover.bubble-hover.bubble-hover__button
+                span
+                  |Искать
+          
+          p.search-result__text
+            |По вашему запросу «<span class="search-result__text-name">Терапевт</span>» найдено 17 страниц.
+
+          .search-result__items
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Терапевт
+              p.search-result__item-description
+                |Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие.
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Мануальный терапевт
+              p.search-result__item-description
+                |Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов).
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Консультация врача терапевта
+              p.search-result__item-description
+                |Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Вызов терапевта на дом
+              p.search-result__item-description
+                |Терапевт – это врач широкого профиля, специализирующийся на ранней диагностике множества заболеваний. Терапевт ведет первичный прием и лечение пациентов, а при необходимости дает направление к более узкоспециализированному специалисту. Если вы не знаете, к какому врачу обратиться, то начать нужно именно с терапевта.
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Заплатина Наталья Ивановна
+              p.search-result__item-description
+                |Врач терапевт, гастроэнтеролог первой категории. Стаж работы 17 лет.
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Ваганова Анастасия Валерьевна
+              p.search-result__item-description
+                |Врач-кардиолог, терапевт. Стаж работы 14 лет.
+            .search-result__item
+              h4.common__h4-heading.search-result__item-title
+                a.search-result__item-link.hidden-dlink(data-al="")
+                  |Онлайн собеседование с лечащим врачом
+              p.search-result__item-description
+                |Онлайн собеседование с врачом – это общение врача и пациента по видеосвязи посредством WhatsApp. Если ранее вы были в нашей клинике на консультации врача и у вас возникла необходимость связаться с врачем. Прокомментировать результаты анализов, скорректировать ранее назначенное лечение.
+
+          button.common__button.common__button--medium.search-result__button.js-bubble-hover.bubble-hover.bubble-hover__button
+            span
+                |Показать еще
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")

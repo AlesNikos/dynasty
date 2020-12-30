@@ -1443,6 +1443,68 @@ body.js-burger-menu-is-open .burger::after {
     display: none;
   }
 }
+.search-result {
+  max-width: 1135px;
+  padding: 0 39px 32px;
+  margin: 0 auto;
+}
+@media (max-width: 1480px) {
+  .search-result {
+    max-width: 978px;
+  }
+}
+@media (max-width: 1200px) {
+  .search-result {
+    padding: 0 32px 32px;
+  }
+}
+@media (max-width: 700px) {
+  .search-result {
+    padding: 0 20px 32px;
+  }
+}
+.search-result .search {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .search-result .search {
+    display: block;
+    padding: 30px 20px;
+  }
+}
+.search-result__text {
+  margin: 43px 0 86px;
+  color: #000;
+}
+@media (max-width: 520px) {
+  .search-result__text {
+    margin-bottom: 60px;
+  }
+}
+.search-result__text-name {
+  color: #a4023e;
+}
+.search-result__item {
+  margin-bottom: 47px;
+}
+.search-result__item-title {
+  margin-bottom: 20px;
+}
+.search-result__item-link {
+  color: #000;
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.search-result__item-link:hover {
+  border-bottom-color: transparent;
+}
+.search-result__item-description {
+  margin: 0;
+  letter-spacing: -0.36px;
+}
 .form--search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1452,6 +1514,14 @@ body.js-burger-menu-is-open .burger::after {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+@media (max-width: 520px) {
+  .form--search {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 .form__row:not(:last-child) {
   margin: 0 0 22px 0;
@@ -1710,6 +1780,8 @@ body.js-burger-menu-is-open .burger::after {
   min-height: 144px;
 }
 .form__search-button {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   margin: 0 0 0 36px;
 }
 @media (max-width: 1480px) {
@@ -1726,6 +1798,16 @@ body.js-burger-menu-is-open .burger::after {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+@media (max-width: 520px) {
+  .form--search .form__group {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .form--search .form__search-button {
+    margin: 0 auto;
+  }
 }
 .choices__inner {
   position: relative;

@@ -14,3 +14,41 @@
         padding 30px
     @media phone
         display none
+
+.search-result
+    max-width 1135px
+    padding 0 39px 32px
+    margin 0 auto
+    @media laptop 
+        max-width 978px
+    @media tablet-landscape-medium
+        padding 0 32px 32px
+    @media tablet-portrait-small
+        padding 0 20px 32px
+    .search 
+        width 100%
+        margin 0
+        @media phone
+            display block
+            padding 30px 20px
+    &__text
+        margin 43px 0 86px
+        color #000
+        @media phone 
+            margin-bottom 60px    
+    &__text-name
+        color deep-pink
+    &__item
+        margin-bottom 47px
+    &__item-title
+        margin-bottom 20px
+    &__item-link
+        color #000
+        border-bottom 1px solid #000
+        text-decoration none
+        transition: 0.3s ease
+        &:hover 
+            border-bottom-color transparent
+    &__item-description
+        margin 0
+        letter-spacing: -0.36px;

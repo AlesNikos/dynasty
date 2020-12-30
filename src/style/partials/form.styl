@@ -3,6 +3,8 @@
         display flex
         flex-wrap nowrap
         align-items flex-start
+        @media phone
+            flex-direction column
 
     &__row
         &:not(:last-child)
@@ -180,6 +182,7 @@
 
 
     &__search-button
+        flex-shrink 0
         margin 0 0 0 36px
         @media laptop
             margin 0 0 0 32px
@@ -189,6 +192,11 @@
 .form--search
     & .form__group
         flex-grow 1
+        @media phone 
+            margin-bottom 20px
+    .form__search-button
+        @media phone
+            margin 0 auto
 
 .choices 
     &__inner 
