@@ -1,0 +1,383 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  span
+                    |Отзывы
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Отзывы
+        //- END inner-intro
+
+
+        // START Отзывы
+        section.i-reviews
+
+          button.common__button.common__button--medium.i-reviews__button.js-bubble-hover.bubble-hover.bubble-hover__button.js-scroll-button(data-target="reviews-form")
+            span
+                |Оставить отзыв
+
+          .i-reviews__list
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Прием терапевта
+
+            .i-reviews__item.i-review.answer
+              .common__wysiwyg.i-review__description
+                p
+                  |Мария, благодарим вас за отзыв и добрые слова о враче. Желаем вам здоровья и благополучия.
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Семейная клиника «Династика»
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                h6 
+                  |Достоинства
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать.
+                h6
+                  |Недостатки
+                p
+                  |Нет.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |УЗИ
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                h6 
+                  |Достоинства
+                p
+                  |Все прекрасно.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Прием терапевта
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Прием гастроэнтеролога
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                p
+                  |Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                h6 
+                  |Достоинства
+                p
+                  |Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать.
+                h6
+                  |Недостатки
+                p
+                  |Нет.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Прием акушера-гинеколога
+
+            .i-reviews__item.i-review.answer
+              .common__wysiwyg.i-review__description
+                p
+                  |Мария, благодарим вас за отзыв и добрые слова о враче. Желаем вам здоровья и благополучия.
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Семейная клиника «Династика»
+
+            .i-reviews__item.i-review
+              span.i-review__date
+                |17.03.2020
+              span.i-review__author
+                |Мария
+              .common__wysiwyg.i-review__description
+                p
+                  |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление. Желаем Алене Игоревне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+              .i-review__tags.tags
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |Ведерникова Алена Игоревна
+                a.tags__tag.i-review__tag.hidden-dlink(data-al="")
+                  |УЗИ
+          // START Пагинация
+          .pagination.pagination--position
+            a.pagination__item.pagination__item-arrows.pagination__item--arrow-left.pagination__item--disabled(href="")
+              <svg width="12" height="21">
+                <use xlink:href="#arrow-left"></use>
+              </svg>
+            a.pagination__item.pagination__item--active(href="")
+              |1
+            a.pagination__item(href="")
+              |2
+            a.pagination__item(href="")
+              |3
+            a.pagination__item(href="")
+              |4
+            a.pagination__item(href="")
+              |5
+            a.pagination__item(href="")
+              |...
+            a.pagination__item(href="")
+              |99
+            a.pagination__item.pagination__item-arrows.pagination__item--arrow-right.js-reviews-slider-arrow-right(href="")
+              <svg width="12" height="21">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+          // END Пагинация
+        // END Отзывы 
+
+        // START Оставить отзыв
+        section.review-form.reviews-form--position.main-form-container(data-anchor="reviews-form")
+          h4.main-form-container__title
+            |Оставить отзыв
+          p.main-form-container__subtitle
+            | Заполните поля и оцените параметры по 5-бальной шкале, где 5 – очень хорошо, 1 – очень плохо.<br> Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+          form.form.form--main
+              .form__row
+                  .form__group-wrap
+                    .form__group
+                        label.form__label(for="name-reviews-1")
+                            | ФИО <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req", id="name-reviews-1")
+                  
+                    .form__group
+                        label.form__label(for="phone-reviews-1")
+                            | Телефон <span class="common-req-sign">*</span>
+                        input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-reviews-1")
+                  
+                    .form__group
+                        label.form__label
+                            | Цель обращения в клинику
+                        input.form__input(type="text", data-req="req")
+                  .form__group-wrap
+                    .form__group
+                        label.form__label
+                            | Текст отзыва <span class="common-req-sign">*</span>
+                        textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+              
+              .form__row
+                  .form__group
+                      label.form__label
+                          | Достоинства
+                      textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                  .form__group
+                      label.form__label
+                          | Недостатки
+                      textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+              
+              .form__row
+                  .form__group.opinion
+                      .opinion__title
+                          |Регистратура
+                      .opinion__row
+                          span.opinion__name
+                              |Скорость обслуживания
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-1", id="radio-reviews-1")
+                                  label.opinion__label(for="radio-reviews-1")
+                                      |1
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-1", id="radio-reviews-2")
+                                  label.opinion__label(for="radio-reviews-2")
+                                      |2
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-1", id="radio-reviews-3")
+                                  label.opinion__label(for="radio-reviews-3")
+                                      |3
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-1", id="radio-reviews-4")
+                                  label.opinion__label(for="radio-reviews-4")
+                                      |4
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-1", id="radio-reviews-5")
+                                  label.opinion__label(for="radio-reviews-5")
+                                      |5
+                      .opinion__row
+                          span.opinion__name
+                              |Внешний вид сотрудника
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-2", id="radio-reviews-11")
+                                  label.opinion__label(for="radio-reviews-11")
+                                      |1
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-2", id="radio-reviews-12")
+                                  label.opinion__label(for="radio-reviews-12")
+                                      |2
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-2", id="radio-reviews-13")
+                                  label.opinion__label(for="radio-reviews-13")
+                                      |3
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-2", id="radio-reviews-14")
+                                  label.opinion__label(for="radio-reviews-14")
+                                      |4
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-2", id="radio-reviews-15")
+                                  label.opinion__label(for="radio-reviews-15")
+                                      |5
+                      .opinion__row
+                          span.opinion__name
+                              |Вежливость
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-3", id="radio-reviews-21")
+                                  label.opinion__label(for="radio-reviews-21")
+                                      |1
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-3", id="radio-reviews-22")
+                                  label.opinion__label(for="radio-reviews-22")
+                                      |2
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-3", id="radio-reviews-23")
+                                  label.opinion__label(for="radio-reviews-23")
+                                      |3
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-3", id="radio-reviews-24")
+                                  label.opinion__label(for="radio-reviews-24")
+                                      |4
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-3", id="radio-reviews-25")
+                                  label.opinion__label(for="radio-reviews-25")
+                                      |5
+              
+                  .form__group.opinion
+                      .opinion__title
+                          |Доктор
+                      .opinion__row
+                          span.opinion__name
+                              |Внешний вид
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-4", id="radio-reviews-31")
+                                  label.opinion__label(for="radio-reviews-31")
+                                      |1
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-4", id="radio-reviews-32")
+                                  label.opinion__label(for="radio-reviews-32")
+                                      |2
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-4", id="radio-reviews-33")
+                                  label.opinion__label(for="radio-reviews-33")
+                                      |3
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-4", id="radio-reviews-34")
+                                  label.opinion__label(for="radio-reviews-34")
+                                      |4
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-4", id="radio-reviews-35")
+                                  label.opinion__label(for="radio-reviews-35")
+                                      |5
+                      .opinion__row
+                          span.opinion__name
+                              |Вежливость
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-5", id="radio-reviews-41")
+                                  label.opinion__label(for="radio-reviews-41")
+                                      |1
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-5", id="radio-reviews-42")
+                                  label.opinion__label(for="radio-reviews-42")
+                                      |2
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-5", id="radio-reviews-43")
+                                  label.opinion__label(for="radio-reviews-43")
+                                      |3
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-5", id="radio-reviews-44")
+                                  label.opinion__label(for="radio-reviews-44")
+                                      |4
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-5", id="radio-reviews-45")
+                                  label.opinion__label(for="radio-reviews-45")
+                                      |5
+                      .opinion__row
+                          span.opinion__name
+                              |Ответил ли на все вопросы
+                          .opinion__inputs
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-6", id="radio-reviews-51")
+                                  label.opinion__label.opinion__label--not-number(for="radio-reviews-51")
+                                      |Да
+                              .opinion__inputs-group
+                                  input.opinion__input(type="radio", name="opinion-6", id="radio-reviews-52")
+                                  label.opinion__label.opinion__label--not-number(for="radio-reviews-52")
+                                      |Нет
+                                  
+                              
+              .form__row
+                  .form__group.form__group--checkbox
+                      input.form__checkbox-input(type="checkbox", id="checkbox-reviews-2")
+                      label.form__checkbox-label(for="checkbox-reviews-2")
+                          span.form__checkbox-description
+                              |Согласен на обработку 
+                              a(href="#") персональных данных
+              .form__row
+                  .form__group.form__group--button
+                      button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                          span
+                              |Отправить отзыв
+        // END Оставить отзыв
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")

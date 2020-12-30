@@ -187,13 +187,15 @@ html(lang="ru")
                     .form__group
                         label.form__label
                             | Клиника
-                        select.js-choice(id="clinic")
+                        select.js-choice.js-choices-dependent(id="clinic")
+                            option.choice-1 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                     .form__group
                         label.form__label
                             | Услуга
-                        select.js-choice(id="services")
+                        select.js-choice.js-choices-dependent(id="services")
+                            option.choice-1 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                 //- .form__row

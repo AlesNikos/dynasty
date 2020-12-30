@@ -122,6 +122,27 @@
             margin 0 -18px
             // &:not(:last-child)
             //     margin-bottom 26px
+        & .form__group-wrap
+            position relative
+            flex 0 0 50%
+            max-width 50%
+            width 100%
+            padding 0 18px
+            margin-bottom 15px
+            // &:last-child
+            //     margin-bottom 0
+            @media tablet-portrait-large
+                flex 0 0 100%
+                max-width 100%
+            .form__group
+                flex 0 0 100%
+                max-width 100%
+                padding 0
+                &:last-of-type
+                    margin 0
+            .form__textarea
+                min-height: 241px
+
         & .form__group
             position relative
             flex 0 0 50%
@@ -139,13 +160,22 @@
             max-width 100%
             margin 24px 0 39px
             text-align center
-            @media phone 
+            @media tablet-portrait-small 
                 text-align left
         & .form__group--button
             flex 0 0 100%
             max-width 100%
             margin-bottom 0
             text-align center
+
+        & .opinion
+            margin-top 14px
+        & .opinion__name
+            font-size 16px
+            font-weight 400
+            line-height 26px
+        & .form__textarea
+            min-height 144px
 
 
 
@@ -283,6 +313,9 @@
         border-radius 50%
         cursor pointer
         transition 0.3s ease
+        @media small-phone
+            width 40px
+            height 40px
         &:hover
             color deep-pink
             border-color: deep-pink
@@ -316,7 +349,8 @@
             font-size 32px
             line-height 36px
     &__subtitle
-        margin 0 0 35px
+        max-width: 780px
+        margin 0 auto 35px
         letter-spacing -0.36px
         text-align center
         span 

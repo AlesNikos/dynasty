@@ -319,7 +319,10 @@ custom-border(color)
         &-arrows
             &:hover:not(.pagination__item--disabled)
                 svg
-                    stroke deep-pink
+                    animation arrow-drawing
+                    animation-duration 1s
+                    animation-timing-function ease
+                    animation-iteration-count 1
         &--arrow-left
             margin-right 34px
             @media phone
@@ -341,7 +344,8 @@ custom-border(color)
                 stroke-dasharray 54px
                 transition: 0.3s
         &--disabled
+            opacity .15
             cursor default
-            svg
-                stroke #e2e2e2
+            // svg
+            //     opacity .15
 

@@ -11,20 +11,22 @@
     });
 
 
-    // let servicesMenu = document.querySelector('.js-service-menu');
-    // // let blockPosition = servicesMenu.getBoundingClientRect().top;
-    // // console.log(blockPosition + pageYOffset);
+    let servicesMenu = document.querySelector('.js-service-menu');
+    let servicesInfo = document.querySelector('.service__info-hero')
+    let blockPosition = window.pageYOffset + servicesMenu.getBoundingClientRect().top;
 
-    // window.addEventListener('scroll', function() {
-    //   let position = window.pageYOffset;
-    //   console.log(position);
-    //   let blockPosition = servicesMenu.getBoundingClientRect();
-    //   console.log(blockPosition.top + pageYOffset);
-    //   if (position > (blockPosition.top + pageYOffset - 96)) {
-    //     servicesMenu.classList.add('services-element__menu--fixed');
-    //   } else {
-    //     servicesMenu.classList.remove('services-element__menu--fixed');
-    //   }
-    // });
+    if (document.documentElement.clientWidth > 1365) {
+      window.addEventListener('scroll', function() {
+        let position = window.pageYOffset;
+        if (position > blockPosition - 96) {
+          servicesMenu.classList.add('service__menu--fixed');
+          servicesInfo.classList.add('service__info-hero--position');
+        } else {
+          servicesMenu.classList.remove('service__menu--fixed');
+          servicesInfo.classList.remove('service__info-hero--position');
+        }
+      });
+
+    }
     
 })();

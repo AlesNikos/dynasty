@@ -486,21 +486,23 @@ if(document.getElementById("map-2")){
     });
 
 
-    // let servicesMenu = document.querySelector('.js-service-menu');
-    // // let blockPosition = servicesMenu.getBoundingClientRect().top;
-    // // console.log(blockPosition + pageYOffset);
+    let servicesMenu = document.querySelector('.js-service-menu');
+    let servicesInfo = document.querySelector('.service__info-hero')
+    let blockPosition = window.pageYOffset + servicesMenu.getBoundingClientRect().top;
 
-    // window.addEventListener('scroll', function() {
-    //   let position = window.pageYOffset;
-    //   console.log(position);
-    //   let blockPosition = servicesMenu.getBoundingClientRect();
-    //   console.log(blockPosition.top + pageYOffset);
-    //   if (position > (blockPosition.top + pageYOffset - 96)) {
-    //     servicesMenu.classList.add('services-element__menu--fixed');
-    //   } else {
-    //     servicesMenu.classList.remove('services-element__menu--fixed');
-    //   }
-    // });
+    if (document.documentElement.clientWidth > 1365) {
+      window.addEventListener('scroll', function() {
+        let position = window.pageYOffset;
+        if (position > blockPosition - 96) {
+          servicesMenu.classList.add('service__menu--fixed');
+          servicesInfo.classList.add('service__info-hero--position');
+        } else {
+          servicesMenu.classList.remove('service__menu--fixed');
+          servicesInfo.classList.remove('service__info-hero--position');
+        }
+      });
+
+    }
     
 })();
 
@@ -537,50 +539,50 @@ if(document.getElementById("map-2")){
   //     });
   //   };
 
-  choicesDependent1 = document.getElementById('doctors-select');
-  if(choicesDependent1){
-      sShort = new Choices(choicesDependent1, {
-        silent: false,
-        searchEnabled: false,
-        resetScrollPosition: true,
-        placeholder: false,
-        classNames: {
-            containerOuter: 'choices',
-            containerInner: 'choices__inner',
-            item: 'choices__item',
-          },
-      });
-    };
+  // choicesDependent1 = document.getElementById('doctors-select');
+  // if(choicesDependent1){
+  //     sShort = new Choices(choicesDependent1, {
+  //       silent: false,
+  //       searchEnabled: false,
+  //       resetScrollPosition: true,
+  //       placeholder: false,
+  //       classNames: {
+  //           containerOuter: 'choices',
+  //           containerInner: 'choices__inner',
+  //           item: 'choices__item',
+  //         },
+  //     });
+  //   };
 
-  let choicesDependent2 = document.getElementById('clinic');
-  if(choicesDependent2){
-      sShort = new Choices(choicesDependent2, {
-        silent: false,
-        searchEnabled: false,
-        resetScrollPosition: true,
-        placeholder: false,
-        classNames: {
-            containerOuter: 'choices',
-            containerInner: 'choices__inner',
-            item: 'choices__item',
-          },
-      });
-    };
+  // let choicesDependent2 = document.getElementById('clinic');
+  // if(choicesDependent2){
+  //     sShort = new Choices(choicesDependent2, {
+  //       silent: false,
+  //       searchEnabled: false,
+  //       resetScrollPosition: true,
+  //       placeholder: false,
+  //       classNames: {
+  //           containerOuter: 'choices',
+  //           containerInner: 'choices__inner',
+  //           item: 'choices__item',
+  //         },
+  //     });
+  //   };
 
-  let choicesDependent3 = document.getElementById('services');
-  if(choicesDependent3){
-      sShort = new Choices(choicesDependent3, {
-        silent: false,
-        searchEnabled: false,
-        resetScrollPosition: true,
-        placeholder: false,
-        classNames: {
-            containerOuter: 'choices',
-            containerInner: 'choices__inner',
-            item: 'choices__item',
-          },
-      });
-    };
+  // let choicesDependent3 = document.getElementById('services');
+  // if(choicesDependent3){
+  //     sShort = new Choices(choicesDependent3, {
+  //       silent: false,
+  //       searchEnabled: false,
+  //       resetScrollPosition: true,
+  //       placeholder: false,
+  //       classNames: {
+  //           containerOuter: 'choices',
+  //           containerInner: 'choices__inner',
+  //           item: 'choices__item',
+  //         },
+  //     });
+  //   };
 
   let choicesDependentAll = document.querySelectorAll(".js-choices-dependent");
   if(choicesDependentAll){
@@ -764,17 +766,17 @@ if(document.getElementById("map-2")){
     function ScrollButton(elem){
 
       // Находит блок, который нужно привязать к кнопке
-      let target = document.querySelector("[data-anchor=" + elem.getAttribute("data-target") + "]");
+        let target = document.querySelector("[data-anchor=" + elem.getAttribute("data-target") + "]");
 
       // Добавляем событие скроллирования по клику
-      if(target){
-          elem.addEventListener("click", function(e){
-            e.preventDefault();
-              if(!inScrollNow){
-                  scrollTo(target);
-              }
-          });
-      };
+        if(target){
+            elem.addEventListener("click", function(e){
+                e.preventDefault();
+                if(!inScrollNow){
+                    scrollTo(target);
+                }
+            });
+        };
         
     };
 
@@ -799,7 +801,7 @@ if(document.getElementById("map-2")){
 
         if(targetYPosition > window.pageYOffset){
 
-            let distance = targetYPosition - window.pageYOffset - 96;
+            let distance = targetYPosition - window.pageYOffset - 200;
             if(distance > speed){
                 window.scrollTo(0, window.pageYOffset + speed);
                 setTimeout(function(){
@@ -809,7 +811,7 @@ if(document.getElementById("map-2")){
                 window.scrollTo(0, window.pageYOffset + distance);
                 inScrollNow = false;
             };
- 
+
         }else{
 
             let distance = window.pageYOffset - targetYPosition;

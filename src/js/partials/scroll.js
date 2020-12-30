@@ -4,17 +4,17 @@
     function ScrollButton(elem){
 
       // Находит блок, который нужно привязать к кнопке
-      let target = document.querySelector("[data-anchor=" + elem.getAttribute("data-target") + "]");
+        let target = document.querySelector("[data-anchor=" + elem.getAttribute("data-target") + "]");
 
       // Добавляем событие скроллирования по клику
-      if(target){
-          elem.addEventListener("click", function(e){
-            e.preventDefault();
-              if(!inScrollNow){
-                  scrollTo(target);
-              }
-          });
-      };
+        if(target){
+            elem.addEventListener("click", function(e){
+                e.preventDefault();
+                if(!inScrollNow){
+                    scrollTo(target);
+                }
+            });
+        };
         
     };
 
@@ -39,7 +39,7 @@
 
         if(targetYPosition > window.pageYOffset){
 
-            let distance = targetYPosition - window.pageYOffset - 96;
+            let distance = targetYPosition - window.pageYOffset - 200;
             if(distance > speed){
                 window.scrollTo(0, window.pageYOffset + speed);
                 setTimeout(function(){
@@ -49,7 +49,7 @@
                 window.scrollTo(0, window.pageYOffset + distance);
                 inScrollNow = false;
             };
- 
+
         }else{
 
             let distance = window.pageYOffset - targetYPosition;
