@@ -1,0 +1,114 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |О нас
+                li.breadcrumps__item
+                  span
+                    |Вопрос-ответ
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Вопрос-ответ
+        //- END inner-intro
+
+
+        // START Вопрос-ответ
+        section.questions
+          .accordion.js-accordion.opened
+            .accordion__head.js-accordion-open
+              span.accordion__title
+                |В ваших клиниках можно вызвать терапевта на дом?
+              svg(width="29" height="29")
+                use(xlink:href="#icon-cross")
+            .accordion__body
+              .accordion__text
+                p
+                  |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                p
+                  |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+          .accordion.js-accordion
+            .accordion__head.js-accordion-open
+              span.accordion__title
+                |Можно ли связаться с лечащим врачем не посещая поликлинику?
+              svg(width="29" height="29")
+                use(xlink:href="#icon-cross")
+            .accordion__body
+              .accordion__text
+                p
+                  |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                p
+                  |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+          .accordion.js-accordion
+            .accordion__head.js-accordion-open
+              span.accordion__title
+                |Если я записываюсь на прием к терапевту, сколько вреимени в моем распоряжении, чтобы задать все вопросы?
+              svg(width="29" height="29")
+                use(xlink:href="#icon-cross")
+            .accordion__body
+              .accordion__text
+                p
+                  |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                p
+                  |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+          .accordion.js-accordion
+            .accordion__head.js-accordion-open
+              span.accordion__title
+                |Еще какой-то небольшой вопрос?
+              svg(width="29" height="29")
+                use(xlink:href="#icon-cross")
+            .accordion__body
+              .accordion__text
+                p
+                  |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                p
+                  |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+          .accordion.js-accordion
+            .accordion__head.js-accordion-open
+              span.accordion__title
+                |Ну и еще какой-то небольшой вопрос?
+              svg(width="29" height="29")
+                use(xlink:href="#icon-cross")
+            .accordion__body
+              .accordion__text
+                p
+                  |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                p
+                  |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+          .questions__link-wrapper
+              a.common__link.common__link--large.questions__link.hidden-dlink(data-al="")
+                  |Все вопросы об услуге
+          .questions__link-wrapper
+              button.common__button.questions__btn.js-bubble-hover.bubble-hover.bubble-hover__button
+                  |Задать вопрос
+          // END Вопрос-ответ
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")
