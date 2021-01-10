@@ -153,12 +153,50 @@
             </div>
           </div>
         </div>
-        <div class="questions__link-wrapper"><a class="common__link common__link--large questions__link hidden-dlink" data-al="">Все вопросы об услуге</a></div>
-        <div class="questions__link-wrapper">
-          <button class="common__button questions__btn js-bubble-hover bubble-hover bubble-hover__button">Задать вопрос</button>
-        </div>
         <!-- END Вопрос-ответ-->
       </section>
+      <div class="pagination pagination--position"><a class="pagination__item pagination__item-arrows pagination__item--arrow-left pagination__item--disabled" href=""><svg width="12" height="21">
+<use xlink:href="#arrow-left"></use>
+</svg></a><a class="pagination__item pagination__item--active" href="">1</a><a class="pagination__item" href="">2</a><a class="pagination__item" href="">3</a><a class="pagination__item" href="">4</a><a class="pagination__item" href="">5</a><a class="pagination__item" href="">...</a><a class="pagination__item" href="">99</a><a class="pagination__item pagination__item-arrows pagination__item--arrow-right js-reviews-slider-arrow-right" href=""><svg width="12" height="21">
+<use xlink:href="#arrow-right"></use>
+</svg></a></div>
+      <!-- START Задать вопрос-->
+      <section class="questions-form questions-form--position main-form-container">
+        <h4 class="main-form-container__title">Задать вопрос</h4>
+        <p class="main-form-container__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
+        <form class="form form--main">
+          <div class="form__row">
+            <div class="form__group-wrap">
+              <div class="form__group">
+                <label class="form__label" for="name-questions-1">ФИО <span class="common-req-sign">*</span></label>
+                <input class="form__input" type="text" data-req="req" id="name-questions-1">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="phone-questions-1">Телефон <span class="common-req-sign">*</span></label>
+                <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-questions-1">
+              </div>
+            </div>
+            <div class="form__group-wrap">
+              <div class="form__group">
+                <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
+                <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group form__group--checkbox">
+              <input class="form__checkbox-input" type="checkbox" id="checkbox-questions-2">
+              <label class="form__checkbox-label" for="checkbox-questions-2"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group form__group--button">
+              <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Отправить вопрос</span></button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!-- END Задать вопрос-->
     </main>
     <footer class="foot">
       <div class="foot__top">
@@ -223,6 +261,7 @@
       <div class="hidden-block__background"></div>
       <div class="hidden-block__container">
         <div class="hidden-block__wrapper">
+          <!-- START ЗАПИСАТЬСЯ НА ПРИЕМ-->
           <section class="appointment-popup popup hidden-block__popup" data-popup="appointment">
             <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
             <h4 class="popup__title">Записаться на прием</h4>
@@ -232,7 +271,7 @@
                 <div class="form__group">
                   <label class="form__label">Клиника</label>
                   <select class="js-choice js-choices-dependent" id="popup-clinic">
-                    <option class="choice-1"> </option>
+                    <option class="choice-1" label=" "> </option>
                     <option>Клиника на Мамина-Сибиряка, 128</option>
                     <option>Клиника на Академика Шварца, 14</option>
                   </select>
@@ -242,7 +281,7 @@
                 <div class="form__group">
                   <label class="form__label">Услуга</label>
                   <select class="js-choice js-choices-dependent" id="popup-services">
-                    <option class="choice-1"> </option>
+                    <option class="choice-1" label=" "> </option>
                     <option>Клиника на Мамина-Сибиряка, 128</option>
                     <option>Клиника на Академика Шварца, 14</option>
                   </select>
@@ -273,6 +312,8 @@
               </div>
             </form>
           </section>
+          <!-- END ЗАПИСАТЬСЯ НА ПРИЕМ-->
+          <!-- START ОСТАВИТЬ ОТЗЫВ-->
           <section class="review-popup popup hidden-block__popup" data-popup="review-popup">
             <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
             <h4 class="popup__title">Оставить отзыв</h4>
@@ -469,7 +510,9 @@
               </div>
             </form>
           </section>
-          <section class="appointment-popup popup hidden-block__popup" data-popup="question-doctor-popup">
+          <!-- END ОСТАВИТЬ ОТЗЫВ-->
+          <!-- START ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ-->
+          <section class="question-doctor-popup popup hidden-block__popup" data-popup="question-doctor-popup">
             <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
             <h4 class="popup__title">Задать вопрос главврачу</h4>
             <p class="popup__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
@@ -500,11 +543,64 @@
               </div>
               <div class="form__row">
                 <div class="form__group">
-                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Задать вопрос</span></button>
+                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Задать вопрос </span></button>
                 </div>
               </div>
             </form>
           </section>
+          <!-- END ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ-->
+          <!-- START ЗАДАТЬ ВОПРОС-->
+          <section class="question-popup popup hidden-block__popup" data-popup="question-popup">
+            <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
+            <h4 class="popup__title">Задать вопрос</h4>
+            <p class="popup__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
+            <form class="popup__form form">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="name-31">ФИО <span class="common-req-sign">*</span></label>
+                  <input class="form__input" type="text" data-req="req" id="name-31">
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="phone-31">Телефон <span class="common-req-sign">*</span></label>
+                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-31">
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group form__group--checkbox">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-4">
+                  <label class="form__checkbox-label" for="checkbox-4"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Задать вопрос </span></button>
+                </div>
+              </div>
+            </form>
+          </section>
+          <!-- END ЗАДАТЬ ВОПРОС-->
+          <!-- START ТЕКСТ ОТЗЫВА-->
+          <section class="review-text-popup popup hidden-block__popup" data-popup="review-text-popup">
+            <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
+            <div class="review">
+              <div class="review__info"><span class="review__date">30.01.2020</span><span class="review__author">Дмитрий</span>
+                <div class="common__wysiwyg review__description">
+                  <p>Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.</p>
+                  <p>Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.</p>
+                </div>
+              </div>
+            </div>
+            <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button js-close-popup-button"><span>Закрыть</span></button>
+          </section>
+          <!-- END ТЕКСТ ОТЗЫВА-->
         </div>
       </div>
     </div>

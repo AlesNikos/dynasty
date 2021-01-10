@@ -4,7 +4,7 @@ div.hidden-block
     div.hidden-block__container
         .hidden-block__wrapper
 
-            //- ЗАПИСАТЬСЯ НА ПРИЕМ
+            // START ЗАПИСАТЬСЯ НА ПРИЕМ
             section.appointment-popup.popup.hidden-block__popup(data-popup="appointment")
                 button.hidden-block__close-button.popup__close-button.js-close-popup-button
                 h4.popup__title
@@ -17,7 +17,7 @@ div.hidden-block
                             label.form__label
                                 | Клиника
                             select.js-choice.js-choices-dependent(id="popup-clinic")
-                                option.choice-1  
+                                option.choice-1(label=" ")  
                                 option Клиника на Мамина-Сибиряка, 128
                                 option Клиника на Академика Шварца, 14
                     .form__row
@@ -25,7 +25,7 @@ div.hidden-block
                             label.form__label
                                 | Услуга
                             select.js-choice.js-choices-dependent(id="popup-services")
-                                option.choice-1  
+                                option.choice-1(label=" ")  
                                 option Клиника на Мамина-Сибиряка, 128
                                 option Клиника на Академика Шварца, 14
                     .form__row
@@ -50,8 +50,9 @@ div.hidden-block
                             button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
                                 span
                                     |Отправить заявку
+            // END ЗАПИСАТЬСЯ НА ПРИЕМ
 
-            //- ОСТАВИТЬ ОТЗЫВ
+            // START ОСТАВИТЬ ОТЗЫВ
             section.review-popup.popup.hidden-block__popup(data-popup="review-popup")
                 button.hidden-block__close-button.popup__close-button.js-close-popup-button
                 h4.popup__title
@@ -243,9 +244,10 @@ div.hidden-block
                             button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
                                 span
                                     |Отправить отзыв
+            // END ОСТАВИТЬ ОТЗЫВ
 
-            //- ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ
-            section.appointment-popup.popup.hidden-block__popup(data-popup="question-doctor-popup")
+            // START ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ
+            section.question-doctor-popup.popup.hidden-block__popup(data-popup="question-doctor-popup")
                 button.hidden-block__close-button.popup__close-button.js-close-popup-button
                 h4.popup__title
                     |Задать вопрос главврачу
@@ -279,3 +281,62 @@ div.hidden-block
                             button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
                                 span
                                     |Задать вопрос 
+            // END ЗАДАТЬ ВОПРОС ГЛАВВРАЧУ
+
+            // START ЗАДАТЬ ВОПРОС
+            section.question-popup.popup.hidden-block__popup(data-popup="question-popup")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                h4.popup__title
+                    |Задать вопрос
+                p.popup__subtitle
+                    | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+                form.popup__form.form
+                    .form__row
+                        .form__group
+                            label.form__label(for="name-31")
+                                | ФИО <span class="common-req-sign">*</span>
+                            input.form__input(type="text", data-req="req", id="name-31")
+                    .form__row
+                        .form__group
+                            label.form__label(for="phone-31")
+                                | Телефон <span class="common-req-sign">*</span>
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-31")
+                    .form__row
+                        .form__group
+                            label.form__label
+                                | Текст вопроса <span class="common-req-sign">*</span>
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                    .form__row
+                        .form__group.form__group--checkbox
+                            input.form__checkbox-input(type="checkbox", id="checkbox-4")
+                            label.form__checkbox-label(for="checkbox-4")
+                                span.form__checkbox-description
+                                    |Согласен на обработку 
+                                    a(href="#") персональных данных
+                    .form__row
+                        .form__group
+                            button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                span
+                                    |Задать вопрос 
+            // END ЗАДАТЬ ВОПРОС
+
+            // START ТЕКСТ ОТЗЫВА
+            section.review-text-popup.popup.hidden-block__popup(data-popup="review-text-popup")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                
+                div.review
+                    div.review__info
+                        span.review__date
+                            |30.01.2020
+                        span.review__author
+                            |Дмитрий
+                        div.common__wysiwyg.review__description
+                            p
+                                |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                            p
+                                |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                
+                button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button.js-close-popup-button
+                    span
+                        |Закрыть
+            // END ТЕКСТ ОТЗЫВА

@@ -188,14 +188,14 @@ html(lang="ru")
                         label.form__label
                             | Клиника
                         select.js-choice.js-choices-dependent(id="clinic")
-                            option.choice-1 
+                            option.choice-1(label="") 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                     .form__group
                         label.form__label
                             | Услуга
                         select.js-choice.js-choices-dependent(id="services")
-                            option.choice-1 
+                            option.choice-1(label="") 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                 //- .form__row
@@ -241,7 +241,7 @@ html(lang="ru")
                                         |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
                                     p
                                         |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
-                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                            button.common__button.review__button.js-bubble-hover.bubble-hover.bubble-hover__button.js-popup-button(data-popup-for="review-text-popup")
                                 |Читать полностью
                     li.reviews-slider__item.swiper-slide
                         div.review
@@ -296,7 +296,7 @@ html(lang="ru")
                 a.common__link.common__link--large.reviews__link(href="")
                     |Все отзывы
             .reviews__link-wrapper
-                button.common__button.reviews__btn.js-bubble-hover.bubble-hover.bubble-hover__button
+                button.common__button.reviews__btn.js-bubble-hover.bubble-hover.bubble-hover__button.js-popup-button(data-popup-for="review-popup")
                     |Оставить отзыв
           // End Отзывы
 
@@ -368,7 +368,7 @@ html(lang="ru")
                 a.common__link.common__link--large.questions__link.hidden-dlink(data-al="")
                     |Все вопросы об услуге
             .questions__link-wrapper
-                button.common__button.questions__btn.js-bubble-hover.bubble-hover.bubble-hover__button
+                button.common__button.questions__btn.js-bubble-hover.bubble-hover.bubble-hover__button.js-popup-button(data-popup-for="question-popup")
                     |Задать вопрос
 
           // END Вопрос-ответ

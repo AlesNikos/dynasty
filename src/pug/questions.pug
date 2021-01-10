@@ -97,13 +97,72 @@ html(lang="ru")
                   |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
                 p
                   |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города. Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
-          .questions__link-wrapper
-              a.common__link.common__link--large.questions__link.hidden-dlink(data-al="")
-                  |Все вопросы об услуге
-          .questions__link-wrapper
-              button.common__button.questions__btn.js-bubble-hover.bubble-hover.bubble-hover__button
-                  |Задать вопрос
           // END Вопрос-ответ
+
+        //- START Pagination
+        .pagination.pagination--position
+          a.pagination__item.pagination__item-arrows.pagination__item--arrow-left.pagination__item--disabled(href="")
+            <svg width="12" height="21">
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+          a.pagination__item.pagination__item--active(href="")
+            |1
+          a.pagination__item(href="")
+            |2
+          a.pagination__item(href="")
+            |3
+          a.pagination__item(href="")
+            |4
+          a.pagination__item(href="")
+            |5
+          a.pagination__item(href="")
+            |...
+          a.pagination__item(href="")
+            |99
+          a.pagination__item.pagination__item-arrows.pagination__item--arrow-right.js-reviews-slider-arrow-right(href="")
+            <svg width="12" height="21">
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+        //- END Pagination
+
+        // START Задать вопрос
+        section.questions-form.questions-form--position.main-form-container
+          h4.main-form-container__title
+            |Задать вопрос
+          p.main-form-container__subtitle
+            | Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.
+          form.form.form--main
+              .form__row
+                  .form__group-wrap
+                    .form__group
+                        label.form__label(for="name-questions-1")
+                            | ФИО <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req", id="name-questions-1")
+                  
+                    .form__group
+                        label.form__label(for="phone-questions-1")
+                            | Телефон <span class="common-req-sign">*</span>
+                        input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-questions-1")
+
+                  .form__group-wrap
+                    .form__group
+                        label.form__label
+                            | Текст вопроса <span class="common-req-sign">*</span>
+                        textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+
+              .form__row
+                  .form__group.form__group--checkbox
+                      input.form__checkbox-input(type="checkbox", id="checkbox-questions-2")
+                      label.form__checkbox-label(for="checkbox-questions-2")
+                          span.form__checkbox-description
+                              |Согласен на обработку 
+                              a(href="#") персональных данных
+              .form__row
+                  .form__group.form__group--button
+                      button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                          span
+                              |Отправить вопрос
+        // END Задать вопрос
 
 
       //= partials/footer.pug
