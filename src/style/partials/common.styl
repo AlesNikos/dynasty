@@ -212,9 +212,30 @@ custom-border(color)
                 margin-top 84px
                 @media phone
                     margin-top 54px
+
+        & ol:not([class])
+            margin 0
+            padding-left 33px
+            & li:not([class])
+                letter-spacing -0.36px
+                &::marker
+                    color deep-pink
+            & + h3 
+                margin-top 84px
+                @media phone
+                    margin-top 54px
+                    
         &--custom
             & p:not([class]) + p:not([class])
                 margin 24px 0 0
+
+        & a:not([class])
+            text-decoration none
+            color deep-pink
+            border-bottom 1px solid deep-pink
+            transition 0.3s
+            &:hover 
+                border-bottom-color transparent
 // .common__button:not(.common__button--no-backing):hover
 //     background-color bright-pink
 

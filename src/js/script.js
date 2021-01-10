@@ -1,6 +1,9 @@
 // Инициализация свайпера
 //= partials/swiper-initialize.js
 
+// Инициализация glightbox
+//= partials/glightbox-init.js
+
 
 // Валидация форм
 //= partials/validation.js

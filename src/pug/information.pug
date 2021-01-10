@@ -1,0 +1,242 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+      div(style="display: none")
+          include ../../build/images/sprite.svg
+      //= partials/header.pug
+      main.main.inner-page
+
+        //- START inner-intro
+        section.inner-intro.inner-intro--left
+          .container
+            .breadcrumps.inner-intro__breadcrumps
+              ul.breadcrumps__list
+                li.breadcrumps__item
+                  a.breadcrumps__link(href="#")
+                    span
+                      |Главная
+                li.breadcrumps__item
+                  span
+                    |Пациентам
+            h1.common__h1-heading.common__h1-heading--black.inner-intro__page-heading
+              |Пациентам
+        //- END inner-intro
+
+        // START Information
+        section.information
+          section.information__info.common__wysiwyg
+            p
+              |Обращаем ваше внимание, что семейные клиники «Династия» не оказывают услуги по ОМС.
+            p
+              | <a href="#">Территориальная программа</a> государственных гарантий бесплатного оказания гражданам медицинской помощи в Свердловской области на 2020 год.
+            h3 
+              |Что необходимо иметь при посещении клиники
+            ol
+              li
+                |Паспорт.
+              li
+                |СНИЛС.
+              li
+                |Медицинские документы. Пожалуйста, возьмите на прием всю медицинскую документацию от предыдущих врачей  (консультативные заключения, результаты анализов, рентгеновские снимки, данные МРТ, КТ и т.п.).
+              li
+                |Список всех лекарств. Пожалуйста, принесите список всех лекарств, которые Вы в настоящее время принимаете или собираетесь принимать, включая кратность приема и дозировку каждого препарата.
+              li
+                |Список вопросов к врачу. Иногда мы забываем то, о чем хотели сказать или спросить доктора, поэтому заранее составьте список своих вопросов, пожеланий или существенных обстоятельствах прежде, чем Вы придете в свое назначенное время на прием к врачу. И не забывайте приносить этот список с собой!
+              li
+                |Страховая информация. Пожалуйста, принесите свой страховой полис или направление страховой компании на обслуживание в конкретную клинику, если вы обслуживаетесь по договору ДМС.
+
+            h3 
+              |Информация для родителей (законных представителей) пациентов, не достигших возраста 15 лет
+            p
+              |Оказание медицинской помощи несовершеннолетним пациентам (до 15 лет) осуществляется в присутствии их законных представителей - родителей, опекунов, усыновителей (на основании закона 323 ФЗ "Об основах охраны здоровья граждан в РФ).
+            h3 
+              |Информация о юридическом лице
+            p
+              |ООО «ГБ№41 - семейная медицина».
+            p
+              |ИНН: 6674194106
+            p 
+              |ОГРН: 1069674077835
+            p
+              |Юридический адрес: 620073, Екатеринбург, улица Академика Шварца, 14
+
+          section.information__rules.rules
+            h3.rules__title.information__title
+              |Правила
+            .rules__items
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Правила предоставления медицинских услуг
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Правила к подготовке к УЗ&#8209;исследованиям
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Правила забора материала на лабораторные исследования
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Визит к гинекологу – что нужно знать перед посещением врача
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Памятка для сбора общего анализа мочи (для женщин)
+              .rules__item-wrap
+                a.rules__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  span.rules__item-text 
+                    |Памятка для сбора общего анализа мочи (для мужчин)
+            .rules__buttons
+              button.common__button.common__button--medium.rules__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                span
+                    |Показать еще
+
+          section.information__locations
+            h3.information__title
+              |Адреса и телефоны надзорных органов
+            .accordion.js-accordion
+              .accordion__head.js-accordion-open
+                span.accordion__title
+                  |Министерство Здравоохранения Свердловской области
+                svg(width="29" height="29")
+                  use(xlink:href="#icon-cross")
+              .accordion__body
+                .accordion__items
+                  .accordion__item
+                    p.accordion__item-name
+                      |Адрес
+                    p.accordion__item-value
+                      |620130, Екатеринбург, улица 8-е Марта, дом 177 А
+                  .accordion__item
+                    p.accordion__item-name
+                      |Телефон
+                    a.accordion__item-value.hidden-dlink(data-al="tel:")
+                      |+7 343 210-94-37
+                  .accordion__item
+                    p.accordion__item-name
+                      |Электронная почта
+                    a.accordion__item-value.hidden-dlink(data-al="mailto:")
+                      |mail_15@66.rospotrebnadzor.ru
+            .accordion.js-accordion.opened
+              .accordion__head.js-accordion-open
+                span.accordion__title
+                  |Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Свердловской области. Территориальный отдел в Чкаловском районе Екатеринбурга, в Городе Полевской и Сысертском районе
+                svg(width="29" height="29")
+                  use(xlink:href="#icon-cross")
+              .accordion__body
+                .accordion__items
+                  .accordion__item
+                    p.accordion__item-name
+                      |Адрес
+                    p.accordion__item-value
+                      |620130, Екатеринбург, улица 8-е Марта, дом 177 А
+                  .accordion__item
+                    p.accordion__item-name
+                      |Телефон
+                    a.accordion__item-value.hidden-dlink(data-al="tel:")
+                      |+7 343 210-94-37
+                  .accordion__item
+                    p.accordion__item-name
+                      |Электронная почта
+                    a.accordion__item-value.hidden-dlink(data-al="mailto:")
+                      |mail_15@66.rospotrebnadzor.ru
+            .accordion.js-accordion
+              .accordion__head.js-accordion-open
+                span.accordion__title
+                  |Территориальный орган Федеральной службы по надзору в сфере здравоохранения по Свердловской области
+                svg(width="29" height="29")
+                  use(xlink:href="#icon-cross")
+              .accordion__body
+                .accordion__items
+                  .accordion__item
+                    p.accordion__item-name
+                      |Адрес
+                    p.accordion__item-value
+                      |620130, Екатеринбург, улица 8-е Марта, дом 177 А
+                  .accordion__item
+                    p.accordion__item-name
+                      |Телефон
+                    a.accordion__item-value.hidden-dlink(data-al="tel:")
+                      |+7 343 210-94-37
+                  .accordion__item
+                    p.accordion__item-name
+                      |Электронная почта
+                    a.accordion__item-value.hidden-dlink(data-al="mailto:")
+                      |mail_15@66.rospotrebnadzor.ru
+
+          section.information__documents.documents
+            h3.documents__title.information__title
+              |Документы
+            .documents__items
+              .documents__item-wrap
+                a.documents__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  .documents__item-info
+                    span.documents__item-type
+                      |pdf, 
+                    span.documents__item-size
+                      |1.3Мб
+                  span.documents__item-name 
+                    |Название документа
+              .documents__item-wrap
+                a.documents__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  .documents__item-info
+                    span.documents__item-type
+                      |doc, 
+                    span.documents__item-size
+                      |470Кб
+                  span.documents__item-name 
+                    |Очень большое название документа
+              .documents__item-wrap
+                a.documents__item.js-bubble-hover.bubble-hover.bubble-hover__card.hidden-dlink(data-al="")
+                  .documents__item-info
+                    span.documents__item-type
+                      |pdf, 
+                    span.documents__item-size
+                      |2.1Мб
+                  span.documents__item-name 
+                    |Большое название документа
+
+          section.information__licenses.licenses
+            h3.licenses__title.information__title
+              |Лицензия
+            .licenses__items
+              .licenses__item-wrap
+                a.licenses__item.glightbox(href="../images/licenses/licenses-img-2.jpg")
+                  img.licenses__item-img(src="../images/licenses/licenses-img.png", alt="")
+              .licenses__item-wrap
+                a.licenses__item.glightbox(href="../images/licenses/licenses-img-2.jpg")
+                  img.licenses__item-img(src="../images/licenses/licenses-img.png", alt="")
+              .licenses__item-wrap
+                a.licenses__item.glightbox(href="../images/licenses/licenses-img-2.jpg")
+                  img.licenses__item-img(src="../images/licenses/licenses-img.png", alt="")
+              .licenses__item-wrap
+                a.licenses__item.glightbox(href="../images/licenses/licenses-img-2.jpg")
+                  img.licenses__item-img(src="../images/licenses/licenses-img.png", alt="")
+
+
+          section.information__tax.common__wysiwyg
+            h3
+              |Налоговый вычет
+            p
+              |Чтобы заказать справку или рецепт для налогового вычета, заполните форму на соответствующей <a href="#">странице</a>.
+
+        // END Information
+
+
+      //= partials/footer.pug
+      //= partials/popup.pug
+      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      script(src="https://unpkg.com/imask")
+      script(src="script/vendor.js")
+      script(src="script/script.js")

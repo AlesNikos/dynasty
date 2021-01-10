@@ -15,7 +15,7 @@
   custom-border(#e2e2e2)
   background-color #fff
   transition box-shadow 0.3s ease
-  cursor pointer
+  // cursor pointer
 
   &:not(:last-of-type)
     margin-bottom 12px
@@ -40,6 +40,7 @@
     // display flex
     // justify-content space-between
     padding 46px 95px 41px 49px
+    cursor pointer
     @media phone 
       padding 24px 54px 24px 24px
     svg
@@ -77,3 +78,14 @@
       letter-spacing -0.36px
     & p:not(:last-child)
       margin 0 0 19px 0
+  &__item
+    &:not(:last-of-type)
+      margin-bottom 20px
+  &__item-name
+    margin 0 0 4px 0
+    color gray
+  &__item-value
+    margin 0
+    color #000
+    text-decoration none
+    letter-spacing -0.36px

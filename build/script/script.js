@@ -88,6 +88,17 @@
     
 })();
 
+// Инициализация glightbox
+(function(){
+  
+      const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+    
+})();
+
 
 // Валидация форм
 (function () {
