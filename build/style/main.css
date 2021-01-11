@@ -5711,6 +5711,8 @@ body.js-burger-menu-is-open .burger::after {
 }
 body.js-popup-is-open {
   overflow-y: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 body.js-popup-is-open .hidden-block {
   width: 100%;
