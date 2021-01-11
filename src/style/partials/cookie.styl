@@ -1,0 +1,31 @@
+.cookie 
+  position fixed
+  right 39px
+  bottom 33px
+  display none
+  max-width 408px
+  padding 44px 43px 50px 50px
+  box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+  border-radius 10px
+  background-color #fff
+  z-index 150
+  @media phone
+    margin-left 20px
+    padding 24px
+    right 20px
+    bottom 20px
+  &__desc
+    margin 0 0 21px 0
+    letter-spacing -0.36px
+    color #000
+  &__link
+    color deep-pink
+    text-decoration none
+    border-bottom 1px solid deep-pink
+    transition 0.3s
+    &:hover 
+      border-bottom-color transparent
+  
+.cookie-show
+  .cookie 
+    display block

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/normalize.css" type="text/css">
     <link rel="stylesheet" href="style/swiper.css" type="text/css">
     <link rel="stylesheet" href="style/choices.css" type="text/css">
+    <link rel="stylesheet" href="style/glightbox.css" type="text/css">
     <link rel="stylesheet" href="style/main.css" type="text/css">
     <title>Династия</title>
   </head>
@@ -89,7 +90,7 @@
       <section class="service">
         <section class="service__info">
           <div class="container">
-            <div class="service__info-hero" style="background-image: url('images/services/services-element-img.png')">
+            <div class="service__info-hero"><img class="service__info-img" src="images/services/services-element-img.png" alt="">
               <div class="service__info-text">
                 <p>Терапевт – это врач широкого профиля, специализирующийся на ранней диагностике множества заболеваний. Терапевт ведет первичный прием и лечение пациентов, а при необходимости дает направление к более узкоспециализированному специалисту.</p>
                 <p>Если вы не знаете, к какому врачу обратиться, то начать нужно именно с терапевта.</p>
@@ -170,27 +171,22 @@
           <div class="prices__items">
             <h5 class="prices__items-heading">Консультации</h5>
             <div class="prices__item">
-              <p class="prices__item-name">Консультация врача-терапевта, инфекциониста Малкиной О.И.</p>
-              <spam class="prices__item-price">1400 руб</spam>
+              <p class="prices__item-name">Консультация врача-терапевта, инфекциониста Малкиной О.И.</p><span class="prices__item-price">1400 руб</span>
             </div>
             <div class="prices__item">
-              <p class="prices__item-name">Консультация врача-терапевта, гастроэнтеролога Заплатиной Н.И.</p>
-              <spam class="prices__item-price">1400 руб</spam>
+              <p class="prices__item-name">Консультация врача-терапевта, гастроэнтеролога Заплатиной Н.И.</p><span class="prices__item-price">1400 руб</span>
             </div>
             <div class="prices__item">
-              <p class="prices__item-name">Консультация врача-терапевта, кардиолога ВагановойА.В</p>
-              <spam class="prices__item-price">1500 руб</spam>
+              <p class="prices__item-name">Консультация врача-терапевта, кардиолога ВагановойА.В</p><span class="prices__item-price">1500 руб</span>
             </div>
           </div>
           <div class="prices__items">
             <h5 class="prices__items-heading">Вызов на дом</h5>
             <div class="prices__item">
-              <p class="prices__item-name">Выезд в пределах Екатеринбурга</p>
-              <spam class="prices__item-price">3000 руб</spam>
+              <p class="prices__item-name">Выезд в пределах Екатеринбурга</p><span class="prices__item-price">3000 руб</span>
             </div>
             <div class="prices__item">
-              <p class="prices__item-name">Выезд за черту города, в пределах 40 км.</p>
-              <spam class="prices__item-price">4000 руб</spam>
+              <p class="prices__item-name">Выезд за черту города, в пределах 40 км.</p><span class="prices__item-price">4000 руб</span>
             </div>
           </div>
         </section>
@@ -204,7 +200,7 @@
               <div class="form__group">
                 <label class="form__label">Клиника</label>
                 <select class="js-choice js-choices-dependent" id="clinic">
-                  <option class="choice-1" label=""> </option>
+                  <option class="choice-1" label=" "> </option>
                   <option>Клиника на Мамина-Сибиряка, 128</option>
                   <option>Клиника на Академика Шварца, 14</option>
                 </select>
@@ -212,7 +208,7 @@
               <div class="form__group">
                 <label class="form__label">Услуга</label>
                 <select class="js-choice js-choices-dependent" id="services">
-                  <option class="choice-1" label=""> </option>
+                  <option class="choice-1" label=" "> </option>
                   <option>Клиника на Мамина-Сибиряка, 128</option>
                   <option>Клиника на Академика Шварца, 14</option>
                 </select>
@@ -221,16 +217,16 @@
             <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="name-d-1">ФИО <span class="common-req-sign">*</span></label>
-                <input class="form__input" type="text" data-req="req" id="name-d-1">
+                <input class="form__input" type="text" data-req="req" id="name-d-1" data-content="name">
               </div>
               <div class="form__group">
                 <label class="form__label" for="phone-d-1">Телефон <span class="common-req-sign">*</span></label>
-                <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-d-1">
+                <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-1" data-content="phone">
               </div>
             </div>
             <div class="form__row">
               <div class="form__group form__group--checkbox">
-                <input class="form__checkbox-input" type="checkbox" id="checkbox-d-1">
+                <input class="form__checkbox-input" type="checkbox" id="checkbox-d-1" data-req>
                 <label class="form__checkbox-label" for="checkbox-d-1"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
               </div>
             </div>
@@ -564,24 +560,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-1">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-1">
+                  <input class="form__input" type="text" data-req="req" id="name-1" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-1">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-1">
+                  <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-1" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-1">
+                  <input class="form__checkbox-input" type="checkbox" data-req id="checkbox-1">
                   <label class="form__checkbox-label" for="checkbox-1"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
-                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Отправить заявку</span></button>
+                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button" type="submit"><span>Отправить заявку</span></button>
                 </div>
               </div>
             </form>
@@ -596,37 +592,37 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-11">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-11">
+                  <input class="form__input" type="text" data-req="req" id="name-11" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-11">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-11">
+                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-11" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Цель обращения в клинику</label>
-                  <input class="form__input" type="text" data-req="req">
+                  <input class="form__input" type="text">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст отзыва <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Достоинства</label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" name="text" autocomplete="off"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Недостатки</label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" name="text" autocomplete="off"></textarea>
                 </div>
               </div>
               <div class="form__row">
@@ -773,7 +769,7 @@
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-2">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-2" data-req>
                   <label class="form__checkbox-label" for="checkbox-2"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
@@ -794,24 +790,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-21">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-21">
+                  <input class="form__input" type="text" data-req="req" id="name-21" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-21">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-21">
+                  <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-21" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-3">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-3" data-req>
                   <label class="form__checkbox-label" for="checkbox-3"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
@@ -832,24 +828,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-31">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-31">
+                  <input class="form__input" type="text" data-req="req" id="name-31" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-31">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-31">
+                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-31" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-4">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-4" data-req>
                   <label class="form__checkbox-label" for="checkbox-4"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>

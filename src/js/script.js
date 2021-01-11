@@ -45,3 +45,6 @@
 
 // Плавный скролл до элемента
 //= partials/scroll.js
+
+// Cookie
+//= partials/cookie.js

@@ -6,9 +6,10 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Династия
-    body
+    body.cookie-show
         div(style="display: none")
             include ../../build/images/sprite.svg
         //= partials/header.pug
@@ -561,6 +562,7 @@ html(lang="ru")
 
         //= partials/footer.pug
         //= partials/popup.pug
+        //= partials/cookie.pug
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
         script(src="https://unpkg.com/imask")
         script(src="script/vendor.js")

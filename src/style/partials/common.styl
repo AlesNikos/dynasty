@@ -158,11 +158,16 @@ custom-border(color)
             font-weight 300
             color black
             letter-spacing: -0.36px;
+            & + h2 
+                margin-top 85px
+                margin-bottom 31px
             & + h3 
                 margin-top 84px
+            & + img 
+                margin 31px 0 24px
 
         & p:not([class]) + p:not([class])
-            margin 18px 0 0 0
+            margin 23px 0 0 0
 
         &--white
             & p:not([class])
@@ -212,6 +217,10 @@ custom-border(color)
                 margin-top 84px
                 @media phone
                     margin-top 54px
+            & + p:not([class])
+                margin-top 23px
+        & p:not([class]) + ul:not([class])
+            margin 23px 0 0 0
 
         & ol:not([class])
             margin 0
@@ -224,6 +233,10 @@ custom-border(color)
                 margin-top 84px
                 @media phone
                     margin-top 54px
+            & + p:not([class])
+                margin-top 23px
+        & p:not([class]) + ol:not([class])
+            margin 23px 0 0 0
                     
         &--custom
             & p:not([class]) + p:not([class])
@@ -236,6 +249,45 @@ custom-border(color)
             transition 0.3s
             &:hover 
                 border-bottom-color transparent
+        & img:not([class])
+            max-width 100%
+            height auto
+            border-radius 10px
+        & .table-responsive
+            overflow auto
+        & .table
+            margin 31px 0 31px
+            border-collapse collapse
+            max-width 100%
+            border-radius 10px
+            border-spacing 0
+            @media desktop-hover
+                custom-border(light-gray)
+                overflow hidden
+            & tr:first-child
+                background-color deep-pink
+            th 
+                padding 19px 25px
+                font-size 16px
+                font-weight 400
+                line-height 24px
+                color #fff
+                text-align left
+                letter-spacing -0.32px
+                white-space nowrap
+            td 
+                padding 18px 25px
+                color #000
+                font-size 16px
+                font-weight 400
+                line-height 24px
+                border 1px solid light-gray
+                letter-spacing -0.32px
+                background-color #fff
+                white-space nowrap
+                @media desktop-hover
+                    border none
+                    custom-border(light-gray)
 // .common__button:not(.common__button--no-backing):hover
 //     background-color bright-pink
 
@@ -273,6 +325,7 @@ custom-border(color)
         &__card
             & .bubble-container
                 opacity 1
+                z-index 0
 
             & .bubble
                 background-color #fafafa

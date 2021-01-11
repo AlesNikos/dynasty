@@ -66,12 +66,16 @@
         outline none
         background-color white
         resize none
+        &.error
+            border-color #a4023e
 
     &__checkbox
         &-input  
             display none
             &:checked + .form__checkbox-label:after
                 opacity 1
+            &.error + .form__checkbox-label:before
+                border-color #a4023e
         &-label
             position relative
             display inline-flex

@@ -103,159 +103,105 @@
 // Валидация форм
 (function () {
 
-    //Валидация форм
-    function validationCheck(){
+    if(document.querySelector("form")){
+        document.querySelectorAll("form").forEach(function(item){
+            item.addEventListener("submit", validationCheck);
+        })
+    }
 
-        // Проверка на обязательность заполнения
-        function reqCheck(elem){
-            if(elem.hasAttribute("data-req")){
-                validErrors.push(elem);
-            };
-        };
+    function validationCheck(event){
 
-        // Убрать указание об ошибке
-        function noErrors(elem){
-            let elemParent = elem.parentElement;
-            while(!elemParent.classList.contains("form__group")){
-                elemParent = elemParent.parentElement;
-            };
-            if(elemParent.classList.contains("js-valid-error")){
-                elemParent.classList.remove("js-valid-error");
-            };
-        };
+        let elems = this.querySelectorAll("input, select, textarea");
+        let errors = [];
 
-        // Проверка прилагаемого файла
-        function fileCheck(elem, file){
-            if(file.size > 5000000){
-                validErrors.push(elem);
+        elems.forEach(function(item){
+            let type;
+
+            if(item.hasAttribute("type")){
+                type = item.getAttribute("type");
             }else{
-                noErrors(elem);
-            };
-        };
-
-        // Проверка вводимых данных через регулярное выражение
-        function valueCheck(elem, val, patrn){
-            if(!patrn.test(val)){
-                validErrors.push(elem); 
-            }else{
-                noErrors(elem);
-            };
-        };
-
-        // Ищем форму, к которой относится кнопка
-        let form = this.parentElement;
-        while(form.tagName != "FORM"){
-            form = form.parentElement
-        };
-
-        // Ищем все элементы данной формы
-        let formElems = form.querySelectorAll("input, select, textarea");
-        
-        // Создаем массив для полей с ошибками
-        let validErrors = [];
-
-        // Основной цикл проверки на правильность заполнения формы
-        for(let i = 0; i < formElems.length; i++){
-
-            let elemType;
-            if(formElems[i].hasAttribute("type")){
-                elemType = formElems[i].getAttribute("type");
-            }else{
-                elemType = formElems[i].getAttribute("data-type");
+                type = item.getAttribute("data-type");
             }
 
-            switch(elemType){
+            switch(type){
 
-                // Для инпутов
                 case "text":
-                    if(formElems[i].value == ""){ 
-                        reqCheck(formElems[i]);
+                    if(item.value == ""){ 
+                        reqCheck(item);
                     }else{
-                        switch(formElems[i].getAttribute("name")){
+                        let pattern;
+
+                        switch(item.getAttribute("data-content")){
                             case "surname":
                             case "name":
-                                let namePattern = new RegExp("^[a-zа-яё -]{1,}$","i");
-                                valueCheck(formElems[i], formElems[i].value, namePattern);
+                                pattern = new RegExp("^[a-zа-яё -]{1,}$","i");
+                                contentCheck(item, item.value, pattern);
                                 break;
                             case "phone":   
-                                let phonePattern = new RegExp("^[0-9 ]{7,}$");
-                                valueCheck(formElems[i], formElems[i].value, phonePattern);
+                                pattern = new RegExp("^[0-9 ]{7,}$");
+                                contentCheck(item, item.value, pattern);
                                 break;
                             case "date":   
-                                let datePattern = new RegExp("^[0-9]{1,4}[.]{1}[0-9]{1,4}[.]{1}[0-9]{1,4}$");
-                                valueCheck(formElems[i], formElems[i].value, datePattern);
+                                pattern = new RegExp("^[0-9]{1,4}[.]{1}[0-9]{1,4}[.]{1}[0-9]{1,4}$");
+                                contentCheck(item, item.value, pattern);
                                 break;
                             case "mail":
-                                let mailPattern = new RegExp("^[a-z0-9_-]{1,}@{1}[a-z]{1,}[.]{1}[a-z]{2}$","i");
-                                valueCheck(formElems[i], formElems[i].value, mailPattern);
+                                pattern = new RegExp("^[a-z0-9_-]{1,}@{1}[a-z]{1,}[.]{1}[a-z]{3}$","i");
+                                contentCheck(item, item.value, pattern);
                                 break;
-                        };
-                    };
+                        }
+                    }
                     break;
 
-                // Для текстовых полей
                 case "textarea":
-                    if(formElems[i].value == ""){ 
-                        reqCheck(formElems[i]);
+                    if(item.value == ""){ 
+                        reqCheck(item);
                     }else{
-                        noErrors(formElems[i]);
-                    };
+                        removeErrorMarks(item);
+                    }
                     break;
 
-                // Для селектов
-                case "select":
-                    if(formElems[i].value == "choice-1"){
-                        reqCheck(formElems[i]);
-                    }else{
-                        noErrors(formElems[i]);
-                    };
-                    break;
-
-                // Для чекбоксов
                 case "checkbox":
-                    if(!formElems[i].checked){
-                        reqCheck(formElems[i]);
+                    if(!item.checked){
+                        reqCheck(item);
                     }else{
-                        noErrors(formElems[i]);
-                    };
+                        removeErrorMarks(item);
+                    }
                     break;
+            }
+        })
 
-                // Для файлов
-                case "file":
-                    if(!formElems[i].files[0]){
-                        reqCheck(formElems[i]);
-                    }else if(formElems[i].files[0]){
-                        fileCheck(formElems[i], formElems[i].files[0]);
-                    };
-                    break;
-            };
-        };
+        function reqCheck(elem){
+            if(elem.hasAttribute("data-req")){
+                errors.push(elem);
+            }
+        }
 
-        // Проверка, есть ли поля с ошибками заполнения, отмена отправки, и назначение подсказок об ошибках
-        if(validErrors.length){
+        function removeErrorMarks(elem){
+            if(item.classList.contains("error")){
+                item.classList.remove("error");
+            }
+        }
+
+        function contentCheck(elem, content, patrn){
+            if(!patrn.test(content)){
+                errors.push(elem); 
+            }else{
+                removeErrorMarks(elem);
+            }
+        }
+
+        if(errors.length){
             event.preventDefault();
-            for(let i = 0; i < validErrors.length; i++){
 
-                let elemParent = validErrors[i].parentElement;
-                while(!elemParent.classList.contains("form__group")){
-                    elemParent = elemParent.parentElement;
-                };
-                if(!elemParent.classList.contains("js-valid-error")){
-                    elemParent.classList.add("js-valid-error");
-                };
-            };
-        };
-    };
-
-    // Кнопки отправки форм
-    const submitButtons = document.querySelectorAll(".js-submit");
-
-    // Если кнопки найдены, по клику на них проверяем относящуюся к ним форму на валидность
-    if(submitButtons){
-        for(let i = 0; i < submitButtons.length; i++){
-            submitButtons[i].addEventListener("click", validationCheck);
-        };  
-    };
+            errors.forEach(function(item){
+                if(!item.classList.contains("error")){
+                    item.classList.add("error");
+                }
+            })
+        }
+    }
+    // 
 
 
     // Маска для телефона imask.js
@@ -286,53 +232,37 @@
 // Показывает и скрывает попапы
 (function(){
 
-    const popupButtons = document.querySelectorAll(".js-popup-button");
+    function showPopup(){
 
-    if(popupButtons){
+        let targetPopup = document.querySelector("[data-popup=" + this.getAttribute("data-popup-for") + "]");
 
-        for(let i = 0; i < popupButtons.length; i++){
-            popupButtons[i].addEventListener("click", showPopup);
+        if(targetPopup){
+            document.body.classList.add("js-popup-is-open");
+            targetPopup.classList.add("js-active-popup");
         };
+    }
 
-    };
+    function hidePopup(){
+        document.querySelector(".js-active-popup").classList.remove("js-active-popup");
+        document.body.classList.remove("js-popup-is-open");
+    }
 
     document.body.addEventListener('click', function(e) {
         let target = e.target;
         if (!target.classList.contains('js-close-popup')) return;
 		
-		closePopup();
+		hidePopup();
     })
 
-    function showPopup(){
+    if(document.querySelector(".js-popup-button") && document.querySelector(".js-close-popup-button")){
 
-        let targetPopupName = this.getAttribute("data-popup-for");
-        let targetPopup = document.querySelector("[data-popup=" + targetPopupName + "]");
-
-        if(targetPopup){
-            document.body.classList.add("js-popup-is-open");
-            targetPopup.classList.add("js-popup-is-active");
-        };
-
-    };
-
-    const closePopupButton = document.querySelectorAll(".js-close-popup-button");
-
-    if(closePopupButton){
-        for (let i = 0; i < closePopupButton.length; i++) {
-            closePopupButton[i].addEventListener("click", closePopup);
-        }
-    };
-
-    function closePopup(){
-
-        let openedPopup = document.querySelector(".js-popup-is-active");
-
-        if(openedPopup){
-            openedPopup.classList.remove("js-popup-is-active");
-        };
-        
-        document.body.classList.remove("js-popup-is-open");
-    };
+        document.querySelectorAll(".js-popup-button").forEach(function(item){
+            item.addEventListener("click", showPopup);
+        });
+        document.querySelectorAll(".js-close-popup-button").forEach(function(item) {
+            item.addEventListener("click", hidePopup);
+        })
+    }
 
 })();
 
@@ -835,7 +765,7 @@ if(document.getElementById("map-2")){
 
         }else{
 
-            let distance = window.pageYOffset - targetYPosition;
+            let distance = window.pageYOffset - targetYPosition + 200;
 
             if(distance > speed){
                 window.scrollTo(0, window.pageYOffset - speed);
@@ -857,5 +787,16 @@ if(document.getElementById("map-2")){
             let bunch = new ScrollButton(buttons[i]);
         };
     };
+
+})();
+
+// Cookie
+(function(){
+
+    if(document.querySelector('.js-close-cookie') && document.body.classList.contains('cookie-show')) {
+      document.querySelector('.js-close-cookie').addEventListener('click', function() {
+        document.body.classList.remove('cookie-show');
+      });
+    }
 
 })();

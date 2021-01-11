@@ -32,22 +32,22 @@ div.hidden-block
                         .form__group
                             label.form__label(for="name-1")
                                 | ФИО <span class="common-req-sign">*</span>
-                            input.form__input(type="text", data-req="req", id="name-1")
+                            input.form__input(type="text", data-req="req", id="name-1", data-content="name")
                     .form__row
                         .form__group
                             label.form__label(for="phone-1")
                                 | Телефон <span class="common-req-sign">*</span>
-                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-1")
+                            input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-1", data-content="phone")
                     .form__row
                         .form__group.form__group--checkbox
-                            input.form__checkbox-input(type="checkbox", id="checkbox-1")
+                            input.form__checkbox-input(type="checkbox", data-req, id="checkbox-1")
                             label.form__checkbox-label(for="checkbox-1")
                                 span.form__checkbox-description
                                     |Согласен на обработку 
                                     a(href="#") персональных данных
                     .form__row
                         .form__group
-                            button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                            button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button(type="submit")
                                 span
                                     |Отправить заявку
             // END ЗАПИСАТЬСЯ НА ПРИЕМ
@@ -64,32 +64,32 @@ div.hidden-block
                         .form__group
                             label.form__label(for="name-11")
                                 | ФИО <span class="common-req-sign">*</span>
-                            input.form__input(type="text", data-req="req", id="name-11")
+                            input.form__input(type="text", data-req="req", id="name-11", data-content="name")
                     .form__row
                         .form__group
                             label.form__label(for="phone-11")
                                 | Телефон <span class="common-req-sign">*</span>
-                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-11")
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-11", data-content="phone")
                     .form__row
                         .form__group
                             label.form__label
                                 | Цель обращения в клинику
-                            input.form__input(type="text", data-req="req")
+                            input.form__input(type="text")
                     .form__row
                         .form__group
                             label.form__label
                                 | Текст отзыва <span class="common-req-sign">*</span>
-                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off", data-type="textarea")
                     .form__row
                         .form__group
                             label.form__label
                                 | Достоинства
-                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(name="text", autocomplete="off")
                     .form__row
                         .form__group
                             label.form__label
                                 | Недостатки
-                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(name="text", autocomplete="off")
                     .form__row
                         .form__group.opinion
                             .opinion__title
@@ -234,7 +234,7 @@ div.hidden-block
                                     
                     .form__row
                         .form__group.form__group--checkbox
-                            input.form__checkbox-input(type="checkbox", id="checkbox-2")
+                            input.form__checkbox-input(type="checkbox", id="checkbox-2", data-req)
                             label.form__checkbox-label(for="checkbox-2")
                                 span.form__checkbox-description
                                     |Согласен на обработку 
@@ -258,20 +258,20 @@ div.hidden-block
                         .form__group
                             label.form__label(for="name-21")
                                 | ФИО <span class="common-req-sign">*</span>
-                            input.form__input(type="text", data-req="req", id="name-21")
+                            input.form__input(type="text", data-req="req", id="name-21", data-content="name")
                     .form__row
                         .form__group
                             label.form__label(for="phone-21")
                                 | Телефон <span class="common-req-sign">*</span>
-                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-21")
+                            input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-21", data-content="phone")
                     .form__row
                         .form__group
                             label.form__label
                                 | Текст вопроса <span class="common-req-sign">*</span>
-                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off", data-type="textarea")
                     .form__row
                         .form__group.form__group--checkbox
-                            input.form__checkbox-input(type="checkbox", id="checkbox-3")
+                            input.form__checkbox-input(type="checkbox", id="checkbox-3", data-req)
                             label.form__checkbox-label(for="checkbox-3")
                                 span.form__checkbox-description
                                     |Согласен на обработку 
@@ -295,20 +295,20 @@ div.hidden-block
                         .form__group
                             label.form__label(for="name-31")
                                 | ФИО <span class="common-req-sign">*</span>
-                            input.form__input(type="text", data-req="req", id="name-31")
+                            input.form__input(type="text", data-req="req", id="name-31", data-content="name")
                     .form__row
                         .form__group
                             label.form__label(for="phone-31")
                                 | Телефон <span class="common-req-sign">*</span>
-                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-31")
+                            input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-31", data-content="phone")
                     .form__row
                         .form__group
                             label.form__label
                                 | Текст вопроса <span class="common-req-sign">*</span>
-                            textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                            textarea.form__textarea(data-req="req", name="text", autocomplete="off", data-type="textarea")
                     .form__row
                         .form__group.form__group--checkbox
-                            input.form__checkbox-input(type="checkbox", id="checkbox-4")
+                            input.form__checkbox-input(type="checkbox", id="checkbox-4", data-req)
                             label.form__checkbox-label(for="checkbox-4")
                                 span.form__checkbox-description
                                     |Согласен на обработку 

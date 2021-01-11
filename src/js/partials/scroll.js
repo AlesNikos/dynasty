@@ -52,7 +52,7 @@
 
         }else{
 
-            let distance = window.pageYOffset - targetYPosition;
+            let distance = window.pageYOffset - targetYPosition + 200;
 
             if(distance > speed){
                 window.scrollTo(0, window.pageYOffset - speed);

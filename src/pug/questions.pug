@@ -6,6 +6,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Династия
     body
@@ -137,22 +138,22 @@ html(lang="ru")
                     .form__group
                         label.form__label(for="name-questions-1")
                             | ФИО <span class="common-req-sign">*</span>
-                        input.form__input(type="text", data-req="req", id="name-questions-1")
+                        input.form__input(type="text", data-req="req", id="name-questions-1", data-content="name")
                   
                     .form__group
                         label.form__label(for="phone-questions-1")
                             | Телефон <span class="common-req-sign">*</span>
-                        input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-questions-1")
+                        input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-questions-1",data-content="phone")
 
                   .form__group-wrap
                     .form__group
                         label.form__label
                             | Текст вопроса <span class="common-req-sign">*</span>
-                        textarea.form__textarea(data-req="req", name="text", autocomplete="off")
+                        textarea.form__textarea(data-req="req", name="text", autocomplete="off", data-type="textarea")
 
               .form__row
                   .form__group.form__group--checkbox
-                      input.form__checkbox-input(type="checkbox", id="checkbox-questions-2")
+                      input.form__checkbox-input(type="checkbox", id="checkbox-questions-2", data-req)
                       label.form__checkbox-label(for="checkbox-questions-2")
                           span.form__checkbox-description
                               |Согласен на обработку 

@@ -60,11 +60,10 @@
     @media phone
       padding 24px
     &:hover
-      // .rules__item-text
-      //   border-bottom-color transparent
       @media desktop-hover
         box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
   &__item-text 
+    position relative
     font-size 26px
     font-weight 400
     line-height 30px
@@ -111,14 +110,14 @@
     @media phone
       padding 24px
     &:hover
-      .documents__item-name
-        border-bottom-color transparent
       @media desktop-hover
         box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
   &__item-info
+    position relative
     margin-bottom 6px
     color gray
   &__item-name 
+    position relative
     font-size 26px
     font-weight 400
     line-height 30px
@@ -128,8 +127,8 @@
     @media phone
       font-size 22px
       line-height 26px
-    // &:hover
-    //   border-bottom-color transparent
+    &:hover
+      border-bottom-color transparent
 
 .licenses
   &__items

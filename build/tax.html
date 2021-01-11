@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/normalize.css" type="text/css">
     <link rel="stylesheet" href="style/swiper.css" type="text/css">
     <link rel="stylesheet" href="style/choices.css" type="text/css">
+    <link rel="stylesheet" href="style/glightbox.css" type="text/css">
     <link rel="stylesheet" href="style/main.css" type="text/css">
     <title>Династия</title>
   </head>
@@ -106,13 +107,13 @@
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="name-d-21">ФИО плательщика <span class="common-req-sign">*</span></label>
-                        <input class="form__input error" type="text" data-req="req" id="name-d-21">
+                        <input class="form__input" type="text" data-req="req" id="name-d-21" data-content="name">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="name-d-22">ФИО пациента <span class="common-req-sign">*</span></label>
-                        <input class="form__input" type="text" data-req="req" id="name-d-22">
+                        <input class="form__input" type="text" data-req="req" id="name-d-22" data-content="name">
                       </div>
                     </div>
                     <div class="form__row">
@@ -137,14 +138,14 @@
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="phone-d-21">Телефон <span class="common-req-sign">*</span></label>
-                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-21">
+                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-21" data-content="phone">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label">Клиника</label>
                         <select class="js-choice js-choices-dependent">
-                          <option class="choice-1"> </option>
+                          <option class="choice-1" label=" "> </option>
                           <option>Клиника на Мамина-Сибиряка, 128</option>
                           <option>Клиника на Академика Шварца, 14</option>
                         </select>
@@ -152,13 +153,13 @@
                     </div>
                     <div class="form__row">
                       <div class="form__group form__group--checkbox">
-                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-24">
+                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-24" data-req>
                         <label class="form__checkbox-label" for="checkbox-d-24"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
-                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Заказать справку</span></button>
+                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button" type="submit"><span>Заказать справку</span></button>
                       </div>
                     </div>
                   </form>
@@ -178,32 +179,32 @@
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="name-d-31">ФИО <span class="common-req-sign">*</span></label>
-                        <input class="form__input error" type="text" data-req="req" id="name-d-31">
+                        <input class="form__input" type="text" data-req="req" id="name-d-31" data-content="name">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="date-d-31">Дата рождения <span class="common-req-sign">*</span></label>
-                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-31">
+                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-31" data-content="date">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="date-d-32">Дата выдачи рецепта <span class="common-req-sign">*</span></label>
-                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-32">
+                        <input class="form__input js-imask-date" type="text" data-req="req" id="date-d-32" data-content="date">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label" for="phone-d-31">Телефон <span class="common-req-sign">*</span></label>
-                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-31">
+                        <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-d-31" data-content="phone">
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
                         <label class="form__label">Клиника</label>
                         <select class="js-choice js-choices-dependent">
-                          <option class="choice-1"> </option>
+                          <option class="choice-1" label=" "> </option>
                           <option>Клиника на Мамина-Сибиряка, 128</option>
                           <option>Клиника на Академика Шварца, 14</option>
                         </select>
@@ -211,13 +212,13 @@
                     </div>
                     <div class="form__row">
                       <div class="form__group form__group--checkbox">
-                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-31">
+                        <input class="form__checkbox-input" type="checkbox" id="checkbox-d-31" data-req>
                         <label class="form__checkbox-label" for="checkbox-d-31"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__group">
-                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Заказать рецепт</span></button>
+                        <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button" type="submit"><span>Заказать рецепт</span></button>
                       </div>
                     </div>
                   </form>
@@ -320,24 +321,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-1">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-1">
+                  <input class="form__input" type="text" data-req="req" id="name-1" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-1">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-1">
+                  <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-1" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-1">
+                  <input class="form__checkbox-input" type="checkbox" data-req id="checkbox-1">
                   <label class="form__checkbox-label" for="checkbox-1"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
-                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button"><span>Отправить заявку</span></button>
+                  <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button" type="submit"><span>Отправить заявку</span></button>
                 </div>
               </div>
             </form>
@@ -352,37 +353,37 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-11">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-11">
+                  <input class="form__input" type="text" data-req="req" id="name-11" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-11">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-11">
+                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-11" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Цель обращения в клинику</label>
-                  <input class="form__input" type="text" data-req="req">
+                  <input class="form__input" type="text">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст отзыва <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Достоинства</label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" name="text" autocomplete="off"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Недостатки</label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" name="text" autocomplete="off"></textarea>
                 </div>
               </div>
               <div class="form__row">
@@ -529,7 +530,7 @@
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-2">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-2" data-req>
                   <label class="form__checkbox-label" for="checkbox-2"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
@@ -550,24 +551,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-21">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-21">
+                  <input class="form__input" type="text" data-req="req" id="name-21" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-21">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-21">
+                  <input class="form__input js-imask-phone" type="text" data-req="req" name="phone" id="phone-21" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-3">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-3" data-req>
                   <label class="form__checkbox-label" for="checkbox-3"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>
@@ -588,24 +589,24 @@
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="name-31">ФИО <span class="common-req-sign">*</span></label>
-                  <input class="form__input" type="text" data-req="req" id="name-31">
+                  <input class="form__input" type="text" data-req="req" id="name-31" data-content="name">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label" for="phone-31">Телефон <span class="common-req-sign">*</span></label>
-                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-31">
+                  <input class="form__input js-imask-phone error" type="text" data-req="req" name="phone" id="phone-31" data-content="phone">
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
                   <label class="form__label">Текст вопроса <span class="common-req-sign">*</span></label>
-                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off"></textarea>
+                  <textarea class="form__textarea" data-req="req" name="text" autocomplete="off" data-type="textarea"></textarea>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group form__group--checkbox">
-                  <input class="form__checkbox-input" type="checkbox" id="checkbox-4">
+                  <input class="form__checkbox-input" type="checkbox" id="checkbox-4" data-req>
                   <label class="form__checkbox-label" for="checkbox-4"><span class="form__checkbox-description">Согласен на обработку <a href="#">персональных данных</a></span></label>
                 </div>
               </div>

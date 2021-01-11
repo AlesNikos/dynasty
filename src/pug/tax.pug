@@ -6,6 +6,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Династия
     body
@@ -58,12 +59,12 @@ html(lang="ru")
                               .form__group
                                   label.form__label(for="name-d-21")
                                       | ФИО плательщика <span class="common-req-sign">*</span>
-                                  input.form__input.error(type="text", data-req="req", id="name-d-21")
+                                  input.form__input(type="text", data-req="req", id="name-d-21", data-content="name")
                           .form__row
                               .form__group
                                   label.form__label(for="name-d-22")
                                       | ФИО пациента <span class="common-req-sign">*</span>
-                                  input.form__input(type="text", data-req="req", id="name-d-22")
+                                  input.form__input(type="text", data-req="req", id="name-d-22", data-content="name")
                           .form__row
                               .form__group
                                   label.form__label(for="date-d-21")
@@ -92,27 +93,27 @@ html(lang="ru")
                               .form__group
                                   label.form__label(for="phone-d-21")
                                       | Телефон <span class="common-req-sign">*</span>
-                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-21")
+                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-21", data-content="phone")
 
                           .form__row
                               .form__group
                                   label.form__label
                                       | Клиника
                                   select.js-choice.js-choices-dependent
-                                    option.choice-1  
+                                    option.choice-1(label=" ")  
                                     option Клиника на Мамина-Сибиряка, 128
                                     option Клиника на Академика Шварца, 14
 
                           .form__row
                               .form__group.form__group--checkbox
-                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-24")
+                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-24", data-req)
                                   label.form__checkbox-label(for="checkbox-d-24")
                                       span.form__checkbox-description
                                           |Согласен на обработку 
                                           a(href="#") персональных данных
                           .form__row
                               .form__group
-                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button(type="submit")
                                       span
                                           |Заказать справку
 
@@ -131,44 +132,44 @@ html(lang="ru")
                               .form__group
                                   label.form__label(for="name-d-31")
                                       | ФИО <span class="common-req-sign">*</span>
-                                  input.form__input.error(type="text", data-req="req", id="name-d-31")
+                                  input.form__input(type="text", data-req="req", id="name-d-31", data-content="name")
                           
                           .form__row
                               .form__group
                                   label.form__label(for="date-d-31")
                                       | Дата рождения <span class="common-req-sign">*</span>
-                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-31")
+                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-31", data-content="date")
                           .form__row
                               .form__group
                                   label.form__label(for="date-d-32")
                                       | Дата выдачи рецепта <span class="common-req-sign">*</span>
-                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-32")
+                                  input.form__input.js-imask-date(type="text", data-req="req", id="date-d-32", data-content="date")
                           
                           .form__row
                               .form__group
                                   label.form__label(for="phone-d-31")
                                       | Телефон <span class="common-req-sign">*</span>
-                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-31")
+                                  input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-31", data-content="phone")
 
                           .form__row
                               .form__group
                                   label.form__label
                                       | Клиника
                                   select.js-choice.js-choices-dependent
-                                    option.choice-1  
+                                    option.choice-1(label=" ")  
                                     option Клиника на Мамина-Сибиряка, 128
                                     option Клиника на Академика Шварца, 14
 
                           .form__row
                               .form__group.form__group--checkbox
-                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-31")
+                                  input.form__checkbox-input(type="checkbox", id="checkbox-d-31", data-req)
                                   label.form__checkbox-label(for="checkbox-d-31")
                                       span.form__checkbox-description
                                           |Согласен на обработку 
                                           a(href="#") персональных данных
                           .form__row
                               .form__group
-                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button
+                                  button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button(type="submit")
                                       span
                                           |Заказать рецепт
 

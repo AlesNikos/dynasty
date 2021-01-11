@@ -176,30 +176,40 @@
         @media phone 
             margin-bottom 40px
     &__info-hero
+        position relative
         height 560px
         padding 40px 49px
         border-radius 10px
-        // background-color #2a2a2a
-        background-position center
-        background-repeat no-repeat
-        background-size cover
+        background-color lightest-gray
         overflow hidden
+        @media tablet-portrait-large
+            margin-bottom 92px
         @media tablet-portrait-medium
-            height 420px
-        @media phone
-            min-height 420px
             height auto
+        @media phone
+            height auto
+            margin-bottom 52px
             padding 32px
 
         &--position
             margin-bottom 128px
         
+    &__info-img
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        object-fit cover
+        @media tablet-portrait-medium
+            display none
     &__info-text
+        position relative
         max-width 500px
         color #000
         font-size 22px
         font-weight 400
         line-height 32px
+        z-index 1
         @media tablet-portrait-medium
             font-size 18px
             line-height 22px
@@ -211,18 +221,21 @@
                 line-height 22px
 
     &__menu
-        position static
+        position relative
         display flex
         align-items center
         justify-content center
         margin-bottom 92px
+        z-index 1001
+        @media tablet-portrait-large
+            display none
         &--fixed
             position fixed
-            top 133px
+            top 143px
             left 0
             right 0
             margin 0
-            z-index 1001
+            // z-index 1001
         .menu__list
             padding 25px 47px
             background-color #fff

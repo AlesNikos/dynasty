@@ -1,51 +1,35 @@
 (function(){
 
-    const popupButtons = document.querySelectorAll(".js-popup-button");
+    function showPopup(){
 
-    if(popupButtons){
+        let targetPopup = document.querySelector("[data-popup=" + this.getAttribute("data-popup-for") + "]");
 
-        for(let i = 0; i < popupButtons.length; i++){
-            popupButtons[i].addEventListener("click", showPopup);
+        if(targetPopup){
+            document.body.classList.add("js-popup-is-open");
+            targetPopup.classList.add("js-active-popup");
         };
+    }
 
-    };
+    function hidePopup(){
+        document.querySelector(".js-active-popup").classList.remove("js-active-popup");
+        document.body.classList.remove("js-popup-is-open");
+    }
 
     document.body.addEventListener('click', function(e) {
         let target = e.target;
         if (!target.classList.contains('js-close-popup')) return;
 		
-		closePopup();
+		hidePopup();
     })
 
-    function showPopup(){
+    if(document.querySelector(".js-popup-button") && document.querySelector(".js-close-popup-button")){
 
-        let targetPopupName = this.getAttribute("data-popup-for");
-        let targetPopup = document.querySelector("[data-popup=" + targetPopupName + "]");
-
-        if(targetPopup){
-            document.body.classList.add("js-popup-is-open");
-            targetPopup.classList.add("js-popup-is-active");
-        };
-
-    };
-
-    const closePopupButton = document.querySelectorAll(".js-close-popup-button");
-
-    if(closePopupButton){
-        for (let i = 0; i < closePopupButton.length; i++) {
-            closePopupButton[i].addEventListener("click", closePopup);
-        }
-    };
-
-    function closePopup(){
-
-        let openedPopup = document.querySelector(".js-popup-is-active");
-
-        if(openedPopup){
-            openedPopup.classList.remove("js-popup-is-active");
-        };
-        
-        document.body.classList.remove("js-popup-is-open");
-    };
+        document.querySelectorAll(".js-popup-button").forEach(function(item){
+            item.addEventListener("click", showPopup);
+        });
+        document.querySelectorAll(".js-close-popup-button").forEach(function(item) {
+            item.addEventListener("click", hidePopup);
+        })
+    }
 
 })();

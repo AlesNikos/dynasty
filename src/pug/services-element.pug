@@ -6,6 +6,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Династия
     body
@@ -38,7 +39,9 @@ html(lang="ru")
 
           section.service__info
             .container
-              .service__info-hero(style="background-image: url('images/services/services-element-img.png')")
+              .service__info-hero
+                img.service__info-img(src="images/services/services-element-img.png", alt="")
+                
                 .service__info-text
                   p
                     |Терапевт – это врач широкого профиля, специализирующийся на ранней диагностике множества заболеваний. Терапевт ведет первичный прием и лечение пациентов, а при необходимости дает направление к более узкоспециализированному специалисту.
@@ -148,17 +151,17 @@ html(lang="ru")
               .prices__item
                 p.prices__item-name
                   |Консультация врача-терапевта, инфекциониста Малкиной О.И.
-                spam.prices__item-price
+                span.prices__item-price
                   |1400 руб
               .prices__item
                 p.prices__item-name
                   |Консультация врача-терапевта, гастроэнтеролога Заплатиной Н.И.
-                spam.prices__item-price
+                span.prices__item-price
                   |1400 руб
               .prices__item
                 p.prices__item-name
                   |Консультация врача-терапевта, кардиолога ВагановойА.В
-                spam.prices__item-price
+                span.prices__item-price
                   |1500 руб
 
             .prices__items
@@ -167,12 +170,12 @@ html(lang="ru")
               .prices__item
                 p.prices__item-name
                   |Выезд в пределах Екатеринбурга
-                spam.prices__item-price
+                span.prices__item-price
                   |3000 руб
               .prices__item
                 p.prices__item-name
                   |Выезд за черту города, в пределах 40 км.
-                spam.prices__item-price
+                span.prices__item-price
                   |4000 руб
           // END Стоимость услуг
             
@@ -188,14 +191,14 @@ html(lang="ru")
                         label.form__label
                             | Клиника
                         select.js-choice.js-choices-dependent(id="clinic")
-                            option.choice-1(label="") 
+                            option.choice-1(label=" ") 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                     .form__group
                         label.form__label
                             | Услуга
                         select.js-choice.js-choices-dependent(id="services")
-                            option.choice-1(label="") 
+                            option.choice-1(label=" ") 
                             option Клиника на Мамина-Сибиряка, 128
                             option Клиника на Академика Шварца, 14
                 //- .form__row
@@ -203,15 +206,15 @@ html(lang="ru")
                     .form__group
                         label.form__label(for="name-d-1")
                             | ФИО <span class="common-req-sign">*</span>
-                        input.form__input(type="text", data-req="req", id="name-d-1")
+                        input.form__input(type="text", data-req="req", id="name-d-1", data-content="name")
                     .form__group
                         label.form__label(for="phone-d-1")
                             | Телефон <span class="common-req-sign">*</span>
-                        input.form__input.js-imask-phone.error(type="text", data-req="req", name="phone", id="phone-d-1")
+                        input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-d-1", data-content="phone")
                 //- .form__row
                 .form__row
                     .form__group.form__group--checkbox
-                        input.form__checkbox-input(type="checkbox", id="checkbox-d-1")
+                        input.form__checkbox-input(type="checkbox", id="checkbox-d-1", data-req)
                         label.form__checkbox-label(for="checkbox-d-1")
                             span.form__checkbox-description
                                 |Согласен на обработку 
