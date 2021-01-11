@@ -20,7 +20,8 @@
   &:not(:last-of-type)
     margin-bottom 12px
   &:hover 
-    box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
+    @media desktop-hover
+      box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
     .accordion__title
       border-bottom-color transparent
   &.opened
