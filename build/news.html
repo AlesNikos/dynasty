@@ -43,7 +43,7 @@
                 </button><a class="header__phone" href="tel:">+7 343 363 74 09</a>
                 <!-- a.header__phone(href="tel:")|+7 343 363 74 09
                 -->
-                <button class="header__button js-popup-button js-bubble-hover bubble-hover bubble-hover__button" data-popup-for="appointment"><span>Записаться на прием</span></button>
+                <button class="header__button js-popup-button js-bubble-hover bubble-hover bubble-hover__button" data-popup-for="appointment-popup"><span>Записаться на прием</span></button>
               </div>
               <div class="header__row">
                 <nav class="menu header__menu">
@@ -205,7 +205,7 @@
       <div class="hidden-block__container">
         <div class="hidden-block__wrapper js-close-popup">
           <!-- START ЗАПИСАТЬСЯ НА ПРИЕМ-->
-          <section class="appointment-popup popup hidden-block__popup" data-popup="appointment">
+          <section class="appointment-popup popup hidden-block__popup" data-popup="appointment-popup">
             <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
             <h4 class="popup__title">Записаться на прием</h4>
             <p class="popup__subtitle">Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
@@ -544,6 +544,14 @@
             <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button js-close-popup-button"><span>Закрыть</span></button>
           </section>
           <!-- END ТЕКСТ ОТЗЫВА-->
+          <!-- START THANKS-->
+          <section class="thanks-popup popup hidden-block__popup" data-popup="thanks-popup">
+            <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
+            <h4 class="popup__title">Спасибо</h4>
+            <p class="popup__subtitle">Это стандартный текстовый попап, который можно выводить, например, после успешной отправки заявки, или записи на прием.</p>
+            <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button js-close-popup-button"><span>Закрыть</span></button>
+          </section>
+          <!-- END THANKS-->
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ div.hidden-block
         .hidden-block__wrapper.js-close-popup
 
             // START ЗАПИСАТЬСЯ НА ПРИЕМ
-            section.appointment-popup.popup.hidden-block__popup(data-popup="appointment")
+            section.appointment-popup.popup.hidden-block__popup(data-popup="appointment-popup")
                 button.hidden-block__close-button.popup__close-button.js-close-popup-button
                 h4.popup__title
                     |Записаться на прием
@@ -340,3 +340,17 @@ div.hidden-block
                     span
                         |Закрыть
             // END ТЕКСТ ОТЗЫВА
+
+            // START THANKS
+            section.thanks-popup.popup.hidden-block__popup(data-popup="thanks-popup")
+                button.hidden-block__close-button.popup__close-button.js-close-popup-button
+                h4.popup__title
+                    |Спасибо
+                p.popup__subtitle
+                    | Это стандартный текстовый попап, который можно выводить, например, после успешной отправки заявки, или записи на прием.
+                
+                button.common__button.common__button--medium.form__button.js-bubble-hover.bubble-hover.bubble-hover__button.js-close-popup-button
+                    span
+                        |Закрыть
+            // END THANKS
+
