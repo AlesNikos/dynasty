@@ -298,7 +298,6 @@
 
     document.body.addEventListener('click', function(e) {
         let target = e.target;
-        console.log(target);
         if (!target.classList.contains('js-close-popup')) return;
 		
 		closePopup();
