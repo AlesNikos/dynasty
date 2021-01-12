@@ -422,6 +422,9 @@
 
 
 // FOR Safari
-@supports(overflow:-webkit-marquee)and(justify-content:inherit)
-    .i-services__img 
-        width 100%
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        .i-services__img 
+            width 100%
+    }
+}
