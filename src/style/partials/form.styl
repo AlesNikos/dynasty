@@ -54,6 +54,7 @@
             border-color #a4023e
 
     &__textarea
+        display block
         width 100%
         min-height 157px
         padding 9px 15px 8px 15px
@@ -200,7 +201,7 @@
             margin-bottom 20px
     .form__search-button
         @media phone
-            margin 0 auto
+            margin 0
 
 .choices 
     &__inner 
@@ -267,6 +268,7 @@
                 padding-right 20px
 
 .choices__list--dropdown::-webkit-scrollbar
+    border-radius 0 10px 10px 0
     width 6px
     background-color #fff
 .choices__list--dropdown::-webkit-scrollbar-thumb
@@ -348,7 +350,7 @@
     @media tablet-portrait-small
         width calc(100% - 40px)
     @media phone 
-        padding 24px
+        padding 20px
 
     &__title
         margin 0 0 30px
@@ -367,28 +369,3 @@
         text-align center
         span 
             color #a4023e
-    // & .form
-    //     display flex
-    //     flex-wrap wrap
-    //     margin 0 -18px
-    // & .form__row
-    //     display flex
-    //     flex-wrap wrap
-    //     margin 0 -18px
-    //     &:not(:last-child)
-    //         margin-bottom 26px
-    // & .form__group
-    //     position relative
-    //     flex 0 0 50%
-    //     max-width 50%
-    //     width 100%
-    //     padding 0 18px
-    // & .form__group--checkbox
-    //     flex 0 0 100%
-    //     max-width 100%
-    //     margin 24px 0 15px
-    //     text-align center
-    // & .form__group--button
-    //     flex 0 0 100%
-    //     max-width 100%
-    //     text-align center

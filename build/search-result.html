@@ -57,7 +57,7 @@
                     <li class="menu__item"><a class="menu__link" href="">Пациентам</a></li>
                     <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
                     <li class="menu__item">
-                      <button class="menu__button menu__button--search">
+                      <button class="menu__button menu__button--search js-popup-button" data-popup-for="search-popup">
                         <svg width="15" height="15">
                           <use xlink:href="#search-icon"></use>
                         </svg>
@@ -540,6 +540,19 @@
             <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button js-close-popup-button"><span>Закрыть</span></button>
           </section>
           <!-- END THANKS-->
+          <!-- START SEARCH-->
+          <div class="search-popup popup hidden-block__popup" data-popup="search-popup">
+            <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
+            <div class="search-popup">
+              <form class="form form--search">
+                <div class="form__group">
+                  <input class="form__input form__input--rounded" placeholder="Поиск по сайту">
+                </div>
+                <button class="common__button common__button--medium form__search-button js-bubble-hover bubble-hover bubble-hover__button"><span>Искать</span></button>
+              </form>
+            </div>
+          </div>
+          <!-- END SEARCH-->
         </div>
       </div>
     </div>

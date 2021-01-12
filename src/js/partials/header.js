@@ -17,10 +17,10 @@
       let servicesInfo = document.querySelector('.service__info-hero')
       let blockPosition = window.pageYOffset + servicesMenu.getBoundingClientRect().top;
   
-      if (document.documentElement.clientWidth > 1365) {
+      if (document.documentElement.clientWidth > 1479) {
         window.addEventListener('scroll', function() {
           let position = window.pageYOffset;
-          if (position > blockPosition - 96) {
+          if (position > blockPosition - 91) {
             servicesMenu.classList.add('service__menu--fixed');
             servicesInfo.classList.add('service__info-hero--position');
           } else {

@@ -2,16 +2,19 @@
   position fixed
   right 39px
   bottom 33px
-  display none
   max-width 408px
   padding 44px 43px 50px 50px
   box-shadow 3px 4px 30px rgba(0, 0, 0, 0.15)
   border-radius 10px
   background-color #fff
   z-index 150
+  opacity 0
+  visibility hidden
+  transform translateY(100%)
+  transition opacity 0.5s, visibility 0.5s, transform 0.5s
   @media phone
     margin-left 20px
-    padding 24px
+    padding 20px
     right 20px
     bottom 20px
   &__desc
@@ -28,4 +31,6 @@
   
 .js-cookie-is-show
   .cookie 
-    display block
+    opacity 1
+    visibility visible
+    transform translateY(0)

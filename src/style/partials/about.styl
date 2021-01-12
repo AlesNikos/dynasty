@@ -6,7 +6,7 @@
   &__item
     margin-bottom 32px
     @media tablet-portrait-medium
-      margin-bottom 48px
+      margin-bottom 64px
 
     &:last-of-type
       margin-bottom 0
@@ -18,13 +18,14 @@
           padding 0 48px
         @media tablet-portrait-medium
           padding 0
+          margin-bottom 0
 
       .about-item__img 
         order -1
         margin 0 18px 0 0
         @media tablet-portrait-medium
           order 0
-          margin 0
+          margin 0 0 31px 0
   &-item
     position relative
     width 100%
@@ -33,7 +34,7 @@
     display flex
     align-items center
     @media tablet-portrait-medium
-      flex-direction: column
+      flex-direction: column-reverse
 
   &-item__heading
     margin 0 auto 143px
@@ -59,7 +60,7 @@
       flex: 0 0 100%
       max-width: 100%
       padding 0
-      margin-bottom 24px
+      margin-bottom 0
 
     p:not([class])
       margin 0
@@ -100,6 +101,7 @@
   &-item__img
     position relative
     // flex: 0 0 50%
+    display flex
     max-width: 702px
     height 600px
     margin 0 0 0 18px
@@ -107,9 +109,10 @@
     overflow: hidden
     @media tablet-portrait-medium
       max-width: 100%
+      width 100%
       max-height: 600px
       height auto
-      margin 0
+      margin 0 0 31px 0
 
     img 
       width 100%
@@ -123,4 +126,4 @@
 .about__item + .about__item .about-item__heading
   margin-top 111px
   @media tablet-portrait-medium
-      margin-top 70px
+      margin-top 6px

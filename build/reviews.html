@@ -57,7 +57,7 @@
                     <li class="menu__item"><a class="menu__link" href="">Пациентам</a></li>
                     <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
                     <li class="menu__item">
-                      <button class="menu__button menu__button--search">
+                      <button class="menu__button menu__button--search js-popup-button" data-popup-for="search-popup">
                         <svg width="15" height="15">
                           <use xlink:href="#search-icon"></use>
                         </svg>
@@ -158,7 +158,7 @@
       <!-- START Оставить отзыв-->
       <section class="review-form reviews-form--position main-form-container" data-anchor="reviews-form">
         <h4 class="main-form-container__title">Оставить отзыв</h4>
-        <p class="main-form-container__subtitle">Заполните поля и оцените параметры по 5-бальной шкале, где 5 – очень хорошо, 1 – очень плохо.<br> Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
+        <p class="main-form-container__subtitle">Заполните поля и оцените параметры по 5-бальной шкале, где 5 – очень хорошо, 1 – очень плохо. Обратите внимание, поля со звездочкой <span>*</span> – обязательны для заполнения.</p>
         <form class="form form--main">
           <div class="form__row">
             <div class="form__group-wrap">
@@ -758,6 +758,19 @@
             <button class="common__button common__button--medium form__button js-bubble-hover bubble-hover bubble-hover__button js-close-popup-button"><span>Закрыть</span></button>
           </section>
           <!-- END THANKS-->
+          <!-- START SEARCH-->
+          <div class="search-popup popup hidden-block__popup" data-popup="search-popup">
+            <button class="hidden-block__close-button popup__close-button js-close-popup-button"></button>
+            <div class="search-popup">
+              <form class="form form--search">
+                <div class="form__group">
+                  <input class="form__input form__input--rounded" placeholder="Поиск по сайту">
+                </div>
+                <button class="common__button common__button--medium form__search-button js-bubble-hover bubble-hover bubble-hover__button"><span>Искать</span></button>
+              </form>
+            </div>
+          </div>
+          <!-- END SEARCH-->
         </div>
       </div>
     </div>
