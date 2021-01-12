@@ -138,7 +138,7 @@
                                 contentCheck(item, item.value, pattern);
                                 break;
                             case "phone":   
-                                pattern = new RegExp("^[0-9 ]{7,}$");
+                                pattern = new RegExp("^[0-9-()+]{7,}$");
                                 contentCheck(item, item.value, pattern);
                                 break;
                             case "date":   
