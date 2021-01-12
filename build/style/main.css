@@ -728,6 +728,14 @@ body.js-burger-menu-is-open {
     transition: opacity 0.5s 0s ease, visibility 0s 0.5s linear;
   }
 }
+.header__row--top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 @media (max-width: 1024px) {
   .header__row--top {
     display: -webkit-box;
@@ -783,6 +791,12 @@ body.js-burger-menu-is-open {
   }
 }
 .header__button--no-backing {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0;
   color: #030404;
   background: none;
@@ -970,6 +984,14 @@ body.js-burger-menu-is-open {
   -webkit-transition: color 0.3s 0s ease;
   transition: color 0.3s 0s ease;
   cursor: pointer;
+}
+.menu__button--search {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .menu__button--search::after {
   content: "Поиск";
