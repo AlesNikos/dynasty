@@ -74,7 +74,7 @@
             }
         }
 
-        function removeErrorMarks(elem){
+        function removeErrorMarks(item){
             if(item.classList.contains("error")){
                 item.classList.remove("error");
             }

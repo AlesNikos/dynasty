@@ -177,7 +177,7 @@
             }
         }
 
-        function removeErrorMarks(elem){
+        function removeErrorMarks(item){
             if(item.classList.contains("error")){
                 item.classList.remove("error");
             }
@@ -793,9 +793,9 @@ if(document.getElementById("map-2")){
 // Cookie
 (function(){
 
-    if(document.querySelector('.js-close-cookie') && document.body.classList.contains('cookie-show')) {
+    if(document.querySelector('.js-close-cookie') && document.body.classList.contains('js-cookie-is-show')) {
       document.querySelector('.js-close-cookie').addEventListener('click', function() {
-        document.body.classList.remove('cookie-show');
+        document.body.classList.remove('js-cookie-is-show');
       });
     }
 

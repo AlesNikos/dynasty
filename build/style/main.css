@@ -6019,6 +6019,6 @@ body.js-popup-is-open .hidden-block__wrapper {
 .cookie__link:hover {
   border-bottom-color: transparent;
 }
-.cookie-show .cookie {
+.js-cookie-is-show .cookie {
   display: block;
 }
