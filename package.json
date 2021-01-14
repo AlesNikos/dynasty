@@ -15,6 +15,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-stylus": "^2.7.0",
     "gulp-svgstore": "^7.0.1",
+    "gulp-uglify-es": "^2.0.0",
     "gulp-watch": "^5.0.1",
     "pug": "^2.0.4",
     "rimraf": "^3.0.0"

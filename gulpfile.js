@@ -9,6 +9,7 @@ let gulp = require("gulp"),
     rigger = require("gulp-rigger"),
     pug = require("gulp-pug"), 
     server = require("browser-sync").create(),
+    uglify = require("gulp-uglify-es").default,
     reload = server.reload;
 
 gulp.task("webserver", function(){
@@ -34,16 +35,29 @@ gulp.task("html:build", function(){
 gulp.task("js:build", function(){
     return gulp.src("src/js/*.js")
         .pipe(rigger())
+        .pipe(
+            uglify()
+        )
+        .pipe(
+            rename({
+                extname: ".min.js"
+            })
+        )
         .pipe(gulp.dest("build/script"))
         .pipe(server.stream());
 });
 
 gulp.task("style:build", function(){
     return gulp.src("src/style/*.{styl,css}")
-        .pipe(stylus())
+        .pipe(stylus({
+            compress: true
+        }))
         .pipe(prefixer({
             overrideBrowserslist: ["last 2 versions"],
             cascade: false
+        }))
+        .pipe(rename({
+            extname: ".min.css"
         }))
         .pipe(gulp.dest("build/style"))
         .pipe(server.stream());

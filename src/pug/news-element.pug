@@ -3,11 +3,7 @@ html(lang="ru")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
-        link(rel="stylesheet" href="style/normalize.css" type="text/css")
-        link(rel="stylesheet" href="style/swiper.css" type="text/css")
-        link(rel="stylesheet" href="style/choices.css" type="text/css")
-        link(rel="stylesheet" href="style/glightbox.css" type="text/css")
-        link(rel="stylesheet" href="style/main.css" type="text/css")
+        //= partials/links.pug
         title Династия
     body
       div(style="display: none")
@@ -80,7 +76,4 @@ html(lang="ru")
 
       //= partials/footer.pug
       //= partials/popup.pug
-      script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
-      script(src="https://unpkg.com/imask")
-      script(src="script/vendor.js")
-      script(src="script/script.js")
+      //= partials/scripts.pug
