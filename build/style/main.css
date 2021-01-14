@@ -5455,7 +5455,7 @@ body.js-burger-menu-is-open .burger::after {
   width: calc(100% - 78px);
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 0 40px 0;
+  padding: 0 0 37px 0;
 }
 @media (max-width: 1200px) {
   .foot {
@@ -5681,7 +5681,7 @@ body.js-burger-menu-is-open .burger::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 38px 0 0 0;
+  margin: 35px 0 0 0;
 }
 @media (max-width: 700px) {
   .foot__bottom {
@@ -5789,11 +5789,30 @@ body.js-burger-menu-is-open .burger::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  margin: 0;
+  margin: 0 0 0 32px;
   padding: 0;
   list-style: none;
+}
+.social__item:not(:last-child) {
+  margin-right: 12px;
+}
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
 }
 .developer {
   display: -webkit-box;
