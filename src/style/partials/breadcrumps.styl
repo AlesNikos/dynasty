@@ -46,10 +46,15 @@
       justify-content flex-start
 
   &.inner-intro__custom
+    max-width 500px
     margin-bottom 38px
     padding 0
     text-align left
     z-index 1
+    @media tablet-landscape-small
+        max-width: 450px
+    @media tablet-portrait-large
+        max-width 100%
     & > .container
       padding 0
     .inner-intro__breadcrumps
@@ -60,12 +65,7 @@
         max-width: 100%
     .breadcrumps__list 
       justify-content flex-start
-      // @media tablet-portrait-large
-      //   justify-content center
     .inner-intro__page-heading
-      max-width 650px
       z-index 1 
-      @media tablet-portrait-large
-        max-width 100%
   &__breadcrumps
     margin-bottom 21px
