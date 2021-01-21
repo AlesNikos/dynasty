@@ -10,7 +10,8 @@ let gulp = require("gulp"),
     pug = require("gulp-pug"), 
     server = require("browser-sync").create(),
     uglify = require("gulp-uglify-es").default,
-    reload = server.reload;
+    reload = server.reload,
+    clean_css = require('gulp-clean-css');
 
 gulp.task("webserver", function(){
     server.init({
@@ -35,6 +36,7 @@ gulp.task("html:build", function(){
 gulp.task("js:build", function(){
     return gulp.src("src/js/*.js")
         .pipe(rigger())
+        .pipe(gulp.dest("build/script"))
         .pipe(
             uglify()
         )
@@ -49,13 +51,13 @@ gulp.task("js:build", function(){
 
 gulp.task("style:build", function(){
     return gulp.src("src/style/*.{styl,css}")
-        .pipe(stylus({
-            compress: true
-        }))
+        .pipe(stylus())
         .pipe(prefixer({
             overrideBrowserslist: ["last 2 versions"],
             cascade: false
         }))
+        .pipe(gulp.dest("build/style"))
+        .pipe(clean_css())
         .pipe(rename({
             extname: ".min.css"
         }))
