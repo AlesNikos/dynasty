@@ -239,6 +239,13 @@
         width auto
 
     &__link
+        display flex
+        align-items center
+        text-decoration none
+        &:hover
+            .developer__hint
+                background-color bright-pink
+    &__hint
         font-family "Helvetica"
         font-size 12px
         line-height 15px
@@ -252,10 +259,10 @@
         background-color deep-pink
         transition background-color .3s 0s ease
 
-        &:hover
-            background-color bright-pink
+        // &:hover
+        //     background-color bright-pink
 
-    &__hint
+    &__text
         margin-left 7px
         font-family "helvetica"
         font-size 9px
